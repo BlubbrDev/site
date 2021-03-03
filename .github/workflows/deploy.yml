@@ -1,5 +1,5 @@
 # This action will automatically deploy the website on changes to main.
-name: React app deployement
+name: Deploy
 
 on:
   push:
