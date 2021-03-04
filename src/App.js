@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import PageRouter from "./PageRouter.js";
+import PageRouter from "./components/PageRouter.js";
 
 function App() {
   return (
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default App();
+export default App;
