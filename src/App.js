@@ -1,15 +1,16 @@
-import React from 'react';
-import './App.css';
-import Spacs from './pages/Spacs.js';
+import React from "react";
+import "./App.css";
+
+import PageRouter from "./PageRouter.js";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Spacs />
+        <PageRouter />
       </header>
     </div>
   );
 }
 
-export default App;
+export default App();
