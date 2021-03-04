@@ -55,4 +55,4 @@ function Spacs() {
   );
 }
 
-export default Spacs();
+export default Spacs;

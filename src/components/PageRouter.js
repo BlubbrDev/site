@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "../pages/Home.js";
-// import Spacs from "../pages/Spacs.js";
+import Spacs from "../pages/Spacs.js";
 
 // This componenet looks through all its children elements (Routes) and tries to render the
 // first route where the path of that route matches the current URL. In this case, we want
@@ -15,11 +15,11 @@ function PageRouter() {
           <Home />
         </Route>
         <Route path="/spacs">
-          {/* <Spacs /> */}
+          <Spacs />
         </Route>
       </Switch>
     </Router>
   );
 }
 
-export default PageRouter();
+export default PageRouter;
