@@ -1,16 +1,32 @@
-import React from "react";
+/* eslint-disable no-undef */
+import React, { useEffect } from "react";
 
-import logo from "../assets/img/logo.svg";
+// import logo from "../assets/img/logo.svg";
 
 function Home() {
+  useEffect(() => _loadRiveAnimation());
+
   return (
-    <div>
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Welcome to <code>blubbr.io</code>!
-      </p>
-    </div>
+    <>
+      <canvas id="canvas" width="600" height="500">
+        <script src={_loadRiveAnimation}></script>
+      </canvas>
+      <code>page not found</code>
+    </>
   );
+}
+
+function _loadRiveAnimation() {
+  // autoplays the first animation in the default artboard
+  new RiveAnimation({
+    src: "https://cdn.rive.app/animations/tv_color.riv",
+    canvas: document.getElementById("canvas"),
+    autoplay: true,
+    alignment: new CanvasAlignment({
+      fit: "fitWidth",
+      alignment: "center",
+    }),
+  });
 }
 
 export default Home;
