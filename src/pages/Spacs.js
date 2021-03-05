@@ -8,18 +8,21 @@ function Spacs() {
     <div
       className="tableauPlaceholder"
       id="viz1614816342907"
-      style={{ position: "relative", max-width: "100vw" }}
+      style={{ position: "relative", maxHeight: "100vh" }}
     >
       <noscript>
         <a href="/">
           <img
             alt=" "
             src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bl&#47;BlubbrVisualizations&#47;NotiFiDataDashboard_1&#47;1_rss.png"
-            style={{ border: "none" }}
+            style={{ border: "none", maxHeight: "100vh" }}
           />
         </a>
       </noscript>
-      <object className="tableauViz" style={{ display: "none" }}>
+      <object
+        className="tableauViz"
+        style={{ display: "none", maxHeight: "100vh" }}
+      >
         <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
         <param name="embed_code_version" value="3" />
         <param name="site_root" value="" />
