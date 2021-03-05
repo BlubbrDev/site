@@ -8,18 +8,19 @@ import Spacs from "../pages/Spacs.js";
 // first route where the path of that route matches the current URL. In this case, we want
 // to serve exactly one route at a time and switching over them is a good way to do that.
 function PageRouter() {
+  let root = process.env.PUBLIC_URL + "/";
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path={root}>
           <Home />
         </Route>
-        <Route exact path="/spacs">
+        <Route exact path={root + "spacs"}>
           <Spacs />
         </Route>
         <Route
           exact
-          path="/discord"
+          path={root + "discord"}
           render={() => (window.location = "https://discord.gg/ZtAWMP2DDd")}
         />
       </Switch>
