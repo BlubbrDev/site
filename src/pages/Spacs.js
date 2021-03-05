@@ -8,7 +8,7 @@ function Spacs() {
     <div
       className="tableauPlaceholder"
       id="viz1614816342907"
-      style={{ position: "relative" }}
+      style={{ position: "relative", max-width: "100vw" }}
     >
       <noscript>
         <a href="/">
