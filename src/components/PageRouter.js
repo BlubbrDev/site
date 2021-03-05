@@ -14,9 +14,14 @@ function PageRouter() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/spacs">
+        <Route exact path="/spacs">
           <Spacs />
         </Route>
+        <Route
+          exact
+          path="/discord"
+          render={() => (window.location = "https://discord.gg/ZtAWMP2DDd")}
+        />
       </Switch>
     </Router>
   );
