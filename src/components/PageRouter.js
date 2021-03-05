@@ -11,18 +11,14 @@ export default function PageRouter() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/spacs">
-          <Spacs />
-        </Route>
-        <Route
-          exact
-          path="/discord"
-          render={() => (window.location = "https://discord.gg/ZtAWMP2DDd")}
-        />
+        <Route exact path="/spacs" component={Spacs} />
+        <Route exact path="/discord" render={_goToDiscord} />
+        <Route path="*" component={Home} />
       </Switch>
     </BrowserRouter>
   );
+}
+
+function _goToDiscord() {
+  window.location = "https://discord.gg/ZtAWMP2DDd";
 }
