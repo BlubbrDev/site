@@ -1,17 +1,20 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
+import blubbr_whale from "../assets/img/blubbr_whale.png";
+
 export default function BlubbrNav() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="#home">
         <img
-          src="../assets/img/logo.png"
+          src={blubbr_whale}
           width="30"
           height="30"
           className="d-inline-block align-top"
           alt="Blubbr"
         />
+        Blubbr
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
