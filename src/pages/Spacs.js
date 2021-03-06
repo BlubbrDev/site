@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 // This page contains an embedded dashboard of spac information, powered by Tableau.
 // If you have any questions, you should contact @StevenK
-function Spacs() {
+export default function Spacs() {
   useEffect(() => loadTableau());
   return (
     <div
@@ -64,5 +64,3 @@ function loadTableau() {
   scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 }
-
-export default Spacs;

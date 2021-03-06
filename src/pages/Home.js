@@ -2,7 +2,7 @@ import React from "react";
 
 import logo from "../assets/img/logo.svg";
 
-function Home() {
+export default function Home() {
   return (
     <div>
       <img src={logo} className="App-logo" alt="logo" />
@@ -12,5 +12,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
