@@ -6,13 +6,12 @@ export default function BlubbrNav() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="#home">
         <img
-          src="img/blubbr_whale.png"
+          src="../assets/img/logo.png"
           width="30"
           height="30"
           className="d-inline-block align-top"
           alt="Blubbr"
         />
-        Blubbr
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
