@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 
 import PageRouter from "./components/PageRouter.js";
 import "bootstrap/dist/css/bootstrap.min.css";
