@@ -11,7 +11,7 @@ export default function BlubbrNav() {
           src={blubbr_whale}
           width="30"
           height="30"
-          className="d-inline-block align-top"
+          className="d-inline-block align-top mr-1"
           alt="Blubbr"
         />
         Blubbr
