@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Navbar, Nav } from "react-bootstrap";
 import { Discord } from "@icons-pack/react-simple-icons";
-
 import blubbr_whale from "../assets/img/blubbr_whale.png";
 
 export default function BlubbrNav() {
