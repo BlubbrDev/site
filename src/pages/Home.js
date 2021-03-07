@@ -8,7 +8,6 @@ export default function Home() {
     <>
       <BlubbrNav />
       <div>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Welcome to <code>blubbr.io</code>!
         </p>

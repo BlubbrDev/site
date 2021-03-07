@@ -6,13 +6,19 @@ import blubbr_whale from "../assets/img/blubbr_whale.png";
 
 export default function BlubbrNav() {
   return (
-    <Navbar collapseOnSelect sticky="top" expand="lg" bg="white">
+    <Navbar
+      collapseOnSelect
+      sticky="top"
+      expand="lg"
+      bg="white"
+      className="mx-5 mt-2"
+    >
       <Navbar.Brand href="/">
         <img
           src={blubbr_whale}
           width="30"
           height="30"
-          className="d-inline-block align-top mr-1"
+          className="d-inline-block align-top mr-2"
           alt="Blubbr"
         />
         Blubbr
@@ -22,7 +28,9 @@ export default function BlubbrNav() {
         <Nav className="ml-auto">
           <Nav.Link href="#features">Features</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
-          <Discord color="#61DAFB" size={24}></Discord>
+          <Nav.Link href="/discord">
+            <Discord color="#6FCEDC" size={24}></Discord>
+          </Nav.Link>
           <Button className="ml-2">Get Started</Button>
         </Nav>
       </Navbar.Collapse>
