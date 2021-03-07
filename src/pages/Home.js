@@ -1,12 +1,13 @@
 import React from "react";
 
-// import logo from "../assets/img/logo.svg";
-import BlubbrNav from "../components/BlubbrNav";
+import NavBar from "../components/nav-bar/NavBar";
+import Hero from "../components/hero/Hero";
 
 export default function Home() {
   return (
     <>
-      <BlubbrNav />
+      <NavBar />
+      <Hero />
       <div>
         <p>
           Welcome to <code>blubbr.io</code>!
