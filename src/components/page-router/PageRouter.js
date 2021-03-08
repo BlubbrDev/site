@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "../../pages/Home.js";
 import Spacs from "../../pages/Spacs.js";
+import PageNotFound from "../../pages/PageNotFound.js";
 
 // This componenet looks through all its children elements (Routes) and tries to render the
 // first route where the path of that route matches the current URL. In this case, we want
@@ -11,9 +12,10 @@ export default function PageRouter() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
+        <Route exact path="/" component={Home} />
         <Route exact path="/spacs" component={Spacs} />
         <Route exact path="/discord" render={_goToDiscord} />
-        <Route path="*" component={Home} />
+        <Route path="*" component={PageNotFound} />
       </Switch>
     </BrowserRouter>
   );
