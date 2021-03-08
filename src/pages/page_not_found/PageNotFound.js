@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import { RiveAnimation } from "rive-js";
+import "./PageNotFound.css";
 
 const MartyAnimation = () => {
   const canvas = useRef(null);
@@ -8,7 +9,7 @@ const MartyAnimation = () => {
 
   useEffect(() => {
     let animation = new RiveAnimation({
-      src: "/marty.riv",
+      src: "/page_not_found.riv",
       canvas: canvas.current,
       autoplay: true,
     });
