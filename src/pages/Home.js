@@ -1,13 +1,13 @@
 import React from "react";
 
 import NavBar from "../components/nav-bar/NavBar";
-import Hero from "../components/hero/Hero";
+// import Hero from "../components/hero/Hero";
 
 export default function Home() {
   return (
     <>
       <NavBar />
-      <Hero />
+      {/* <Hero /> */}
       <div>
         <p>
           Welcome to <code>blubbr.io</code>!
