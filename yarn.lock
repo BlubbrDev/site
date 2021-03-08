@@ -9929,6 +9929,11 @@
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
 
+"rive-js@^0.0.2":
+  "integrity" "sha512-8IH9M/APfi55BgNoRLf+EdOjr0Itpq1An+LGNxyxV5/nhR5MzzVQHcj6hgZ2RxNoHuIsUV8D8l6eJdoABl8M1A=="
+  "resolved" "https://registry.npmjs.org/rive-js/-/rive-js-0.0.2.tgz"
+  "version" "0.0.2"
+
 "rollup-plugin-babel@^4.3.3":
   "integrity" "sha512-Lek/TYp1+7g7I+uMfJnnSJ7YWoD58ajo6Oarhlex7lvUce+RCKRuGRSgztDO3/MF/PuGKmUL5iTHKf208UNszw=="
   "resolved" "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-4.4.0.tgz"

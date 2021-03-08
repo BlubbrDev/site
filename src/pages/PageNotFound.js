@@ -1,28 +1,41 @@
-/* eslint-disable no-undef */
-import React, { useEffect } from "react";
+import React from "react";
+import { useRef, useEffect } from "react";
+import { RiveAnimation } from "rive-js";
 
-export default function PageNotFound() {
-  useEffect(() => _loadRiveAnimation());
+const MartyAnimation = () => {
+  const canvas = useRef(null);
+  const container = useRef(null);
+
+  useEffect(() => {
+    let animation = new RiveAnimation({
+      src: "/marty.riv",
+      canvas: canvas.current,
+      autoplay: true,
+    });
+
+    resize();
+    window.addEventListener("resize", resize);
+    return () => {
+      animation.current?.stop();
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  const resize = () => {
+    if (container.current && canvas.current) {
+      const { width, height } = container.current.getBoundingClientRect();
+      canvas.current.width = width;
+      canvas.current.height = height;
+    }
+  };
 
   return (
-    <>
-      <canvas id="canvas" width="600" height="500">
-        <script src={_loadRiveAnimation}></script>
-      </canvas>
-      <code>page not found</code>
-    </>
+    <div ref={container} className="OuterContainer">
+      <div className="InnerContainer">
+        <canvas ref={canvas} />
+      </div>
+    </div>
   );
-}
+};
 
-function _loadRiveAnimation() {
-  // autoplays the first animation in the default artboard
-  new RiveAnimation({
-    src: "https://cdn.rive.app/animations/tv_color.riv",
-    canvas: document.getElementById("canvas"),
-    autoplay: true,
-    alignment: new CanvasAlignment({
-      fit: "fitWidth",
-      alignment: "center",
-    }),
-  });
-}
+export default MartyAnimation;
