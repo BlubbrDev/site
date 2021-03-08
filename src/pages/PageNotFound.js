@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import { RiveAnimation } from "rive-js";
-import "./PageNotFound.css";
+import "pages/PageNotFound.css";
 
 export default function PageNotFound() {
   const canvas = useRef(null);
