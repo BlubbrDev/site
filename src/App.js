@@ -1,6 +1,4 @@
 import React from "react";
-import "./App.css";
-
 import PageRouter from "./components/PageRouter.js";
 
 function App() {

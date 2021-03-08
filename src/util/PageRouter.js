@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
 import Home from "../pages/Home.js";
-import Spacs from "../pages/Spacs.js";
-import PageNotFound from "../pages/PageNotFound.js";
+import Spacs from "../pages/spacs/Spacs.js";
+import PageNotFound from "../pages/page_not_found/PageNotFound.js";
 
 // This componenet looks through all its children elements (Routes) and tries to render the
 // first route where the path of that route matches the current URL. In this case, we want

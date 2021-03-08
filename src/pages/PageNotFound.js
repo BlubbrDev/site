@@ -3,13 +3,13 @@ import { useRef, useEffect } from "react";
 import { RiveAnimation } from "rive-js";
 import "./PageNotFound.css";
 
-const MartyAnimation = () => {
+export default function PageNotFound() {
   const canvas = useRef(null);
   const container = useRef(null);
 
   useEffect(() => {
     let animation = new RiveAnimation({
-      src: "/page_not_found.riv",
+      src: "./page_not_found.riv",
       canvas: canvas.current,
       autoplay: true,
     });
@@ -37,6 +37,4 @@ const MartyAnimation = () => {
       </div>
     </div>
   );
-};
-
-export default MartyAnimation;
+}
