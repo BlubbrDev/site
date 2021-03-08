@@ -4,8 +4,8 @@ import { RiveAnimation } from "rive-js";
 import "pages/PageNotFound.css";
 
 export default function PageNotFound() {
-  const canvas = useRef(null);
-  const container = useRef(null);
+  const canvas = useRef<HTMLCanvasElement>(null);
+  const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let animation = new RiveAnimation({

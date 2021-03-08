@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "pages/Home.js";
-import Spacs from "pages/Spacs.js";
-import PageNotFound from "pages/PageNotFound.js";
+import Home from "pages/Home";
+import Spacs from "pages/Spacs";
+import PageNotFound from "pages/PageNotFound";
 
 // This componenet looks through all its children elements (Routes) and tries to render the
 // first route where the path of that route matches the current URL. In this case, we want
@@ -13,13 +13,15 @@ export default function PageRouter() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/spacs" component={Spacs} />
-        <Route exact path="/discord" render={_goToDiscord} />
-        <Route path="*" component={PageNotFound} />
+        <Route exact path="/discord" render={_redirectToDiscord} />
+        <Route component={PageNotFound} />
       </Switch>
     </BrowserRouter>
   );
 }
 
-function _goToDiscord() {
-  window.location = "https://discord.gg/ZtAWMP2DDd";
+function _redirectToDiscord(): React.ReactNode {
+  const discordURL = "https://discord.gg/ZtAWMP2DDd";
+  window.location.href = discordURL;
+  return null;
 }

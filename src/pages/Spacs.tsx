@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 
 // This page contains an embedded dashboard of spac information, powered by Tableau.
 // If you have any questions, you should contact @StevenK
-function Spacs() {
-  useEffect(() => loadTableau());
+export default function Spacs() {
+  useEffect(() => _loadTableau());
   return (
     <div
       className="tableauPlaceholder"
@@ -44,25 +44,23 @@ function Spacs() {
         <param name="language" value="en" />
         <param name="filter" value="publish=yes" />
       </object>
-      <script src={loadTableau}></script>
+      <script>{_loadTableau}</script>
     </div>
   );
 }
 
-function loadTableau() {
+function _loadTableau() {
   var divElement = document.getElementById("viz1614816342907");
-  var vizElement = divElement.getElementsByTagName("object")[0];
+  var vizElement = divElement!.getElementsByTagName("object")[0];
   vizElement.style.width = "100%";
-  if (divElement.offsetWidth > 800) {
-    vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-  } else if (divElement.offsetWidth > 500) {
-    vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+  if (divElement!.offsetWidth > 800) {
+    vizElement.style.height = divElement!.offsetWidth * 0.75 + "px";
+  } else if (divElement!.offsetWidth > 500) {
+    vizElement.style.height = divElement!.offsetWidth * 0.75 + "px";
   } else {
     vizElement.style.height = "1127px";
   }
   var scriptElement = document.createElement("script");
   scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  vizElement.parentNode!.insertBefore(scriptElement, vizElement);
 }
-
-export default Spacs;
