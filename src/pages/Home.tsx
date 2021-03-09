@@ -1,13 +1,9 @@
-import React from "react";
-// import logo from "assets/img/logo.svg";
+import LayoutDefault from "layouts/LayoutDefault";
 
 export default function Home() {
   return (
-    <div>
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <p>
-        Welcome to <code>blubbr.io</code>!
-      </p>
-    </div>
+    <LayoutDefault>
+      
+    </LayoutDefault>
   );
 }

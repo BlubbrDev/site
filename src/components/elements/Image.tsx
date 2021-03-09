@@ -16,7 +16,7 @@ const defaultProps: ImageProp = {
   alt: undefined,
 };
 
-export default function Image(imgProp: ImageProp, ...props: any[]) {
+export default function Image(imgProp: ImageProp = defaultProps, ...props: any[]) {
   const [loaded, setLoaded] = useState(false);
 
   const image = useRef(null);
