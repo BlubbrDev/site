@@ -1,38 +1,32 @@
-import React, { ElementType } from "react";
+import React, { ElementType, ReactNode, ReactNodeArray } from "react";
 import classNames from "classnames";
+import { JsxAttribute, JsxAttributes } from "typescript";
 
 type ButtonProps = {
   className?: string;
-  tag?: ElementType;
+  tag: ElementType;
   color?: string;
   size?: string;
+  href: string;
   loading?: boolean;
   wide?: boolean;
   wideMobile?: boolean;
   disabled?: boolean;
+  children?: ReactNode | ReactNodeArray;
+  props?: JsxAttribute | JsxAttributes[];
 };
 
-const defaultProps: ButtonProps = {
-  tag: "button",
-  color: "",
-  size: "",
-  loading: false,
-  wide: false,
-  wideMobile: false,
-  disabled: false,
-};
-
-const Button = ({
-  className,
-  tag,
-  color,
-  size,
-  loading,
-  wide,
-  wideMobile,
-  disabled,
-  ...props
-}: ButtonProps = defaultProps) => {
+export default function Button({
+  tag = "button",
+  href = "/",
+  color = "",
+  className = "",
+  size = "",
+  loading = false,
+  wide = false,
+  wideMobile = false,
+  disabled = false,
+}: ButtonProps) {
   const classes = classNames(
     "button",
     color && `button-${color}`,
@@ -44,7 +38,5 @@ const Button = ({
   );
 
   const Component = tag;
-  return <Component {...props} className={classes} disabled={disabled} />;
-};
-
-export default Button;
+  return <Component href={href} className={classes} disabled={disabled} />;
+}

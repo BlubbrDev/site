@@ -1,34 +1,32 @@
-import React, { MouseEventHandler, ReactNode, useEffect } from "react";
+import React, {
+  MouseEventHandler,
+  ReactNode,
+  ReactNodeArray,
+  useEffect,
+} from "react";
 import classNames from "classnames";
 
 type ModalProp = {
   className?: String;
-  children: ReactNode[] | null;
+  children?: ReactNode | ReactNodeArray;
   handleClose?: MouseEventHandler<HTMLDivElement | HTMLButtonElement>;
   show: boolean;
-  closeHidden: boolean;
+  closeHidden?: boolean;
   video: string;
   videoTag: string;
+  id: string;
 };
 
-const defaultProps: ModalProp = {
-  children: null,
-  show: false,
-  closeHidden: false,
-  video: "",
-  videoTag: "iframe",
-};
-
-const Modal = ({
-  className,
-  children,
-  handleClose,
-  show,
-  closeHidden,
-  video,
-  videoTag,
-  ...props
-}: ModalProp = defaultProps) => {
+export default function Modal({
+  className = undefined,
+  children = null,
+  handleClose = undefined,
+  show = false,
+  closeHidden = false,
+  video = "",
+  videoTag = "iframe",
+  id = "video-modal",
+}: ModalProp) {
   useEffect(() => {
     document.addEventListener("keydown", keyPress);
     document.addEventListener("click", stopProgagation);
@@ -70,7 +68,7 @@ const Modal = ({
   return (
     <>
       {show && (
-        <div {...props} className={classes} onClick={handleClose}>
+        <div id={id} className={classes} onClick={handleClose}>
           <div className="modal-inner" onClick={stopProgagation}>
             {video ? (
               <div className="responsive-video">
@@ -102,6 +100,4 @@ const Modal = ({
       )}
     </>
   );
-};
-
-export default Modal;
+}

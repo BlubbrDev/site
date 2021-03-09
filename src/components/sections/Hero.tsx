@@ -86,7 +86,7 @@ export default function Hero(
           >
             <a
               data-video="https://player.vimeo.com/video/174002812"
-              href="#0"
+              href="/"
               aria-controls="video-modal"
               onClick={openModal}
             >

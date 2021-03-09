@@ -23,6 +23,7 @@ export default function Image(imgProp: ImageProp = defaultProps, ...props: any[]
 
   useEffect(() => {
     handlePlaceholder(image.current);
+    // eslint-disable-next-line
   }, []);
 
   const placeholderSrc = (width: number, height: number) => {

@@ -1,13 +1,12 @@
-import React from "react";
+import React, { ReactNode, ReactNodeArray } from "react";
 import classNames from "classnames";
 
 type ButtonGroupProp = {
   className?: String;
-  children: Element[];
-  props?: any[];
+  children: ReactNode | ReactNodeArray;
 };
 
-export default function ButtonGroup({ className, ...props }: ButtonGroupProp) {
-  const classes = classNames("button-group", className);
+export default function ButtonGroup(buttonGroupProps: ButtonGroupProp, ...props: any) {
+  const classes = classNames("button-group", buttonGroupProps.className);
   return <div {...props} className={classes} />;
 }
