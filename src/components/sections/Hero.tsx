@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import { SectionProps, DefaultSectionProps } from "../../utils/SectionProps";
-import ButtonGroup from "../elements/ButtonGroup";
-import Button from "../elements/Button";
-import Image from "../elements/Image";
-import Modal from "../elements/Modal";
+import { SectionProps, DefaultSectionProps } from "utils/SectionProps";
+import ButtonGroup from "components/elements/ButtonGroup";
+import Button from "components/elements/Button";
+import Image from "components/elements/Image";
+import Modal from "components/elements/Modal";
 
 export default function Hero(
   prop: SectionProps = DefaultSectionProps,
