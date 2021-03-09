@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import Logo from "components/layout/partials/Logo";
 import FooterNav from "components/layout/partials/FooterNav";
@@ -41,8 +42,8 @@ export default function Footer(
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <FooterNav />
             <div className="footer-copyright">
-              Made by the <a href="https://blubbr.io"> blubbr</a> team in
-              Seattle, Washington. All right reserved.
+              Made by the <a href="https://blubbr.io"> blubbr</a> team on planet
+              Earth. All right reserved.
             </div>
           </div>
         </div>

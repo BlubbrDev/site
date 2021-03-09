@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Logo from "./partials/Logo";
@@ -14,14 +14,14 @@ interface HeaderProp {
 
 const defaultProps: HeaderProp = {
   className: "",
-  navPosition: "",
+  navPosition: undefined,
   hideNav: false,
   hideSignin: false,
   bottomOuterDivider: false,
   bottomDivider: false,
 };
 
-export default function Header(headerProp: HeaderProp, ...props: any[]) {
+export default function Header(headerProp: HeaderProp = defaultProps, ...props: any[]) {
   const [isActive, setIsactive] = useState(false);
 
   const nav = useRef<HTMLDivElement>(null);
