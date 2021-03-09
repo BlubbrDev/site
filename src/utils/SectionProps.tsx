@@ -22,7 +22,7 @@ const SectionShared = {
 
 // Default section props
 export interface SectionProps {
-  className?: string;
+  className?: String;
   topOuterDivider: boolean;
   bottomOuterDivider: boolean;
   topDivider: boolean;

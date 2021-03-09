@@ -100,11 +100,11 @@ export default function Hero(
             </a>
           </div>
           <Modal
-            id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
             video="https://player.vimeo.com/video/174002812"
             videoTag="iframe"
+            id="video-modal"
           />
         </div>
       </div>

@@ -1,19 +1,18 @@
 import React, { ElementType } from "react";
-import PropTypes, { string } from "prop-types";
 import classNames from "classnames";
 
-interface propTypes {
-  className?: String;
-  tag?: ElementType;
-  color?: String;
-  size?: String;
-  loading?: boolean;
-  wide?: boolean;
-  wideMobile?: boolean;
-  disabled?: boolean;
-}
+type ButtonProps = {
+  className?: string;
+  tag: ElementType;
+  color: string;
+  size: string;
+  loading: boolean;
+  wide: boolean;
+  wideMobile: boolean;
+  disabled: boolean;
+};
 
-const defaultProps: propTypes = {
+const defaultProps: ButtonProps = {
   tag: "button",
   color: "",
   size: "",
@@ -23,22 +22,29 @@ const defaultProps: propTypes = {
   disabled: false,
 };
 
-export default function Button(
-  buttonProps: propTypes = defaultProps,
-  ...props: any[]
-) {
+const Button = ({
+  className,
+  tag,
+  color,
+  size,
+  loading,
+  wide,
+  wideMobile,
+  disabled,
+  ...props
+}: ButtonProps = defaultProps) => {
   const classes = classNames(
     "button",
-    buttonProps.color && `button-${buttonProps.color}`,
-    buttonProps.size && `button-${buttonProps.size}`,
-    buttonProps.loading && "is-loading",
-    buttonProps.wide && "button-block",
-    buttonProps.wideMobile && "button-wide-mobile",
-    buttonProps.className
+    color && `button-${color}`,
+    size && `button-${size}`,
+    loading && "is-loading",
+    wide && "button-block",
+    wideMobile && "button-wide-mobile",
+    className
   );
 
-  const Component = buttonProps.tag;
-  return (
-    <Component {...props} className={classes} disabled={buttonProps.disabled} />
-  );
-}
+  const Component = tag;
+  return <Component {...props} className={classes} disabled={disabled} />;
+};
+
+export default Button;
