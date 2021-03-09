@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import reportWebVitals from "util/reportWebVitals";
 
 import App from "App";
+import reportWebVitals from "util/reportWebVitals";
 import * as serviceWorker from "util/serviceWorker";
+
+import "./assets/scss/style.scss";
 
 ReactDOM.render(
   <React.StrictMode>
