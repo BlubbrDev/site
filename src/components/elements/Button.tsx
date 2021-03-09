@@ -3,13 +3,13 @@ import classNames from "classnames";
 
 type ButtonProps = {
   className?: string;
-  tag: ElementType;
-  color: string;
-  size: string;
-  loading: boolean;
-  wide: boolean;
-  wideMobile: boolean;
-  disabled: boolean;
+  tag?: ElementType;
+  color?: string;
+  size?: string;
+  loading?: boolean;
+  wide?: boolean;
+  wideMobile?: boolean;
+  disabled?: boolean;
 };
 
 const defaultProps: ButtonProps = {

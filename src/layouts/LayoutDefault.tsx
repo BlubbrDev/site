@@ -1,9 +1,9 @@
-import React, { ReactNodeArray } from "react";
+import React, { ReactNode, ReactNodeArray } from "react";
 import Header from "components/layout/Header";
 import Footer from "components/layout/Footer";
 
 interface LayoutDefaultProps {
-  children: ReactNodeArray;
+  children: ReactNode | ReactNodeArray;
 }
 
 export default function LayoutDefault(props: LayoutDefaultProps) {
