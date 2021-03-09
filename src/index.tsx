@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "App";
-import reportWebVitals from "util/reportWebVitals";
-import * as serviceWorker from "util/serviceWorker";
+import reportWebVitals from "utils/reportWebVitals";
+import * as serviceWorker from "utils/serviceWorker";
 
 import "assets/scss/style.scss";
 
