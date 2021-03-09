@@ -5,7 +5,7 @@ import App from "App";
 import reportWebVitals from "util/reportWebVitals";
 import * as serviceWorker from "util/serviceWorker";
 
-import "./assets/scss/style.scss";
+import "assets/scss/style.scss";
 
 ReactDOM.render(
   <React.StrictMode>
