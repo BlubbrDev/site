@@ -1,25 +1,28 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
-import Logo from "partials/Logo";
-import FooterNav from "partials/FooterNav";
-import FooterSocial from "partials/FooterSocial";
+import Logo from "components/layout/partials/Logo";
+import FooterNav from "components/layout/partials/FooterNav";
+import FooterSocial from "components/layout/partials/FooterSocial";
 
-interface FooterProps {
-  topOuterDivider: boolean;
-  topDivider: boolean;
+interface FooterProp {
+  className?: String;
+  topOuterDivider?: boolean;
+  topDivider?: boolean;
 }
 
-const defaultProps: FooterProps = {
+const defaultProps: FooterProp = {
+  className: undefined,
   topOuterDivider: false,
   topDivider: false,
 };
 
-const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
+export default function Footer(
+  footerProp: FooterProp = defaultProps,
+  ...props: any[]
+) {
   const classes = classNames(
     "site-footer center-content-mobile",
-    topOuterDivider && "has-top-divider",
-    className
+    footerProp.topOuterDivider && "has-top-divider",
+    footerProp.className
   );
 
   return (
@@ -28,7 +31,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
         <div
           className={classNames(
             "site-footer-inner",
-            topDivider && "has-top-divider"
+            footerProp.topDivider && "has-top-divider"
           )}
         >
           <div className="footer-top space-between text-xxs">
@@ -46,9 +49,4 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
       </div>
     </footer>
   );
-};
-
-Footer.propTypes = propTypes;
-Footer.defaultProps = defaultProps;
-
-export default Footer;
+}
