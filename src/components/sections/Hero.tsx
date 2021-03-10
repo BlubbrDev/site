@@ -52,7 +52,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
                   >
                     Join Discord
                   </Button>
-                  <Button tag="a" color="dark" wideMobile href="">
+                  <Button tag="a" color="dark" wideMobile href="#bots">
                     Meet the Bots
                   </Button>
                 </ButtonGroup>
@@ -60,6 +60,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
             </div>
           </div>
           <div
+            id="bots"
             className="hero-figure reveal-from-bottom illustration-element-01"
             data-reveal-value="20px"
             data-reveal-delay="400"

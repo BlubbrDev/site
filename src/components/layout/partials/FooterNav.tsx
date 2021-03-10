@@ -1,10 +1,9 @@
 import React from "react";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
 
 interface FooterNavProp {
-  className?: String,
-  props?: any[],
+  className?: String;
+  props?: any[];
 }
 
 export default function FooterNav(prop: FooterNavProp) {
@@ -14,9 +13,12 @@ export default function FooterNav(prop: FooterNavProp) {
     <nav {...prop.props} className={classes}>
       <ul className="list-reset">
         <li>
-          <Link to="#0">Contact</Link>
+          <a href="#bots">About</a>
         </li>
         <li>
+          <a href="#features">Features</a>
+        </li>
+        {/* <li>
           <Link to="#0">About us</Link>
         </li>
         <li>
@@ -24,7 +26,7 @@ export default function FooterNav(prop: FooterNavProp) {
         </li>
         <li>
           <Link to="#0">Support</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

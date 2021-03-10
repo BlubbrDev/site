@@ -41,7 +41,7 @@ export default function FeaturesTiles(
   };
 
   return (
-    <section id="#about" {...props} className={outerClasses}>
+    <section id="features" {...props} className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

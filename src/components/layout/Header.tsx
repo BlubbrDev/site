@@ -99,7 +99,7 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
                 className={classNames("header-nav", isActive && "is-active")}
               >
                 <div className="header-nav-inner">
-                  {/* <ul
+                  <ul
                     className={classNames(
                       "list-reset text-xs",
                       headerProp.navPosition &&
@@ -107,11 +107,15 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
                     )}
                   >
                     <li>
-                      <Link to="#" onClick={closeMenu}>
-                        Pricing
-                      </Link>
+                      <a href="#bots">About</a>
                     </li>
-                  </ul> */}
+                    <li>
+                      <a href="#features" onClick={closeMenu}>
+                        Features
+                      </a>
+                      {/* <Link to="#features" onClick={closeMenu}>Features</Link> */}
+                    </li>
+                  </ul>
                   {!headerProp.hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>
