@@ -1,4 +1,4 @@
-import React, { ElementType, ReactNode, ReactNodeArray } from "react";
+import React, { ElementType, ReactNode } from "react";
 import classNames from "classnames";
 import { JsxAttribute, JsxAttributes } from "typescript";
 
@@ -12,7 +12,7 @@ type ButtonProps = {
   wide?: boolean;
   wideMobile?: boolean;
   disabled?: boolean;
-  children?: ReactNode | ReactNodeArray;
+  children: ReactNode[] | ReactNode;
   props?: JsxAttribute | JsxAttributes[];
 };
 
@@ -26,6 +26,7 @@ export default function Button({
   wide = false,
   wideMobile = false,
   disabled = false,
+  children = undefined,
 }: ButtonProps) {
   const classes = classNames(
     "button",
@@ -38,5 +39,9 @@ export default function Button({
   );
 
   const Component = tag;
-  return <Component href={href} className={classes} disabled={disabled} />;
+  return (
+    <Component href={href} className={classes} disabled={disabled}>
+      {children}
+    </Component>
+  );
 }

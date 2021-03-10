@@ -5,6 +5,7 @@ import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
 import Image from "components/elements/Image";
 import Modal from "components/elements/Modal";
+import placeholder from "assets/images/video-placeholder.jpg";
 
 export default function Hero(prop: SectionProps = DefaultSectionProps) {
   const [videoModalActive, setVideomodalactive] = useState(false);
@@ -43,16 +44,17 @@ export default function Hero(prop: SectionProps = DefaultSectionProps) {
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              Landing template for{" "}
-              <span className="text-color-primary">startups</span>
+              The future of{" "}
+              <span className="text-color-primary">investing</span>
             </h1>
             <div className="container-xs">
               <p
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="400"
               >
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                NotiFi is a trading bot that scrapes the SEC website to find new
+                filings for SPACs to notify traders when to trade before the
+                rest of the market finds out.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
@@ -60,17 +62,12 @@ export default function Hero(prop: SectionProps = DefaultSectionProps) {
                     tag="a"
                     color="primary"
                     wideMobile
-                    href="https://cruip.com/"
+                    href="https://discord.gg/ZtAWMP2DDd"
                   >
-                    Get started
+                    Join Discord
                   </Button>
-                  <Button
-                    tag="a"
-                    color="dark"
-                    wideMobile
-                    href="https://github.com/cruip/open-react-template/"
-                  >
-                    View on Github
+                  <Button tag="a" color="dark" wideMobile href="">
+                    Meet the Bots
                   </Button>
                 </ButtonGroup>
               </div>
@@ -89,7 +86,7 @@ export default function Hero(prop: SectionProps = DefaultSectionProps) {
             >
               <Image
                 className="has-shadow"
-                src={"assets/images/video-placeholder.jpg"}
+                src={placeholder}
                 alt="Hero"
                 width={896}
                 height={504}

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Logo from "./partials/Logo";
+import Button from "components/elements/Button";
 
 interface HeaderProp {
   className?: String;
@@ -106,21 +107,22 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
                     )}
                   >
                     <li>
-                      <Link to="#0" onClick={closeMenu}>
-                        Documentation
+                      <Link to="#" onClick={closeMenu}>
+                        Pricing
                       </Link>
                     </li>
                   </ul>
                   {!headerProp.hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>
-                        <Link
-                          to="#0"
-                          className="button button-primary button-wide-mobile button-sm"
-                          onClick={closeMenu}
+                        <Button
+                          tag="a"
+                          color="primary"
+                          wideMobile
+                          href="https://discord.gg/ZtAWMP2DDd"
                         >
-                          Sign up
-                        </Link>
+                          Join Discord
+                        </Button>
                       </li>
                     </ul>
                   )}
