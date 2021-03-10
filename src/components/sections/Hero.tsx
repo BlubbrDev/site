@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import { SectionProps, DefaultSectionProps } from "utils/SectionProps";
+import { SectionProps, defaultSectionProps } from "utils/SectionProps";
 import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
 import Image from "components/elements/Image";
 import Modal from "components/elements/Modal";
 import placeholder from "assets/images/video-placeholder.jpg";
 
-export default function Hero(prop: SectionProps = DefaultSectionProps) {
+export default function Hero(prop: SectionProps = defaultSectionProps) {
   const [videoModalActive, setVideomodalactive] = useState(false);
 
   const openModal = (e: any) => {
