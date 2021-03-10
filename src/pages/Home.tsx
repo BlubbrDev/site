@@ -15,6 +15,7 @@ export default function Home() {
         imageFill
         className="illustration-section-02"
       />
+      <Testimonial topDivider />
     </LayoutDefault>
   );
 }

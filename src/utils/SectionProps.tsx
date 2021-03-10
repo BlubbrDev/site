@@ -29,10 +29,10 @@ export const defaultSectionProps: SectionProps = {
 
 // Section split props
 export interface SectionSplitProps extends SectionProps {
-  invertMobile: boolean;
-  invertDesktop: boolean;
-  alignTop: boolean;
-  imageFill: boolean;
+  invertMobile?: boolean;
+  invertDesktop?: boolean;
+  alignTop?: boolean;
+  imageFill?: boolean;
 }
 
 export const defaultSectionSplitProps: SectionSplitProps = {

@@ -7,6 +7,10 @@ import {
 import SectionHeader from "./partials/SectionHeader";
 import Image from "components/elements/Image";
 
+import figure_1 from "assets/images/features-split-image-01.png";
+import figure_2 from "assets/images/features-split-image-02.png";
+import figure_3 from "assets/images/features-split-image-03.png";
+
 export default function FeaturesSplit(
   props: SectionSplitProps = defaultSectionSplitProps
 ) {
@@ -68,7 +72,7 @@ export default function FeaturesSplit(
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/features-split-image-01.png")}
+                  src={figure_1}
                   alt="Features split 01"
                   width={528}
                   height={396}
@@ -100,7 +104,7 @@ export default function FeaturesSplit(
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/features-split-image-02.png")}
+                  src={figure_2}
                   alt="Features split 02"
                   width={528}
                   height={396}
@@ -132,7 +136,7 @@ export default function FeaturesSplit(
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/features-split-image-03.png")}
+                  src={figure_3}
                   alt="Features split 03"
                   width={528}
                   height={396}
