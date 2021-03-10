@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Logo from "./partials/Logo";
 import Button from "components/elements/Button";
 
@@ -99,7 +99,7 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
                 className={classNames("header-nav", isActive && "is-active")}
               >
                 <div className="header-nav-inner">
-                  <ul
+                  {/* <ul
                     className={classNames(
                       "list-reset text-xs",
                       headerProp.navPosition &&
@@ -111,7 +111,7 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
                         Pricing
                       </Link>
                     </li>
-                  </ul>
+                  </ul> */}
                   {!headerProp.hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>

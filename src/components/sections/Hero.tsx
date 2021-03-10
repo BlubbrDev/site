@@ -1,25 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
 import { SectionProps, defaultSectionProps } from "utils/SectionProps";
 import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
-import Image from "components/elements/Image";
-import Modal from "components/elements/Modal";
-import placeholder from "assets/images/video-placeholder.jpg";
+import HeroAnimation from "./partials/HeroAnimation";
 
 export default function Hero(prop: SectionProps = defaultSectionProps) {
-  const [videoModalActive, setVideomodalactive] = useState(false);
-
-  const openModal = (e: any) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  };
-
-  const closeModal = (e: any) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  };
-
   const outerClasses = classNames(
     "hero section center-content",
     prop.topOuterDivider && "has-top-divider",
@@ -78,28 +64,8 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
             data-reveal-value="20px"
             data-reveal-delay="400"
           >
-            <a
-              data-video="https://player.vimeo.com/video/174002812"
-              href="/"
-              aria-controls="video-modal"
-              onClick={openModal}
-            >
-              <Image
-                className="has-shadow"
-                src={placeholder}
-                alt="Hero"
-                width={896}
-                height={504}
-              />
-            </a>
+            <HeroAnimation/>
           </div>
-          <Modal
-            show={videoModalActive}
-            handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
-            videoTag="iframe"
-            id="video-modal"
-          />
         </div>
       </div>
     </section>

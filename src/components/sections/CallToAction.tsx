@@ -31,7 +31,7 @@ export default function CallToAction(
       <div className="container">
         <div className={innerClasses}>
           <div className="cta-slogan">
-            <h3 className="m-0">For previewing layouts and visual?</h3>
+            <h3 className="m-0">Welcome to the future of investing</h3>
           </div>
           <div className="cta-action">
             <Button

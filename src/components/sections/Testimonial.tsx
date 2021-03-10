@@ -24,7 +24,7 @@ export default function Testimonial(
   const tilesClasses = classNames("tiles-wrap", props.pushLeft && "push-left");
 
   const sectionHeader = {
-    title: "Customer testimonials",
+    title: "The future is here",
     paragraph:
       "Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.",
   };
@@ -50,11 +50,11 @@ export default function Testimonial(
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                   <span className="testimonial-item-name text-color-high">
-                    Roman Level
+                    BigTitty666
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">AppName</a>
+                    <a href="#0">Sailor</a>
                   </span>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function Testimonial(
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">AppName</a>
+                    <a href="#0">Captain</a>
                   </span>
                 </div>
               </div>
