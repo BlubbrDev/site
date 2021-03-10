@@ -52,3 +52,13 @@ export const defaultSectionTileProps: SectionTileProps = {
   ...defaultSectionProps,
   pushLeft: false,
 };
+
+// Call to action props
+export interface CallToActionProps extends SectionProps {
+  split?: boolean;
+}
+
+export const defaultCallToActionProps: CallToActionProps = {
+  ...defaultSectionProps,
+  split: true,
+};
