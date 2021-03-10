@@ -5,11 +5,11 @@ interface FooterSocialProp {
   className?: String;
 }
 
-export default function FooterSocial(footerSocialProp: FooterSocialProp, ...props: any[]) {
+export default function FooterSocial(footerSocialProp: FooterSocialProp) {
   const classes = classNames("footer-social", footerSocialProp.className);
 
   return (
-    <div {...props} className={classes}>
+    <div className={classes}>
       <ul className="list-reset">
         <li>
           <a href="https://facebook.com/">

@@ -21,7 +21,7 @@ const defaultProps: HeaderProp = {
   bottomDivider: false,
 };
 
-export default function Header(headerProp: HeaderProp = defaultProps, ...props: any[]) {
+export default function Header(headerProp: HeaderProp = defaultProps) {
   const [isActive, setIsactive] = useState(false);
 
   const nav = useRef<HTMLDivElement>(null);
@@ -72,7 +72,7 @@ export default function Header(headerProp: HeaderProp = defaultProps, ...props: 
   );
 
   return (
-    <header {...props} className={classes}>
+    <header className={classes}>
       <div className="container">
         <div
           className={classNames(

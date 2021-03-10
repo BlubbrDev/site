@@ -6,10 +6,7 @@ import Button from "components/elements/Button";
 import Image from "components/elements/Image";
 import Modal from "components/elements/Modal";
 
-export default function Hero(
-  prop: SectionProps = DefaultSectionProps,
-  ...props: any[]
-) {
+export default function Hero(prop: SectionProps = DefaultSectionProps) {
   const [videoModalActive, setVideomodalactive] = useState(false);
 
   const openModal = (e: any) => {
@@ -38,7 +35,7 @@ export default function Hero(
   );
 
   return (
-    <section {...props} className={outerClasses}>
+    <section className={outerClasses}>
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">
@@ -92,7 +89,7 @@ export default function Hero(
             >
               <Image
                 className="has-shadow"
-                src={require("./../../assets/images/video-placeholder.jpg")}
+                src={"assets/images/video-placeholder.jpg"}
                 alt="Hero"
                 width={896}
                 height={504}

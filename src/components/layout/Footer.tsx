@@ -16,10 +16,7 @@ const defaultProps: FooterProp = {
   topDivider: false,
 };
 
-export default function Footer(
-  footerProp: FooterProp = defaultProps,
-  ...props: any[]
-) {
+export default function Footer(footerProp: FooterProp = defaultProps) {
   const classes = classNames(
     "site-footer center-content-mobile",
     footerProp.topOuterDivider && "has-top-divider",
@@ -27,7 +24,7 @@ export default function Footer(
   );
 
   return (
-    <footer {...props} className={classes}>
+    <footer className={classes}>
       <div className="container">
         <div
           className={classNames(
