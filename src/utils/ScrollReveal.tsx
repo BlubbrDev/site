@@ -4,13 +4,11 @@ import { throttle } from "lodash";
 
 const ScrollReveal = React.forwardRef((props, ref) => {
   const [viewportHeight, setViewportheight] = useState(window.innerHeight);
-  const [revealEl, setRevealel] = useState<HTMLElement[]>();
+  const [revealEl, setRevealel] = useState<HTMLElement[]>([]);
 
   const checkComplete = () => {
-    return (
-      revealEl.length <=
-      document.querySelectorAll("[class*=reveal-].is-revealed").length
-    );
+    let query = "[class*=reveal-].is-revealed";
+    return revealEl.length <= document.querySelectorAll(query).length;
   };
 
   const elementIsVisible = (el: HTMLElement, offset: number) => {
@@ -21,11 +19,13 @@ const ScrollReveal = React.forwardRef((props, ref) => {
     if (checkComplete()) return;
     for (let i = 0; i < revealEl.length; i++) {
       let el: HTMLElement = revealEl[i];
-      let revealDelay = parseInt(el.getAttribute("data-reveal-delay"));
+        let revealDelay = el.getAttribute("data-reveal-delay") as string;
+        ? parseInt(el.getAttribute("data-reveal-delay"))
+        : 0;
       let revealOffset = el.getAttribute("data-reveal-offset")
         ? el.getAttribute("data-reveal-offset")
         : "200";
-      let listenedEl: HTMLElement = el.getAttribute("data-reveal-container")
+      let listenedEl = el.getAttribute("data-reveal-container")
         ? el.closest(el.getAttribute("data-reveal-container"))
         : el;
       if (
