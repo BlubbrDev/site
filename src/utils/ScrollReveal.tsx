@@ -7,11 +7,12 @@ import React, {
 } from "react";
 import { throttle } from "lodash";
 
-type props = {
+type ScrollRevealProps = {
   children: ReactNode | ReactNodeArray;
 };
 
-const ScrollReveal = React.forwardRef((props, ref) => {
+// eslint-disable-next-line react/display-name
+const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
   const [viewportHeight, setViewportheight] = useState(window.innerHeight);
   const [revealEl, setRevealel] = useState<Element[]>([]);
 

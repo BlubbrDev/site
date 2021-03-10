@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import PageRouter from "utils/PageRouter";
+import ScrollReveal from "utils/ScrollReveal";
 
+// TODO: add google analytics module
 // import React, { useEffect, useRef } from "react";
-// import { useLocation } from "react-router-dom";
 
 // Initialize Google Analytics
 // ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -11,16 +14,18 @@ import React from "react";
 //   ReactGA.pageview(page);
 // };
 
-import PageRouter from "utils/PageRouter";
-// import LayoutDefault from "layouts/LayoutDefault";
-
 export default function App() {
-  // let location = useLocation();
+  const childRef = useRef<any>();
+  let location = useLocation<any>();
 
-  // useEffect(() => {
-  //   const page = location.pathname;
-  //   document.body.classList.add("is-loaded");
-  //   // trackPage(page);
-  // }, [location]);
-  return <PageRouter />;
+  useEffect(() => {
+    document.body.classList.add("is-loaded");
+    childRef.current.init();
+    // trackPage(location.pathname);
+  }, [location]);
+  return (
+    <ScrollReveal ref={childRef}>
+      <PageRouter />
+    </ScrollReveal>
+  );
 }
