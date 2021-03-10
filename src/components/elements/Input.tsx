@@ -57,7 +57,7 @@ export default function Input(props: InputProps = defaultInputProps) {
   const classes = classNames(
     "form-input",
     props.size && `form-input-${props.size}`,
-    status && `form-${status}`,
+    props.status && `form-${props.status}`,
     props.className
   );
 
@@ -81,7 +81,7 @@ export default function Input(props: InputProps = defaultInputProps) {
         />
         {props.children}
       </div>
-      {props.hint && <FormHint status={status}>{props.hint}</FormHint>}
+      {props.hint && <FormHint status={props.status}>{props.hint}</FormHint>}
     </>
   );
 }

@@ -71,7 +71,7 @@ export default function FeaturesTiles(
 
             <div
               className="tiles-item reveal-from-bottom"
-              data-reveal-delay="200"
+              data-reveal-delay="100"
             >
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -97,7 +97,7 @@ export default function FeaturesTiles(
 
             <div
               className="tiles-item reveal-from-bottom"
-              data-reveal-delay="200"
+              data-reveal-delay="50"
             >
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -146,7 +146,7 @@ export default function FeaturesTiles(
 
             <div
               className="tiles-item reveal-from-bottom"
-              data-reveal-delay="200"
+              data-reveal-delay="100"
             >
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -172,7 +172,7 @@ export default function FeaturesTiles(
 
             <div
               className="tiles-item reveal-from-bottom"
-              data-reveal-delay="400"
+              data-reveal-delay="200"
             >
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">

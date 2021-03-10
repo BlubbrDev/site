@@ -4,6 +4,7 @@ import LayoutDefault from "layouts/LayoutDefault";
 import FeaturesTiles from "components/sections/FeaturesTiles";
 import FeaturesSplit from "components/sections/FeaturesSplit";
 import Testimonial from "components/sections/Testimonial";
+import CallToAction from "components/sections/CallToAction";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         className="illustration-section-02"
       />
       <Testimonial topDivider />
+      <CallToAction split />
     </LayoutDefault>
   );
 }

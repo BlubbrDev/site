@@ -42,7 +42,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
           <div className="hero-content">
             <h1
               className="mt-0 mb-16 reveal-from-bottom"
-              data-reveal-delay="200"
+              data-reveal-delay="100"
             >
               The future of{" "}
               <span className="text-color-primary">investing</span>
@@ -50,13 +50,13 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
             <div className="container-xs">
               <p
                 className="m-0 mb-32 reveal-from-bottom"
-                data-reveal-delay="400"
+                data-reveal-delay="200"
               >
                 NotiFi is a trading bot that scrapes the SEC website to find new
                 filings for SPACs to notify traders when to trade before the
                 rest of the market finds out.
               </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div className="reveal-from-bottom" data-reveal-delay="300">
                 <ButtonGroup>
                   <Button
                     tag="a"
@@ -76,7 +76,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
           <div
             className="hero-figure reveal-from-bottom illustration-element-01"
             data-reveal-value="20px"
-            data-reveal-delay="800"
+            data-reveal-delay="400"
           >
             <a
               data-video="https://player.vimeo.com/video/174002812"
