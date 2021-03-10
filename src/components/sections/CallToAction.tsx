@@ -4,7 +4,8 @@ import {
   CallToActionProps,
   defaultCallToActionProps,
 } from "utils/SectionProps";
-import Input from "components/elements/Input";
+// import Input from "components/elements/Input";
+import Button from "components/elements/Button";
 
 export default function CallToAction(
   props: CallToActionProps = defaultCallToActionProps
@@ -33,7 +34,15 @@ export default function CallToAction(
             <h3 className="m-0">For previewing layouts and visual?</h3>
           </div>
           <div className="cta-action">
-            <Input
+            <Button
+              tag="a"
+              color="dark"
+              wideMobile
+              href="https://discord.gg/ZtAWMP2DDd"
+            >
+              Join Discord
+            </Button>
+            {/* <Input
               id="newsletter"
               type="email"
               label="Subscribe"
@@ -47,7 +56,7 @@ export default function CallToAction(
                   fill="#376DF9"
                 />
               </svg>
-            </Input>
+            </Input> */}
           </div>
         </div>
       </div>

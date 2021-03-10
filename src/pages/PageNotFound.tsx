@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import { RiveAnimation } from "rive-js";
-import "pages/PageNotFound.css";
+import LayoutDefault from "layouts/LayoutDefault";
 
 export default function PageNotFound() {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -31,10 +31,16 @@ export default function PageNotFound() {
   };
 
   return (
-    <div ref={container} className="OuterContainer">
-      <div className="InnerContainer">
-        <canvas ref={canvas} />
+    <LayoutDefault>
+      <div
+        ref={container}
+        className="OuterContainer"
+        style={{ height: "calc(100vh - 286px)", marginTop: "80px" }}
+      >
+        <div className="InnerContainer">
+          <canvas ref={canvas} />
+        </div>
       </div>
-    </div>
+    </LayoutDefault>
   );
 }

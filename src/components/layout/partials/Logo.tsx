@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Image from "components/elements/Image";
-import logo from "assets/images/logo.svg";
+import logo from "assets/images/logo.png";
 
 interface LogoProp {
   className?: String;
