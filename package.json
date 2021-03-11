@@ -22,13 +22,16 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint 'src/**/*.ts'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
       "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
       "plugin:react/recommended"
     ]
   },
@@ -51,7 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "eslint": "^7.21.0",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "gh-pages": "^3.1.0",
     "typescript": "^4.2.3"
   }
