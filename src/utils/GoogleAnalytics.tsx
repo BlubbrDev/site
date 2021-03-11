@@ -27,7 +27,6 @@ export default function TrackedPage(
   const trackPage = (page: string) => {
     GoogleAnalytics.set({ page });
     GoogleAnalytics.pageview(page);
-    GoogleAnalytics.pageview(window.location.pathname + window.location.search);
   };
 
   return child;
