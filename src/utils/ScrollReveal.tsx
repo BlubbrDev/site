@@ -17,7 +17,7 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
   const [revealEl, setRevealel] = useState<Element[]>([]);
 
   const checkComplete = () => {
-    let query = "[class*=reveal-].is-revealed";
+    const query = "[class*=reveal-].is-revealed";
     return revealEl.length <= document.querySelectorAll(query).length;
   };
 
@@ -28,14 +28,14 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
   const revealElements = () => {
     if (checkComplete()) return;
     for (let i = 0; i < revealEl.length; i++) {
-      let el: Element = revealEl[i];
-      let revealDelay = parseInt(
+      const el: Element = revealEl[i];
+      const revealDelay = parseInt(
         el.getAttribute("data-reveal-delay") as string
       );
-      let revealOffset: number = el.getAttribute("data-reveal-offset")
+      const revealOffset: number = el.getAttribute("data-reveal-offset")
         ? parseInt(el.getAttribute("data-reveal-offset") as string)
         : 200;
-      let listenedEl = el.getAttribute("data-reveal-container")
+      const listenedEl = el.getAttribute("data-reveal-container")
         ? (el.closest(
             el.getAttribute("data-reveal-container") as string
           ) as Element)
@@ -69,7 +69,6 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
       }
       revealElements();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [revealEl]);
 
   const handleListeners = () => {
@@ -90,7 +89,6 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
   useEffect(() => {
     handleListeners();
     revealElements();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewportHeight]);
 
   return <>{props.children}</>;

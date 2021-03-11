@@ -8,7 +8,7 @@ initializeGoogleAnalytics();
 
 export default function App() {
   const childRef = useRef<any>();
-  let location = useLocation<any>();
+  const location = useLocation<any>();
 
   useEffect(() => {
     document.body.classList.add("is-loaded");

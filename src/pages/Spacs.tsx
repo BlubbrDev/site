@@ -50,8 +50,8 @@ export default function Spacs() {
 }
 
 function _loadTableau() {
-  var divElement = document.getElementById("viz1614816342907");
-  var vizElement = divElement!.getElementsByTagName("object")[0];
+  const divElement = document.getElementById("viz1614816342907");
+  const vizElement = divElement!.getElementsByTagName("object")[0];
   vizElement.style.width = "100%";
   if (divElement!.offsetWidth > 800) {
     vizElement.style.height = divElement!.offsetWidth * 0.75 + "px";
@@ -60,7 +60,7 @@ function _loadTableau() {
   } else {
     vizElement.style.height = "1127px";
   }
-  var scriptElement = document.createElement("script");
+  const scriptElement = document.createElement("script");
   scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
   vizElement.parentNode!.insertBefore(scriptElement, vizElement);
 }

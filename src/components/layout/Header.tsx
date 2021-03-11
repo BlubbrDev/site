@@ -5,8 +5,8 @@ import Logo from "./partials/Logo";
 import Button from "components/elements/Button";
 
 interface HeaderProp {
-  className?: String;
-  navPosition?: String;
+  className?: string;
+  navPosition?: string;
   hideNav?: boolean;
   hideSignin?: boolean;
   bottomOuterDivider?: boolean;

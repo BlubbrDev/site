@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 interface FooterSocialProp {
-  className?: String;
+  className?: string;
 }
 
 export default function FooterSocial(footerSocialProp: FooterSocialProp) {
