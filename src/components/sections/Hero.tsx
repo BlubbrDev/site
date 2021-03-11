@@ -48,7 +48,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
                     tag="a"
                     color="primary"
                     wideMobile
-                    href="https://discord.gg/ZtAWMP2DDd"
+                    href={process.env.DISCORD_URL as string}
                   >
                     Join Discord
                   </Button>
@@ -65,7 +65,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
             data-reveal-value="20px"
             data-reveal-delay="400"
           >
-            <HeroAnimation/>
+            <HeroAnimation />
           </div>
         </div>
       </div>

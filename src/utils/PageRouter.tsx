@@ -19,7 +19,6 @@ export default function PageRouter() {
 }
 
 function _redirectToDiscord(): React.ReactNode {
-  const discordURL = "https://discord.gg/ZtAWMP2DDd";
-  window.location.href = discordURL;
+  window.location.href = process.env.DISCORD_URL as string;
   return null;
 }
