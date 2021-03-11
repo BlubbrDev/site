@@ -48,7 +48,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
                     tag="a"
                     color="primary"
                     wideMobile
-                    href={process.env.DISCORD_URL as string}
+                    href={process.env.REACT_APP_DISCORD_URL as string}
                   >
                     Join Discord
                   </Button>

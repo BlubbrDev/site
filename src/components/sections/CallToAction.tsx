@@ -38,7 +38,7 @@ export default function CallToAction(
               tag="a"
               color="dark"
               wideMobile
-              href={process.env.DISCORD_URL as string}
+              href={process.env.REACT_APP_DISCORD_URL as string}
             >
               Join Discord
             </Button>

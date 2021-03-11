@@ -123,7 +123,7 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
                           tag="a"
                           color="primary"
                           wideMobile
-                          href={process.env.DISCORD_URL as string}
+                          href={process.env.REACT_APP_DISCORD_URL as string}
                         >
                           Join Discord
                         </Button>

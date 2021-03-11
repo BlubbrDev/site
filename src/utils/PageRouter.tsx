@@ -20,6 +20,6 @@ export default function PageRouter() {
 }
 
 function _redirectToDiscord(): React.ReactNode {
-  window.location.href = process.env.DISCORD_URL as string;
+  window.location.href = process.env.REACT_APP_DISCORD_URL as string;
   return null;
 }
