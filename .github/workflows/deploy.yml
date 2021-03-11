@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 # check out the main repository
 
       - name: Deploy react app to github pages
         uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1

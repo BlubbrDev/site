@@ -6,10 +6,13 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-
-      - run: 
+      - run: npm ci # do a clean install (faster in CI/CD than npm install)
+        shell: bash
+      - run: npm run build # build the project
+        shell: bash
+      - run: npm run lint # lint the project
+        shell: bash

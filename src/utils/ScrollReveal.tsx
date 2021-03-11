@@ -11,7 +11,6 @@ type ScrollRevealProps = {
   children: ReactNode | ReactNodeArray;
 };
 
-// eslint-disable-next-line react/display-name
 const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
   const [viewportHeight, setViewportheight] = useState(window.innerHeight);
   const [revealEl, setRevealel] = useState<Element[]>([]);
