@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 interface FooterNavProp {
-  className?: String;
+  className?: string;
   props?: any[];
 }
 

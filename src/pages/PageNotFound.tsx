@@ -8,7 +8,7 @@ export default function PageNotFound() {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let animation = new RiveAnimation({
+    const animation = new RiveAnimation({
       src: "./page_not_found.riv",
       canvas: canvas.current,
       autoplay: true,

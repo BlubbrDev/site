@@ -18,7 +18,7 @@ export function initializeGoogleAnalytics() {
 export default function TrackedPage(
   child: React.ComponentType<any>
 ): React.ComponentType<any> {
-  let location = useLocation<any>();
+  const location = useLocation<any>();
 
   useEffect(() => {
     trackPage(location.pathname + location.search);

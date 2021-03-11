@@ -7,7 +7,7 @@ export default function HeroAnimation() {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let animation = new RiveAnimation({
+    const animation = new RiveAnimation({
       src: "./reading_bot.riv",
       canvas: canvas.current,
       autoplay: true,

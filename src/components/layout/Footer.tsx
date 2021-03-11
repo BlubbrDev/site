@@ -5,7 +5,7 @@ import FooterNav from "components/layout/partials/FooterNav";
 import FooterSocial from "components/layout/partials/FooterSocial";
 
 interface FooterProp {
-  className?: String;
+  className?: string;
   topOuterDivider?: boolean;
   topDivider?: boolean;
 }

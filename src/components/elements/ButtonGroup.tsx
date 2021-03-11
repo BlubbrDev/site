@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import classNames from "classnames";
 
 type ButtonGroupProp = {
-  className?: String;
+  className?: string;
   children: ReactNode[];
 };
 

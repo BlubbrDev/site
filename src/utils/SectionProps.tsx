@@ -19,7 +19,7 @@ export const defaultSectionBase: SectionBase = {
 
 // Default section props
 export interface SectionProps extends SectionBase {
-  className?: String;
+  className?: string;
 }
 
 export const defaultSectionProps: SectionProps = {
