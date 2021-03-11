@@ -2,11 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import PageRouter from "utils/PageRouter";
 import ScrollReveal from "utils/ScrollReveal";
+import ReactGA from "react-ga";
 
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+ReactGA.initialize(process.env.REACT_APP_GA_CODE as string);
 
-const trackPage = (page) => {
+const trackPage = (page: string) => {
   ReactGA.set({ page });
   ReactGA.pageview(page);
 };
