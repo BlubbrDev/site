@@ -38,9 +38,8 @@ export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Elem
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="200"
               >
-                NotiFi is a trading bot that scrapes the SEC website to find new
-                filings for SPACs to notify traders when to trade before the
-                rest of the market finds out.
+                Blubbr is a financial analytics company that specializes in a set of automated
+                tools to help you stay informed and up-to-date on any ticker in the index.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="300">
                 <ButtonGroup>
