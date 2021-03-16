@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
  */
 export function initializeGoogleAnalytics(): void {
   GoogleAnalytics.initialize(process.env.REACT_APP_GA_CODE as string, {
-    testMode: process.env.NODE_ENV === "test",
+    testMode: process.env.NODE_ENV === "test", // check if we are running in a test env
   });
 }
 
