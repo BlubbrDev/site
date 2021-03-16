@@ -19,7 +19,7 @@ jobs:
     - name: Testing...
       uses: ./.github/actions/test
   build:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     name: Build App
     needs: test
     runs-on: ubuntu-latest 
@@ -33,7 +33,7 @@ jobs:
         name : react-app-build
         path : build/
   deploy:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     name: Deploy App
     needs: build
     runs-on: ubuntu-latest
