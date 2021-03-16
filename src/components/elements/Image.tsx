@@ -19,7 +19,7 @@ const defaultProps: ImageProp = {
 export default function Image(imgProp: ImageProp = defaultProps): JSX.Element {
   const [loaded, setLoaded] = useState(false);
 
-  const image = useRef<HTMLImageElement>();
+  const image = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     handlePlaceholder(image.current);
@@ -29,17 +29,17 @@ export default function Image(imgProp: ImageProp = defaultProps): JSX.Element {
     return `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}"%3E%3C/svg%3E`;
   };
 
-  const handlePlaceholder = (img: HTMLImageElement) => {
+  const handlePlaceholder = (img: HTMLImageElement | null) => {
     const placeholder = document.createElement("img");
-    if (!loaded) {
+    if (!loaded && img) {
       img.style.display = "none";
       img.before(placeholder);
       placeholder.src = placeholderSrc(
         (img.getAttribute("width") || 0) as number,
         (img.getAttribute("height") || 0) as number
       );
-      placeholder.width = img.getAttribute("width");
-      placeholder.height = img.getAttribute("height");
+      placeholder.width = img.width;
+      placeholder.height = img.height;
       placeholder.style.opacity = "0";
       img.className && placeholder.classList.add(img.className);
       placeholder.remove();
