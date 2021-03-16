@@ -5,7 +5,7 @@ interface FooterSocialProp {
   className?: string;
 }
 
-export default function FooterSocial(footerSocialProp: FooterSocialProp) {
+export default function FooterSocial(footerSocialProp: FooterSocialProp): JSX.Element {
   const classes = classNames("footer-social", footerSocialProp.className);
 
   return (

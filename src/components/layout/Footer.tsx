@@ -16,7 +16,7 @@ const defaultProps: FooterProp = {
   topDivider: false,
 };
 
-export default function Footer(footerProp: FooterProp = defaultProps) {
+export default function Footer(footerProp: FooterProp = defaultProps): JSX.Element {
   const classes = classNames(
     "site-footer center-content-mobile",
     footerProp.topOuterDivider && "has-top-divider",

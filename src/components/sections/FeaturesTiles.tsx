@@ -13,7 +13,7 @@ import feature_6 from "assets/images/feature-tile-icon-06.svg";
 
 export default function FeaturesTiles(
   props: SectionTileProps = defaultSectionTileProps
-) {
+): JSX.Element {
   const outerClasses = classNames(
     "features-tiles section",
     props.topOuterDivider && "has-top-divider",

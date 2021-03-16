@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { RiveAnimation } from "rive-js";
 import LayoutDefault from "layouts/LayoutDefault";
 
-export default function PageNotFound() {
+export default function PageNotFound(): JSX.Element {
   const canvas = useRef<HTMLCanvasElement>(null);
   const container = useRef<HTMLDivElement>(null);
 

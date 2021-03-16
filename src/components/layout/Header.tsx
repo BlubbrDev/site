@@ -22,7 +22,7 @@ const defaultProps: HeaderProp = {
   bottomDivider: false,
 };
 
-export default function Header(headerProp: HeaderProp = defaultProps) {
+export default function Header(headerProp: HeaderProp = defaultProps): JSX.Element {
   const [isActive, setIsactive] = useState(false);
 
   const nav = useRef<HTMLDivElement>(null);
@@ -41,7 +41,8 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
 
   const openMenu = () => {
     document.body.classList.add("off-nav-is-active");
-    nav.current!.style.maxHeight = nav.current?.scrollHeight + "px";
+    if (!nav.current) return;
+    nav.current.style.maxHeight = nav.current?.scrollHeight + "px";
     setIsactive(true);
   };
 
@@ -51,10 +52,12 @@ export default function Header(headerProp: HeaderProp = defaultProps) {
     setIsactive(false);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const keyPress = (e: any) => {
     isActive && e.keyCode === 27 && closeMenu();
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const clickOutside = (e: any) => {
     if (!nav.current) return;
     if (

@@ -5,7 +5,7 @@ import SectionHeader from "./partials/SectionHeader";
 
 export default function Testimonial(
   props: SectionTileProps = defaultSectionTileProps
-) {
+): JSX.Element {
   const outerClasses = classNames(
     "testimonial section",
     props.topOuterDivider && "has-top-divider",

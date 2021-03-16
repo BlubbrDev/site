@@ -5,7 +5,7 @@ import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
 import HeroAnimation from "./partials/HeroAnimation";
 
-export default function Hero(prop: SectionProps = defaultSectionProps) {
+export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Element {
   const outerClasses = classNames(
     "hero section center-content",
     prop.topOuterDivider && "has-top-divider",

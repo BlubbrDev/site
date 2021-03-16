@@ -13,7 +13,7 @@ import figure_3 from "assets/images/features-split-image-03.png";
 
 export default function FeaturesSplit(
   props: SectionSplitProps = defaultSectionSplitProps
-) {
+): JSX.Element {
   const outerClasses = classNames(
     "features-split section",
     props.topOuterDivider && "has-top-divider",

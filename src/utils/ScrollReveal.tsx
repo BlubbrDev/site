@@ -13,10 +13,11 @@ type ScrollRevealProps = {
 
 const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
   const [viewportHeight, setViewportheight] = useState(window.innerHeight);
-  const [revealEl, setRevealel] = useState<Element[]>([]);
+  const [revealEl, setRevealel] = useState<NodeListOf<Element>>();
 
   const checkComplete = () => {
     const query = "[class*=reveal-].is-revealed";
+    if (!revealEl) return false;
     return revealEl.length <= document.querySelectorAll(query).length;
   };
 
@@ -26,6 +27,7 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
 
   const revealElements = () => {
     if (checkComplete()) return;
+    if (!revealEl) return;
     for (let i = 0; i < revealEl.length; i++) {
       const el: Element = revealEl[i];
       const revealDelay = parseInt(
@@ -56,7 +58,9 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
 
   useImperativeHandle(ref, () => ({
     init() {
-      setRevealel(document.querySelectorAll("[class*=reveal-]") as any);
+      setRevealel(
+        document.querySelectorAll("[class*=reveal-]") as NodeListOf<Element>
+      );
     },
   }));
 
