@@ -27,7 +27,7 @@ export default function Button({
   wideMobile = false,
   disabled = false,
   children = undefined,
-}: ButtonProps) {
+}: ButtonProps): JSX.Element {
   const classes = classNames(
     "button",
     color && `button-${color}`,

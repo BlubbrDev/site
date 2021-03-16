@@ -1,5 +1,5 @@
 # site
 
-[![Deploy](https://github.com/BlubbrDev/site/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/BlubbrDev/site/actions/workflows/deploy.yml)
+[![CI/CD](https://github.com/BlubbrDev/site/actions/workflows/main.yaml/badge.svg)](https://github.com/BlubbrDev/site/actions/workflows/main.yaml)
 
 Source code for https://blubbr.io

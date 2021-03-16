@@ -9,11 +9,11 @@ import Image from "components/elements/Image";
 
 import figure_1 from "assets/images/features-split-image-01.png";
 import figure_2 from "assets/images/features-split-image-02.png";
-import figure_3 from "assets/images/features-split-image-03.png";
+// import figure_3 from "assets/images/features-split-image-03.png";
 
 export default function FeaturesSplit(
   props: SectionSplitProps = defaultSectionSplitProps
-) {
+): JSX.Element {
   const outerClasses = classNames(
     "features-split section",
     props.topOuterDivider && "has-top-divider",
@@ -37,9 +37,10 @@ export default function FeaturesSplit(
   );
 
   const sectionHeader = {
-    title: "Workflow that just works",
+    title: "Advanced insights",
     paragraph:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.",
+      "At Blubbr, we cut the fat off of traditional financial institutions \
+      because we believe the power belongs to the players.",
   };
 
   return (
@@ -54,14 +55,13 @@ export default function FeaturesSplit(
                 data-reveal-container=".split-item"
               >
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  BOT
                 </div>
-                <h3 className="mt-0 mb-12">Data-driven insights</h3>
+                <h3 className="mt-0 mb-12">Notifi</h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Gets a feed from a webscraping bot that notifies a discord channel
+                  when there are important updates to the SEC website. The fastest way
+                  to get new information.
                 </p>
               </div>
               <div
@@ -86,14 +86,12 @@ export default function FeaturesSplit(
                 data-reveal-container=".split-item"
               >
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  BOT
                 </div>
-                <h3 className="mt-0 mb-12">Data-driven insights</h3>
+                <h3 className="mt-0 mb-12">Notifi News</h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Be the first to know about breaking news. Notifi News reads every article
+                  the second it is published and filters it for important financial information.
                 </p>
               </div>
               <div
@@ -112,7 +110,7 @@ export default function FeaturesSplit(
               </div>
             </div>
 
-            <div className="split-item">
+            {/* <div className="split-item">
               <div
                 className="split-item-content center-content-mobile reveal-from-left"
                 data-reveal-container=".split-item"
@@ -142,7 +140,7 @@ export default function FeaturesSplit(
                   height={396}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

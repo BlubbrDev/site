@@ -46,7 +46,7 @@ const defaultInputProps: InputProps = {
   rows: 3,
 };
 
-export default function Input(props: InputProps = defaultInputProps) {
+export default function Input(props: InputProps = defaultInputProps): JSX.Element {
   const wrapperClasses = classNames(
     props.formGroup &&
       props.formGroup !== "" &&

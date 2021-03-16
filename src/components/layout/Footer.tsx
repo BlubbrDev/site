@@ -5,7 +5,7 @@ import FooterNav from "components/layout/partials/FooterNav";
 import FooterSocial from "components/layout/partials/FooterSocial";
 
 interface FooterProp {
-  className?: String;
+  className?: string;
   topOuterDivider?: boolean;
   topDivider?: boolean;
 }
@@ -16,7 +16,7 @@ const defaultProps: FooterProp = {
   topDivider: false,
 };
 
-export default function Footer(footerProp: FooterProp = defaultProps) {
+export default function Footer(footerProp: FooterProp = defaultProps): JSX.Element {
   const classes = classNames(
     "site-footer center-content-mobile",
     footerProp.topOuterDivider && "has-top-divider",

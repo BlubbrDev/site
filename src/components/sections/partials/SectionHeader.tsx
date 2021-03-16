@@ -17,7 +17,7 @@ const SectionHeader = ({
   data,
   tag = "h2",
   ...props
-}: SectionHeaderProps) => {
+}: SectionHeaderProps): JSX.Element => {
   const classes = classNames("section-header", className);
 
   const Component = tag;

@@ -9,7 +9,7 @@ import Button from "components/elements/Button";
 
 export default function CallToAction(
   props: CallToActionProps = defaultCallToActionProps
-) {
+): JSX.Element {
   const outerClasses = classNames(
     "cta section center-content-mobile reveal-from-bottom",
     props.topOuterDivider && "has-top-divider",

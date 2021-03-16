@@ -6,7 +6,7 @@ interface LayoutDefaultProps {
   children: ReactNode | ReactNodeArray;
 }
 
-export default function LayoutDefault(props: LayoutDefaultProps) {
+export default function LayoutDefault(props: LayoutDefaultProps): JSX.Element {
   return (
     <>
       <Header navPosition="right" className="reveal-from-bottom" />

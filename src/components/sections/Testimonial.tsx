@@ -5,7 +5,7 @@ import SectionHeader from "./partials/SectionHeader";
 
 export default function Testimonial(
   props: SectionTileProps = defaultSectionTileProps
-) {
+): JSX.Element {
   const outerClasses = classNames(
     "testimonial section",
     props.topOuterDivider && "has-top-divider",
@@ -24,9 +24,10 @@ export default function Testimonial(
   const tilesClasses = classNames("tiles-wrap", props.pushLeft && "push-left");
 
   const sectionHeader = {
-    title: "The future is here",
+    title: "Hear it from them",
     paragraph:
-      "Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.",
+      "Don't just take our word for it, hear what some of our community members have to say \
+      about how Blubbr has helped them achieve alpha gains.",
   };
 
   return (
@@ -42,19 +43,20 @@ export default function Testimonial(
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
                   <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                    — Timing is everything. With Notifi, I can rest easy knowing
+                    that if anything happens in the news I will be the first to
+                    know. Blubbr saves me time by pre-reading every financial
+                    article as it is published, so I only need to read the
+                    important summaries.
                   </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                   <span className="testimonial-item-name text-color-high">
-                    BigTitty666
+                    Soren
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">Sailor</a>
+                    <a href="/">Commodore</a>
                   </span>
                 </div>
               </div>
@@ -64,19 +66,20 @@ export default function Testimonial(
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
                   <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                    — I love Blubbr! Their notification services actually send
+                    my phone an SMS notification whenever something important
+                    happens related to my stocks. Its like getting a text from
+                    Warren Buffet anytime there is new information about my
+                    holdings.
                   </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                   <span className="testimonial-item-name text-color-high">
-                    Diana Rynzhuk
+                    Justin
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">Captain</a>
+                    <a href="/">Captain</a>
                   </span>
                 </div>
               </div>
@@ -89,19 +92,19 @@ export default function Testimonial(
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
                   <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                    — The insights behind Blubbr are huge. With massive amounts
+                    of data, the team has been able to reliably predict
+                    important market signals and warn the community when it is
+                    time to buy or sell.
                   </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                   <span className="testimonial-item-name text-color-high">
-                    Ben Stafford
+                    Steven
                   </span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">AppName</a>
+                    <a href="/">Sailor</a>
                   </span>
                 </div>
               </div>

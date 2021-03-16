@@ -3,12 +3,12 @@ import { useRef, useEffect } from "react";
 import { RiveAnimation } from "rive-js";
 import LayoutDefault from "layouts/LayoutDefault";
 
-export default function PageNotFound() {
+export default function PageNotFound(): JSX.Element {
   const canvas = useRef<HTMLCanvasElement>(null);
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let animation = new RiveAnimation({
+    const animation = new RiveAnimation({
       src: "./page_not_found.riv",
       canvas: canvas.current,
       autoplay: true,

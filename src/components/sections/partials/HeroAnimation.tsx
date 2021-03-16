@@ -1,13 +1,13 @@
 import React from "react";
 import { useRef, useEffect } from "react";
-import { RiveAnimation } from "rive-js";
+import { Rive } from "rive-js";
 
-export default function HeroAnimation() {
+export default function HeroAnimation(): JSX.Element {
   const canvas = useRef<HTMLCanvasElement>(null);
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let animation = new RiveAnimation({
+    const animation = new Rive({
       src: "./reading_bot.riv",
       canvas: canvas.current,
       autoplay: true,
@@ -33,7 +33,7 @@ export default function HeroAnimation() {
     <div
       ref={container}
       className="OuterContainer"
-      style={{ height: "calc(100vh - 286px)"}}
+      style={{ height: "calc(100vh - 286px)" }}
     >
       <div className="InnerContainer">
         <canvas ref={canvas} />

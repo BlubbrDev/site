@@ -2,10 +2,10 @@ import React from "react";
 import classNames from "classnames";
 
 interface FooterSocialProp {
-  className?: String;
+  className?: string;
 }
 
-export default function FooterSocial(footerSocialProp: FooterSocialProp) {
+export default function FooterSocial(footerSocialProp: FooterSocialProp): JSX.Element {
   const classes = classNames("footer-social", footerSocialProp.className);
 
   return (

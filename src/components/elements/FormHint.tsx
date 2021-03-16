@@ -7,7 +7,7 @@ interface FormHintProp {
   status?: string;
 }
 
-export default function FormHint(props: FormHintProp) {
+export default function FormHint(props: FormHintProp): JSX.Element {
   const classes = classNames(
     "form-hint",
     props.status && `text-color-${props.status}`,

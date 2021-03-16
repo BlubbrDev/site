@@ -5,10 +5,10 @@ import Image from "components/elements/Image";
 import logo from "assets/images/logo.png";
 
 interface LogoProp {
-  className?: String;
+  className?: string;
 }
 
-export default function Logo(logoProp: LogoProp) {
+export default function Logo(logoProp: LogoProp): JSX.Element {
   const classes = classNames("brand", logoProp.className);
 
   return (

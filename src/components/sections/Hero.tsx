@@ -5,7 +5,7 @@ import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
 import HeroAnimation from "./partials/HeroAnimation";
 
-export default function Hero(prop: SectionProps = defaultSectionProps) {
+export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Element {
   const outerClasses = classNames(
     "hero section center-content",
     prop.topOuterDivider && "has-top-divider",
@@ -38,9 +38,8 @@ export default function Hero(prop: SectionProps = defaultSectionProps) {
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="200"
               >
-                NotiFi is a trading bot that scrapes the SEC website to find new
-                filings for SPACs to notify traders when to trade before the
-                rest of the market finds out.
+                Blubbr is a financial analytics company that specializes in a set of automated
+                tools to help you stay informed and up-to-date on any ticker in the index.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="300">
                 <ButtonGroup>

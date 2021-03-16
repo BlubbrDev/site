@@ -2,11 +2,12 @@ import React from "react";
 import classNames from "classnames";
 
 interface FooterNavProp {
-  className?: String;
+  className?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props?: any[];
 }
 
-export default function FooterNav(prop: FooterNavProp) {
+export default function FooterNav(prop: FooterNavProp): JSX.Element {
   const classes = classNames("footer-nav", prop.className);
 
   return (

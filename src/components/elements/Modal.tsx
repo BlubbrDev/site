@@ -7,7 +7,7 @@ import React, {
 import classNames from "classnames";
 
 type ModalProp = {
-  className?: String;
+  className?: string;
   children?: ReactNode | ReactNodeArray;
   handleClose?: MouseEventHandler<HTMLDivElement | HTMLButtonElement>;
   show: boolean;
@@ -26,7 +26,7 @@ export default function Modal({
   video = "",
   videoTag = "iframe",
   id = "video-modal",
-}: ModalProp) {
+}: ModalProp): JSX.Element {
   useEffect(() => {
     document.addEventListener("keydown", keyPress);
     document.addEventListener("click", stopProgagation);
@@ -48,12 +48,14 @@ export default function Modal({
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const keyPress = (e: any) => {
     if (e.keyCode === 27 && handleClose) {
       handleClose(e);
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const stopProgagation = (e: any) => {
     e.stopPropagation();
   };
