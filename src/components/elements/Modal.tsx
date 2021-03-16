@@ -7,7 +7,7 @@ import React, {
 import classNames from "classnames";
 
 type ModalProp = {
-  className?: String;
+  className?: string;
   children?: ReactNode | ReactNodeArray;
   handleClose?: MouseEventHandler<HTMLDivElement | HTMLButtonElement>;
   show: boolean;

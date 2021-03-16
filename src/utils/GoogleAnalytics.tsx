@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from "react";
 import GoogleAnalytics from "react-ga";
 import { useLocation } from "react-router-dom";
@@ -5,7 +6,7 @@ import { useLocation } from "react-router-dom";
 /**
  * Initializes the GoogleAnalytics tracker with the code in the root .env file.
  */
-export function initializeGoogleAnalytics() {
+export function initializeGoogleAnalytics(): void {
   GoogleAnalytics.initialize(process.env.REACT_APP_GA_CODE as string);
 }
 
