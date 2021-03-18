@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "pages/Home";
-import Spacs from "pages/Spacs";
-import PageNotFound from "pages/PageNotFound";
+import Home from "layouts/pages/Home";
+import Spacs from "layouts/pages/Spacs";
+import PageNotFound from "layouts/pages/PageNotFound";
 import TrackedPage from "utils/GoogleAnalytics";
 
 // This componenet looks through all its children elements (Routes) and tries to render the
