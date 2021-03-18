@@ -8,20 +8,20 @@ export default function Testimonial(
 ): JSX.Element {
   const outerClasses = classNames(
     "testimonial section",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
+    props.topouterdivider && "has-top-divider",
+    props.bottomouterdivider && "has-bottom-divider",
+    props.hasbgcolor && "has-bg-color",
+    props.invertcolor && "invert-color",
     props.className
   );
 
   const innerClasses = classNames(
     "testimonial-inner section-inner",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider"
+    props.topdivider && "has-top-divider",
+    props.bottomdivider && "has-bottom-divider"
   );
 
-  const tilesClasses = classNames("tiles-wrap", props.pushLeft && "push-left");
+  const tilesClasses = classNames("tiles-wrap", props.pushleft && "push-left");
 
   const sectionHeader = {
     title: "Hear it from them",

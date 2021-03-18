@@ -16,24 +16,24 @@ export default function FeaturesSplit(
 ): JSX.Element {
   const outerClasses = classNames(
     "features-split section",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
+    props.topouterdivider && "has-top-divider",
+    props.bottomouterdivider && "has-bottom-divider",
+    props.hasbgcolor && "has-bg-color",
+    props.invertcolor && "invert-color",
     props.className
   );
 
   const innerClasses = classNames(
     "features-split-inner section-inner",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider"
+    props.topdivider && "has-top-divider",
+    props.bottomdivider && "has-bottom-divider"
   );
 
   const splitClasses = classNames(
     "split-wrap",
-    props.invertMobile && "invert-mobile",
-    props.invertDesktop && "invert-desktop",
-    props.alignTop && "align-top"
+    props.invertmobile && "invert-mobile",
+    props.invertdesktop && "invert-desktop",
+    props.aligntop && "align-top"
   );
 
   const sectionHeader = {
@@ -67,7 +67,7 @@ export default function FeaturesSplit(
               <div
                 className={classNames(
                   "split-item-image center-content-mobile reveal-from-bottom",
-                  props.imageFill && "split-item-image-fill"
+                  props.imagefill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
               >
@@ -97,7 +97,7 @@ export default function FeaturesSplit(
               <div
                 className={classNames(
                   "split-item-image center-content-mobile reveal-from-bottom",
-                  props.imageFill && "split-item-image-fill"
+                  props.imagefill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
               >

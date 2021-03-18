@@ -12,13 +12,13 @@ export default function Home(): JSX.Element {
       <Hero className="illustration-section-01" />
       <FeaturesTiles />
       <FeaturesSplit
-        invertMobile
-        topDivider
-        imageFill
+        invertmobile
+        topdivider
+        imagefill
         className="illustration-section-02"
       />
-      <Testimonial topDivider />
-      <CallToAction split />
+      <Testimonial topdivider />
+      <CallToAction split="true" />
     </LayoutDefault>
   );
 }

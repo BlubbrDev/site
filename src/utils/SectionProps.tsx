@@ -1,20 +1,20 @@
 // Props shared by all sections
 export interface SectionBase {
-  topOuterDivider?: boolean;
-  bottomOuterDivider?: boolean;
-  topDivider?: boolean;
-  bottomDivider?: boolean;
-  hasBgColor?: boolean;
-  invertColor?: boolean;
+  topouterdivider?: boolean;
+  bottomouterdivider?: boolean;
+  topdivider?: boolean;
+  bottomdivider?: boolean;
+  hasbgcolor?: boolean;
+  invertcolor?: boolean;
 }
 
 export const defaultSectionBase: SectionBase = {
-  topOuterDivider: false,
-  bottomOuterDivider: false,
-  topDivider: false,
-  bottomDivider: false,
-  hasBgColor: false,
-  invertColor: false,
+  topouterdivider: false,
+  bottomouterdivider: false,
+  topdivider: false,
+  bottomdivider: false,
+  hasbgcolor: false,
+  invertcolor: false,
 };
 
 // Default section props
@@ -29,36 +29,36 @@ export const defaultSectionProps: SectionProps = {
 
 // Section split props
 export interface SectionSplitProps extends SectionProps {
-  invertMobile?: boolean;
-  invertDesktop?: boolean;
-  alignTop?: boolean;
-  imageFill?: boolean;
+  invertmobile?: boolean;
+  invertdesktop?: boolean;
+  aligntop?: boolean;
+  imagefill?: boolean;
 }
 
 export const defaultSectionSplitProps: SectionSplitProps = {
   ...defaultSectionProps,
-  invertMobile: false,
-  invertDesktop: false,
-  alignTop: false,
-  imageFill: false,
+  invertmobile: false,
+  invertdesktop: false,
+  aligntop: false,
+  imagefill: false,
 };
 
 // Section tiles props
 export interface SectionTileProps extends SectionProps {
-  pushLeft?: boolean;
+  pushleft?: boolean;
 }
 
 export const defaultSectionTileProps: SectionTileProps = {
   ...defaultSectionProps,
-  pushLeft: false,
+  pushleft: false,
 };
 
 // Call to action props
 export interface CallToActionProps extends SectionProps {
-  split?: boolean;
+  split?: string;
 }
 
 export const defaultCallToActionProps: CallToActionProps = {
   ...defaultSectionProps,
-  split: true,
+  split: "true",
 };

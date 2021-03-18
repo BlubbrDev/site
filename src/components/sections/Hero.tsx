@@ -8,17 +8,17 @@ import HeroAnimation from "./partials/HeroAnimation";
 export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Element {
   const outerClasses = classNames(
     "hero section center-content",
-    prop.topOuterDivider && "has-top-divider",
-    prop.bottomOuterDivider && "has-bottom-divider",
-    prop.hasBgColor && "has-bg-color",
-    prop.invertColor && "invert-color",
+    prop.topouterdivider && "has-top-divider",
+    prop.bottomouterdivider && "has-bottom-divider",
+    prop.hasbgcolor && "has-bg-color",
+    prop.invertcolor && "invert-color",
     prop.className
   );
 
   const innerClasses = classNames(
     "hero-inner section-inner",
-    prop.topDivider && "has-top-divider",
-    prop.bottomDivider && "has-bottom-divider"
+    prop.topdivider && "has-top-divider",
+    prop.bottomdivider && "has-bottom-divider"
   );
 
   return (

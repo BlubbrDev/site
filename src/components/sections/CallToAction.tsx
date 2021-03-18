@@ -12,17 +12,17 @@ export default function CallToAction(
 ): JSX.Element {
   const outerClasses = classNames(
     "cta section center-content-mobile reveal-from-bottom",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
+    props.topouterdivider && "has-top-divider",
+    props.bottomouterdivider && "has-bottom-divider",
+    props.hasbgcolor && "has-bg-color",
+    props.invertcolor && "invert-color",
     props.className
   );
 
   const innerClasses = classNames(
     "cta-inner section-inner",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider",
+    props.topdivider && "has-top-divider",
+    props.bottomdivider && "has-bottom-divider",
     props.split && "cta-split"
   );
 

@@ -16,22 +16,22 @@ export default function FeaturesTiles(
 ): JSX.Element {
   const outerClasses = classNames(
     "features-tiles section",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
+    props.topouterdivider && "has-top-divider",
+    props.bottomouterdivider && "has-bottom-divider",
+    props.hasbgcolor && "has-bg-color",
+    props.invertcolor && "invert-color",
     props.className
   );
 
   const innerClasses = classNames(
     "features-tiles-inner section-inner pt-0",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider"
+    props.topdivider && "has-top-divider",
+    props.bottomdivider && "has-bottom-divider"
   );
 
   const tilesClasses = classNames(
     "tiles-wrap center-content",
-    props.pushLeft && "push-left"
+    props.pushleft && "push-left"
   );
 
   const sectionHeader = {
