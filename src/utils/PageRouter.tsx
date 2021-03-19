@@ -1,21 +1,24 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "layouts/pages/Home";
-import Spacs from "layouts/pages/Spacs";
-import PageNotFound from "layouts/pages/PageNotFound";
-import TrackedPage from "utils/GoogleAnalytics";
+
+const Home = lazy(() => import("layouts/pages/Home"));
+const Spacs = lazy(() => import("layouts/pages/Spacs"));
+const PageNotFound = lazy(() => import("layouts/pages/PageNotFound"));
+const TrackedPage = lazy(() => import("utils/GoogleAnalytics"));
 
 // This componenet looks through all its children elements (Routes) and tries to render the
 // first route where the path of that route matches the current URL. In this case, we want
 // to serve exactly one route at a time and switching over them is a good way to do that.
 export default function PageRouter(): JSX.Element {
   return (
-    <Switch>
-      <Route exact path="/" component={TrackedPage(Home)} />
-      <Route exact path="/spacs" component={TrackedPage(Spacs)} />
-      <Route exact path="/discord" render={_redirectToDiscord} />
-      <Route component={TrackedPage(PageNotFound)} />
-    </Switch>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Switch>
+        <Route exact path="/" component={TrackedPage(Home)} />
+        <Route exact path="/spacs" component={TrackedPage(Spacs)} />
+        <Route exact path="/discord" render={_redirectToDiscord} />
+        <Route component={TrackedPage(PageNotFound)} />
+      </Switch>
+    </Suspense>
   );
 }
 

@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "App";
 import reportWebVitals from "utils/reportWebVitals";
 import * as serviceWorker from "utils/serviceWorker";
+import { initializeGoogleAnalytics } from "utils/GoogleAnalytics";
 
 import "assets/scss/style.scss";
 
@@ -26,3 +27,6 @@ reportWebVitals();
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// Initializes a connection to Google Analytics
+initializeGoogleAnalytics();
