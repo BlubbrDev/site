@@ -5,20 +5,23 @@ import FeaturesTiles from "components/sections/FeaturesTiles";
 import FeaturesSplit from "components/sections/FeaturesSplit";
 import Testimonial from "components/sections/Testimonial";
 import CallToAction from "components/sections/CallToAction";
+import TrackedPage from "utils/GoogleAnalytics";
 
 export default function Home(): JSX.Element {
   return (
-    <LayoutDefault>
-      <Hero className="illustration-section-01" />
-      <FeaturesTiles />
-      <FeaturesSplit
-        invertmobile="true"
-        topdivider="true"
-        imagefill="true"
-        className="illustration-section-02"
-      />
-      <Testimonial topdivider="true" />
-      <CallToAction split="true" />
-    </LayoutDefault>
+    <TrackedPage>
+      <LayoutDefault>
+        <Hero className="illustration-section-01" />
+        <FeaturesTiles />
+        <FeaturesSplit
+          invertmobile="true"
+          topdivider="true"
+          imagefill="true"
+          className="illustration-section-02"
+        />
+        <Testimonial topdivider="true" />
+        <CallToAction split="true" />
+      </LayoutDefault>
+    </TrackedPage>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useEffect } from "react";
 import { RiveAnimation } from "rive-js";
 import LayoutDefault from "layouts/LayoutDefault";
+import TrackedPage from "utils/GoogleAnalytics";
 
 export default function PageNotFound(): JSX.Element {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -31,16 +32,18 @@ export default function PageNotFound(): JSX.Element {
   };
 
   return (
-    <LayoutDefault>
-      <div
-        ref={container}
-        className="OuterContainer"
-        style={{ height: "calc(100vh - 286px)", marginTop: "80px" }}
-      >
-        <div className="InnerContainer">
-          <canvas ref={canvas} />
+    <TrackedPage>
+      <LayoutDefault>
+        <div
+          ref={container}
+          className="OuterContainer"
+          style={{ height: "calc(100vh - 286px)", marginTop: "80px" }}
+        >
+          <div className="InnerContainer">
+            <canvas ref={canvas} />
+          </div>
         </div>
-      </div>
-    </LayoutDefault>
+      </LayoutDefault>
+    </TrackedPage>
   );
 }
