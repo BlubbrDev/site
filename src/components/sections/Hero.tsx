@@ -5,7 +5,9 @@ import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
 import HeroAnimation from "./partials/HeroAnimation";
 
-export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Element {
+export default function Hero(
+  prop: SectionProps = defaultSectionProps
+): JSX.Element {
   const outerClasses = classNames(
     "hero section center-content",
     prop.topouterdivider && "has-top-divider",
@@ -38,8 +40,9 @@ export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Elem
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="200"
               >
-                Blubbr is a financial analytics company that specializes in a set of automated
-                tools to help you stay informed and up-to-date on any ticker in the index.
+                Blubbr is a financial analytics company that specializes in a
+                set of automated tools to help you stay informed and up-to-date
+                on any ticker in the index.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="300">
                 <ButtonGroup>

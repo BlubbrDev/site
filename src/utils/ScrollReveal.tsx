@@ -58,9 +58,7 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
 
   useImperativeHandle(ref, () => ({
     init() {
-      setRevealel(
-        document.querySelectorAll("[class*=reveal-]") as NodeListOf<Element>
-      );
+      setRevealel(document.querySelectorAll("[class*=reveal-]"));
     },
   }));
 

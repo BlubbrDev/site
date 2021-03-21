@@ -1,11 +1,11 @@
 // Props shared by all sections
 export interface SectionBase {
-  topouterdivider?: boolean;
-  bottomouterdivider?: boolean;
-  topdivider?: boolean;
-  bottomdivider?: boolean;
-  hasbgcolor?: boolean;
-  invertcolor?: boolean;
+  topouterdivider: boolean;
+  bottomouterdivider: boolean;
+  topdivider: boolean;
+  bottomdivider: boolean;
+  hasbgcolor: boolean;
+  invertcolor: boolean;
 }
 
 export const defaultSectionBase: SectionBase = {

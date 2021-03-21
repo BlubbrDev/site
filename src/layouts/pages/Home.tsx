@@ -14,13 +14,13 @@ export default function Home(): JSX.Element {
         <Hero className="illustration-section-01" />
         <FeaturesTiles />
         <FeaturesSplit
-          invertmobile
-          topdivider
-          imagefill
+          invertmobile={true}
+          topdivider={true}
+          imagefill={true}
           className="illustration-section-02"
         />
-        <Testimonial topdivider />
-        <CallToAction split />
+        <Testimonial topdivider={true} />
+        <CallToAction split={true} />
       </LayoutDefault>
     </TrackedPage>
   );
