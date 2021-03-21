@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef, useEffect } from "react";
-import { RiveAnimation } from "rive-js";
+import { Rive } from "rive-js";
 import LayoutDefault from "layouts/LayoutDefault";
 import TrackedPage from "utils/GoogleAnalytics";
 
@@ -9,7 +9,7 @@ export default function PageNotFound(): JSX.Element {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const animation = new RiveAnimation({
+    const animation = new Rive({
       src: "./page_not_found.riv",
       canvas: canvas.current,
       autoplay: true,
