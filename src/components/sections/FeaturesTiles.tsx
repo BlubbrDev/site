@@ -61,7 +61,7 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Premium Content</h4>
+                  <h3 className="h4 mt-0 mb-8">Premium Content</h3>
                   <p className="m-0 text-sm">
                     Our specialized software is optimized to find the next big
                     insight that can help you realize alpha gains.
@@ -86,9 +86,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Daily Digest</h4>
+                  <h3 className="h4 mt-0 mb-8">Daily Digest</h3>
                   <p className="m-0 text-sm">
-                    With our daily digest, you will get the powerful insights of blubbr right in your inbox.
+                    With our daily digest, you will get the powerful insights of
+                    blubbr right in your inbox.
                   </p>
                 </div>
               </div>
@@ -110,9 +111,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Global Network</h4>
+                  <h3 className="h4 mt-0 mb-8">Global Network</h3>
                   <p className="m-0 text-sm">
-                    Our global community of financial professionals means you can always talk stock.
+                    Our global community of financial professionals means you
+                    can always talk stock.
                   </p>
                 </div>
               </div>
@@ -131,7 +133,7 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">ML Insights</h4>
+                  <h3 className="h4 mt-0 mb-8">ML Insights</h3>
                   <p className="m-0 text-sm">
                     Our machine-learning algorithms will help you better
                     understand current market dynamics.
@@ -156,9 +158,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Free Trial</h4>
+                  <h3 className="h4 mt-0 mb-8">Free Trial</h3>
                   <p className="m-0 text-sm">
-                    Join the community for free and see for yourself how much fat you can cut off with blubbr.
+                    Join the community for free and see for yourself how much
+                    fat you can cut off with blubbr.
                   </p>
                 </div>
               </div>
@@ -180,9 +183,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Deep Dives</h4>
+                  <h3 className="h4 mt-0 mb-8">Deep Dives</h3>
                   <p className="m-0 text-sm">
-                    As a member, you get access to hand-crafted research from our deticated members.
+                    As a member, you get access to hand-crafted research from
+                    our deticated members.
                   </p>
                 </div>
               </div>
