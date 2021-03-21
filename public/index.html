@@ -55,6 +55,11 @@
       gtag("js", new Date());
       gtag("config", "G-FE2829FLJR");
     </script>
+
+    <!-- Depreciated React API Workaround (see: https://github.com/facebook/react/pull/20831) -->
+    <script>
+      if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
+    </script>
   </head>
   <body class="has-animations">
     <noscript>You need to enable JavaScript to run this app.</noscript>
