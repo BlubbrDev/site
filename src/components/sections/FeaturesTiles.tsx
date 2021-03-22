@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { SectionTileProps, defaultSectionTileProps } from "utils/SectionProps";
+import { SectionTileProps } from "utils/SectionProps";
 import SectionHeader from "components/sections/partials/SectionHeader";
 import Image from "components/elements/Image";
 
@@ -19,6 +19,7 @@ export default function FeaturesTiles({
   hasBgColor = false,
   invertColor = false,
   className = "",
+  pushLeft = false,
 }: SectionTileProps): JSX.Element {
   const outerClasses = classNames(
     "features-tiles section",
