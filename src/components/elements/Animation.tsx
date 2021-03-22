@@ -22,29 +22,24 @@ export default function Animation({ src, style }: AnimationProp): JSX.Element {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const animation = new Rive({
+    new Rive({
       src: src,
       canvas: canvas.current,
       autoplay: true,
     });
     resize();
-    window.addEventListener("resize", resize);
-    return () => {
-      animation.current?.stop();
-      window.removeEventListener("resize", resize);
-    };
   }, [canvas, container]);
 
   const resize = () => {
     if (container.current && canvas.current) {
       const { width, height } = container.current.getBoundingClientRect();
-      canvas.current.width = width;
-      canvas.current.height = height;
+      canvas.current.width = 4 * width;
+      canvas.current.height = 4 * height;
     }
   };
 
   return (
-    <div ref={container} style={style}>
+    <div id="retina-canvas" ref={container} style={style}>
       <canvas ref={canvas} />
     </div>
   );
