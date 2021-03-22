@@ -29,7 +29,6 @@ export default function FeatureSplitRow({
   shouldFill,
 }: FeatureSplitRowProps): JSX.Element {
   const defaultClassName = "split-item-content center-content-mobile";
-  const imgClassName = defaultClassName + " reveal-from-bottom";
   return (
     <div className="split-item">
       <div
@@ -44,7 +43,7 @@ export default function FeatureSplitRow({
       </div>
       <div
         className={classNames(
-          imgClassName,
+          "split-item-image center-content-mobile reveal-from-bottom",
           shouldFill && "split-item-image-fill"
         )}
         data-reveal-container=".split-item"
