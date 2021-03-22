@@ -1,27 +1,34 @@
 import React from "react";
 import classNames from "classnames";
-import { defaultSectionTileProps, SectionTileProps } from "utils/SectionProps";
+import { SectionTileProps } from "utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 
-export default function Testimonial(
-  props: SectionTileProps = defaultSectionTileProps
-): JSX.Element {
+export default function Testimonial({
+  topOuterDivider = false,
+  bottomOuterDivider = false,
+  topDivider = false,
+  bottomDivider = false,
+  hasBgColor = false,
+  invertColor = false,
+  className = "",
+  pushLeft = false,
+}: SectionTileProps): JSX.Element {
   const outerClasses = classNames(
     "testimonial section",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
-    props.className
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
+    className
   );
 
   const innerClasses = classNames(
     "testimonial-inner section-inner",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider"
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
-  const tilesClasses = classNames("tiles-wrap", props.pushLeft && "push-left");
+  const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
   const sectionHeader = {
     title: "Hear it from them",
@@ -31,7 +38,7 @@ export default function Testimonial(
   };
 
   return (
-    <section {...props} className={outerClasses}>
+    <section className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

@@ -11,27 +11,33 @@ import feature_4 from "assets/images/feature-tile-icon-04.svg";
 import feature_5 from "assets/images/feature-tile-icon-05.svg";
 import feature_6 from "assets/images/feature-tile-icon-06.svg";
 
-export default function FeaturesTiles(
-  props: SectionTileProps = defaultSectionTileProps
-): JSX.Element {
+export default function FeaturesTiles({
+  topOuterDivider = false,
+  bottomOuterDivider = false,
+  topDivider = false,
+  bottomDivider = false,
+  hasBgColor = false,
+  invertColor = false,
+  className = "",
+}: SectionTileProps): JSX.Element {
   const outerClasses = classNames(
     "features-tiles section",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
-    props.className
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
+    className
   );
 
   const innerClasses = classNames(
     "features-tiles-inner section-inner pt-0",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider"
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
   const tilesClasses = classNames(
     "tiles-wrap center-content",
-    props.pushLeft && "push-left"
+    pushLeft && "push-left"
   );
 
   const sectionHeader = {
@@ -43,7 +49,7 @@ export default function FeaturesTiles(
   };
 
   return (
-    <section id="features" {...props} className={outerClasses}>
+    <section id="features" className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

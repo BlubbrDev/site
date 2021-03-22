@@ -1,24 +1,32 @@
 import React from "react";
 import classNames from "classnames";
-import { SectionProps, defaultSectionProps } from "utils/SectionProps";
+import { SectionProps } from "utils/SectionProps";
 import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
 import HeroAnimation from "./partials/HeroAnimation";
 
-export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Element {
+export default function Hero({
+  topOuterDivider = false,
+  bottomOuterDivider = false,
+  topDivider = false,
+  bottomDivider = false,
+  hasBgColor = false,
+  invertColor = false,
+  className = "",
+}: SectionProps): JSX.Element {
   const outerClasses = classNames(
     "hero section center-content",
-    prop.topOuterDivider && "has-top-divider",
-    prop.bottomOuterDivider && "has-bottom-divider",
-    prop.hasBgColor && "has-bg-color",
-    prop.invertColor && "invert-color",
-    prop.className
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
+    className
   );
 
   const innerClasses = classNames(
     "hero-inner section-inner",
-    prop.topDivider && "has-top-divider",
-    prop.bottomDivider && "has-bottom-divider"
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
   return (
@@ -38,8 +46,9 @@ export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Elem
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="200"
               >
-                Blubbr is a financial analytics company that specializes in a set of automated
-                tools to help you stay informed and up-to-date on any ticker in the index.
+                Blubbr is a financial analytics company that specializes in a
+                set of automated tools to help you stay informed and up-to-date
+                on any ticker in the index.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="300">
                 <ButtonGroup>

@@ -1,9 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import {
-  SectionSplitProps,
-  defaultSectionSplitProps,
-} from "utils/SectionProps";
+import { SectionSplitProps } from "utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import Image from "components/elements/Image";
 
@@ -11,29 +8,39 @@ import figure_1 from "assets/images/features-split-image-01.png";
 import figure_2 from "assets/images/features-split-image-02.png";
 // import figure_3 from "assets/images/features-split-image-03.png";
 
-export default function FeaturesSplit(
-  props: SectionSplitProps = defaultSectionSplitProps
-): JSX.Element {
+export default function FeaturesSplit({
+  topOuterDivider = false,
+  bottomOuterDivider = false,
+  topDivider = false,
+  bottomDivider = false,
+  hasBgColor = false,
+  invertColor = false,
+  className = "",
+  invertMobile = false,
+  invertDesktop = false,
+  alignTop = false,
+  imageFill = false,
+}: SectionSplitProps): JSX.Element {
   const outerClasses = classNames(
     "features-split section",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
-    props.className
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
+    className
   );
 
   const innerClasses = classNames(
     "features-split-inner section-inner",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider"
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
   const splitClasses = classNames(
     "split-wrap",
-    props.invertMobile && "invert-mobile",
-    props.invertDesktop && "invert-desktop",
-    props.alignTop && "align-top"
+    invertMobile && "invert-mobile",
+    invertDesktop && "invert-desktop",
+    alignTop && "align-top"
   );
 
   const sectionHeader = {
@@ -44,7 +51,7 @@ export default function FeaturesSplit(
   };
 
   return (
-    <section {...props} className={outerClasses}>
+    <section className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
@@ -59,15 +66,15 @@ export default function FeaturesSplit(
                 </div>
                 <h3 className="mt-0 mb-12">Notifi</h3>
                 <p className="m-0">
-                  Gets a feed from a webscraping bot that notifies a discord channel
-                  when there are important updates to the SEC website. The fastest way
-                  to get new information.
+                  Gets a feed from a webscraping bot that notifies a discord
+                  channel when there are important updates to the SEC website.
+                  The fastest way to get new information.
                 </p>
               </div>
               <div
                 className={classNames(
                   "split-item-image center-content-mobile reveal-from-bottom",
-                  props.imageFill && "split-item-image-fill"
+                  imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
               >
@@ -90,14 +97,15 @@ export default function FeaturesSplit(
                 </div>
                 <h3 className="mt-0 mb-12">Notifi News</h3>
                 <p className="m-0">
-                  Be the first to know about breaking news. Notifi News reads every article
-                  the second it is published and filters it for important financial information.
+                  Be the first to know about breaking news. Notifi News reads
+                  every article the second it is published and filters it for
+                  important financial information.
                 </p>
               </div>
               <div
                 className={classNames(
                   "split-item-image center-content-mobile reveal-from-bottom",
-                  props.imageFill && "split-item-image-fill"
+                  imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
               >
