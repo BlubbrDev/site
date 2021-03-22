@@ -4,14 +4,15 @@ import React, {
   useImperativeHandle,
   ReactNode,
   ReactNodeArray,
+  useRef,
 } from "react";
 import { throttle } from "lodash";
 
-type ScrollRevealProps = {
+type _ScrollerProps = {
   children: ReactNode | ReactNodeArray;
 };
 
-const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
+const _Scroller = React.forwardRef((props: _ScrollerProps, ref) => {
   const [viewportHeight, setViewportheight] = useState(window.innerHeight);
   const [revealEl, setRevealel] = useState<NodeListOf<Element>>();
 
@@ -97,4 +98,27 @@ const ScrollReveal = React.forwardRef((props: ScrollRevealProps, ref) => {
   return <>{props.children}</>;
 });
 
-export default ScrollReveal;
+/**
+ * Defines the interface of props used by the scroll reveal component.
+ */
+interface ScrollRevealProps {
+  children: ReactNode | ReactNodeArray;
+}
+
+/**
+ * A wrapper for individual pages where we want the content on that page to be revealed as you
+ * scroll down the page.
+ */
+export default function ScrollReveal({
+  children,
+}: ScrollRevealProps): JSX.Element {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const childRef = useRef<any>();
+
+  useEffect(() => {
+    document.body.classList.add("is-loaded");
+    childRef.current.init();
+  }, []);
+
+  return <_Scroller ref={childRef}>{children}</_Scroller>;
+}

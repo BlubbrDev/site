@@ -9,6 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="Blubbr" content="This is a description of blubbr." />
+    <meta
+      name="Description"
+      content="Blubbr is a financial services palatform that allows users to gain instant access
+      to the worlds financial information so that they can make smarter, more informed financial
+      decisions."
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/blubbr_192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -48,6 +54,11 @@
       }
       gtag("js", new Date());
       gtag("config", "G-FE2829FLJR");
+    </script>
+
+    <!-- Depreciated React API Workaround (see: https://github.com/facebook/react/pull/20831) -->
+    <script>
+      if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
     </script>
   </head>
   <body class="has-animations">

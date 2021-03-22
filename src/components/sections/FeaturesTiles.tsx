@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { SectionTileProps, defaultSectionTileProps } from "utils/SectionProps";
+import { SectionTileProps } from "utils/SectionProps";
 import SectionHeader from "components/sections/partials/SectionHeader";
 import Image from "components/elements/Image";
 
@@ -11,27 +11,34 @@ import feature_4 from "assets/images/feature-tile-icon-04.svg";
 import feature_5 from "assets/images/feature-tile-icon-05.svg";
 import feature_6 from "assets/images/feature-tile-icon-06.svg";
 
-export default function FeaturesTiles(
-  props: SectionTileProps = defaultSectionTileProps
-): JSX.Element {
+export default function FeaturesTiles({
+  topOuterDivider = false,
+  bottomOuterDivider = false,
+  topDivider = false,
+  bottomDivider = false,
+  hasBgColor = false,
+  invertColor = false,
+  className = "",
+  pushLeft = false,
+}: SectionTileProps): JSX.Element {
   const outerClasses = classNames(
     "features-tiles section",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
-    props.className
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
+    className
   );
 
   const innerClasses = classNames(
     "features-tiles-inner section-inner pt-0",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider"
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
   const tilesClasses = classNames(
     "tiles-wrap center-content",
-    props.pushLeft && "push-left"
+    pushLeft && "push-left"
   );
 
   const sectionHeader = {
@@ -43,7 +50,7 @@ export default function FeaturesTiles(
   };
 
   return (
-    <section id="features" {...props} className={outerClasses}>
+    <section id="features" className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
@@ -61,7 +68,7 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Premium Content</h4>
+                  <h3 className="h4 mt-0 mb-8">Premium Content</h3>
                   <p className="m-0 text-sm">
                     Our specialized software is optimized to find the next big
                     insight that can help you realize alpha gains.
@@ -86,9 +93,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Daily Digest</h4>
+                  <h3 className="h4 mt-0 mb-8">Daily Digest</h3>
                   <p className="m-0 text-sm">
-                    With our daily digest, you will get the powerful insights of blubbr right in your inbox.
+                    With our daily digest, you will get the powerful insights of
+                    blubbr right in your inbox.
                   </p>
                 </div>
               </div>
@@ -110,9 +118,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Global Network</h4>
+                  <h3 className="h4 mt-0 mb-8">Global Network</h3>
                   <p className="m-0 text-sm">
-                    Our global community of financial professionals means you can always talk stock.
+                    Our global community of financial professionals means you
+                    can always talk stock.
                   </p>
                 </div>
               </div>
@@ -131,7 +140,7 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">ML Insights</h4>
+                  <h3 className="h4 mt-0 mb-8">ML Insights</h3>
                   <p className="m-0 text-sm">
                     Our machine-learning algorithms will help you better
                     understand current market dynamics.
@@ -156,9 +165,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Free Trial</h4>
+                  <h3 className="h4 mt-0 mb-8">Free Trial</h3>
                   <p className="m-0 text-sm">
-                    Join the community for free and see for yourself how much fat you can cut off with blubbr.
+                    Join the community for free and see for yourself how much
+                    fat you can cut off with blubbr.
                   </p>
                 </div>
               </div>
@@ -180,9 +190,10 @@ export default function FeaturesTiles(
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Deep Dives</h4>
+                  <h3 className="h4 mt-0 mb-8">Deep Dives</h3>
                   <p className="m-0 text-sm">
-                    As a member, you get access to hand-crafted research from our deticated members.
+                    As a member, you get access to hand-crafted research from
+                    our deticated members.
                   </p>
                 </div>
               </div>

@@ -1,24 +1,32 @@
 import React from "react";
 import classNames from "classnames";
-import { SectionProps, defaultSectionProps } from "utils/SectionProps";
+import { SectionProps } from "utils/SectionProps";
 import ButtonGroup from "components/elements/ButtonGroup";
 import Button from "components/elements/Button";
 import HeroAnimation from "./partials/HeroAnimation";
 
-export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Element {
+export default function Hero({
+  topOuterDivider = false,
+  bottomOuterDivider = false,
+  topDivider = false,
+  bottomDivider = false,
+  hasBgColor = false,
+  invertColor = false,
+  className = "",
+}: SectionProps): JSX.Element {
   const outerClasses = classNames(
     "hero section center-content",
-    prop.topOuterDivider && "has-top-divider",
-    prop.bottomOuterDivider && "has-bottom-divider",
-    prop.hasBgColor && "has-bg-color",
-    prop.invertColor && "invert-color",
-    prop.className
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
+    className
   );
 
   const innerClasses = classNames(
     "hero-inner section-inner",
-    prop.topDivider && "has-top-divider",
-    prop.bottomDivider && "has-bottom-divider"
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
   return (
@@ -28,7 +36,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Elem
           <div className="hero-content">
             <h1
               className="mt-0 mb-16 reveal-from-bottom"
-              data-reveal-delay="100"
+              data-reveal-delay="25"
             >
               The future of{" "}
               <span className="text-color-primary">investing</span>
@@ -36,10 +44,11 @@ export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Elem
             <div className="container-xs">
               <p
                 className="m-0 mb-32 reveal-from-bottom"
-                data-reveal-delay="200"
+                data-reveal-delay="75"
               >
-                Blubbr is a financial analytics company that specializes in a set of automated
-                tools to help you stay informed and up-to-date on any ticker in the index.
+                Blubbr is a financial analytics company that specializes in a
+                set of automated tools to help you stay informed and up-to-date
+                on any ticker in the index.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="300">
                 <ButtonGroup>
@@ -62,7 +71,7 @@ export default function Hero(prop: SectionProps = defaultSectionProps): JSX.Elem
             id="bots"
             className="hero-figure reveal-from-bottom illustration-element-01"
             data-reveal-value="20px"
-            data-reveal-delay="400"
+            data-reveal-delay="200"
           >
             <HeroAnimation />
           </div>

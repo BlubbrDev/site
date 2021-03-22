@@ -1,33 +1,37 @@
 import React from "react";
 import classNames from "classnames";
-import {
-  CallToActionProps,
-  defaultCallToActionProps,
-} from "utils/SectionProps";
+import { CallToActionProps } from "utils/SectionProps";
 // import Input from "components/elements/Input";
 import Button from "components/elements/Button";
 
-export default function CallToAction(
-  props: CallToActionProps = defaultCallToActionProps
-): JSX.Element {
+export default function CallToAction({
+  topOuterDivider = false,
+  bottomOuterDivider = false,
+  topDivider = false,
+  bottomDivider = false,
+  hasBgColor = false,
+  invertColor = false,
+  className = "",
+  split = true,
+}: CallToActionProps): JSX.Element {
   const outerClasses = classNames(
     "cta section center-content-mobile reveal-from-bottom",
-    props.topOuterDivider && "has-top-divider",
-    props.bottomOuterDivider && "has-bottom-divider",
-    props.hasBgColor && "has-bg-color",
-    props.invertColor && "invert-color",
-    props.className
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color",
+    className
   );
 
   const innerClasses = classNames(
     "cta-inner section-inner",
-    props.topDivider && "has-top-divider",
-    props.bottomDivider && "has-bottom-divider",
-    props.split && "cta-split"
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider",
+    split && "cta-split"
   );
 
   return (
-    <section {...props} className={outerClasses}>
+    <section className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <div className="cta-slogan">
