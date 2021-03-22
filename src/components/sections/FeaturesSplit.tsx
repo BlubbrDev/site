@@ -5,7 +5,7 @@ import SectionHeader from "./partials/SectionHeader";
 
 import figure_1 from "assets/images/features-split-image-01.png";
 import figure_2 from "assets/images/features-split-image-02.png";
-import FeatureSplitRow from "./partials/FeatureSplitRow";
+import FeatureSplitRow from "./partials/SplitRow";
 // import figure_3 from "assets/images/features-split-image-03.png";
 
 export default function FeaturesSplit({
