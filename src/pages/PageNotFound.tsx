@@ -4,6 +4,9 @@ import Animation from "components/elements/Animation";
 import TrackedPage from "utils/GoogleAnalytics";
 import ScrollReveal from "utils/ScrollReveal";
 
+/**
+ * The 404 error page for the website.
+ */
 export default function PageNotFound(): JSX.Element {
   return (
     <TrackedPage>
