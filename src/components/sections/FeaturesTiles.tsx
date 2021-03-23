@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import { SectionTileProps } from "utils/SectionProps";
 import SectionHeader from "components/sections/partials/SectionHeader";
-import Image from "components/elements/Image";
 
 import feature_1 from "assets/images/feature-tile-icon-01.svg";
 import feature_2 from "assets/images/feature-tile-icon-02.svg";
