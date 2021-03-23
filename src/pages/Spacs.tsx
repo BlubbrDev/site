@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import TrackedPage from "utils/GoogleAnalytics";
 
-// This page contains an embedded dashboard of spac information, powered by Tableau.
-// If you have any questions, you should contact @StevenK
+/**
+ * This page contains an embedded dashboard of spac information, powered by Tableau.
+ * If you have any questions, you should contact @StevenK
+ */
 export default function Spacs(): JSX.Element {
   useEffect(() => _loadTableau());
   return (
@@ -52,6 +54,9 @@ export default function Spacs(): JSX.Element {
   );
 }
 
+/**
+ * Loads the tableau data.
+ */
 function _loadTableau() {
   const divElement = document.getElementById("viz1614816342907");
   if (!divElement) return;

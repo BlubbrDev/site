@@ -10,6 +10,7 @@ import feature_3 from "assets/images/feature-tile-icon-03.svg";
 import feature_4 from "assets/images/feature-tile-icon-04.svg";
 import feature_5 from "assets/images/feature-tile-icon-05.svg";
 import feature_6 from "assets/images/feature-tile-icon-06.svg";
+import FeatureTile from "./partials/FeatureTile";
 
 export default function FeaturesTiles({
   topOuterDivider = false,
@@ -49,155 +50,67 @@ export default function FeaturesTiles({
       rest of the market finds out.",
   };
 
+  const features = [
+    {
+      delay: 0,
+      title: "Premium Content",
+      body:
+        "Our specialized software is optimized to find the next big insight that can help you \
+        realize alpha gains.",
+      img: { src: feature_1, alt: "Premium Content" },
+    },
+    {
+      delay: 100,
+      title: "Daily Digest",
+      body:
+        "With our daily digest, you will get the powerful insights of blubbr right in your \
+        inbox.",
+      img: { src: feature_2, alt: "Daily Digest" },
+    },
+    {
+      delay: 50,
+      title: "Global Network",
+      body:
+        "Our global community of financial professionals means you can always talk stock.",
+      img: { src: feature_3, alt: "Global Network" },
+    },
+    {
+      delay: 0,
+      title: "ML Insights",
+      body:
+        "Our machine-learning algorithms will help you better understand current market \
+        dynamics.",
+      img: { src: feature_4, alt: "ML Insights" },
+    },
+    {
+      delay: 100,
+      title: "Free Trial",
+      body:
+        "Join the community for free and see for yourself how much fat you can cut off with \
+        blubbr.",
+      img: { src: feature_5, alt: "Free Trial" },
+    },
+    {
+      delay: 200,
+      title: "Deep Dives",
+      body:
+        "As a member, you get access to hand-crafted research from our deticated members.",
+      img: { src: feature_6, alt: "Deep Dives" },
+    },
+  ];
+
   return (
     <section id="features" className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={feature_1}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h3 className="h4 mt-0 mb-8">Premium Content</h3>
-                  <p className="m-0 text-sm">
-                    Our specialized software is optimized to find the next big
-                    insight that can help you realize alpha gains.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tiles-item reveal-from-bottom"
-              data-reveal-delay="100"
-            >
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={feature_2}
-                      alt="Features tile icon 02"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h3 className="h4 mt-0 mb-8">Daily Digest</h3>
-                  <p className="m-0 text-sm">
-                    With our daily digest, you will get the powerful insights of
-                    blubbr right in your inbox.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tiles-item reveal-from-bottom"
-              data-reveal-delay="50"
-            >
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={feature_3}
-                      alt="Features tile icon 03"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h3 className="h4 mt-0 mb-8">Global Network</h3>
-                  <p className="m-0 text-sm">
-                    Our global community of financial professionals means you
-                    can always talk stock.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={feature_4}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h3 className="h4 mt-0 mb-8">ML Insights</h3>
-                  <p className="m-0 text-sm">
-                    Our machine-learning algorithms will help you better
-                    understand current market dynamics.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tiles-item reveal-from-bottom"
-              data-reveal-delay="100"
-            >
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={feature_5}
-                      alt="Features tile icon 05"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h3 className="h4 mt-0 mb-8">Free Trial</h3>
-                  <p className="m-0 text-sm">
-                    Join the community for free and see for yourself how much
-                    fat you can cut off with blubbr.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tiles-item reveal-from-bottom"
-              data-reveal-delay="200"
-            >
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={feature_6}
-                      alt="Features tile icon 06"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h3 className="h4 mt-0 mb-8">Deep Dives</h3>
-                  <p className="m-0 text-sm">
-                    As a member, you get access to hand-crafted research from
-                    our deticated members.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <FeatureTile {...features[0]} />
+            <FeatureTile {...features[1]} />
+            <FeatureTile {...features[2]} />
+            <FeatureTile {...features[3]} />
+            <FeatureTile {...features[4]} />
+            <FeatureTile {...features[5]} />
           </div>
         </div>
       </div>

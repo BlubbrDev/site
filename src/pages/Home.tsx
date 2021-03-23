@@ -8,6 +8,9 @@ import CallToAction from "components/sections/CallToAction";
 import TrackedPage from "utils/GoogleAnalytics";
 import ScrollReveal from "utils/ScrollReveal";
 
+/**
+ * The landing page for the website.
+ */
 export default function Home(): JSX.Element {
   return (
     <TrackedPage>
