@@ -1,5 +1,5 @@
 import React from "react";
-import LayoutDefault from "layouts/LayoutDefault";
+import LayoutDefault from "components/layout/LayoutDefault";
 import Animation from "components/elements/Animation";
 import TrackedPage from "utils/GoogleAnalytics";
 import ScrollReveal from "utils/ScrollReveal";

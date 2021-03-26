@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import classNames from "classnames";
-// import { Link } from "react-router-dom";
 import Logo from "./partials/Logo";
 import Button from "components/elements/Button";
 
@@ -126,7 +125,7 @@ export default function Header(headerProp: HeaderProp = defaultProps): JSX.Eleme
                           tag="a"
                           color="primary"
                           wideMobile
-                          href={process.env.REACT_APP_DISCORD_URL as string}
+                          href={process.env.NEXT_PUBLIC_DISCORD_URL}
                         >
                           Join Discord
                         </Button>

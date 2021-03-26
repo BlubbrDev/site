@@ -3,8 +3,6 @@ import classNames from "classnames";
 import { SectionSplitProps } from "utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 
-import figure_1 from "assets/images/features-split-image-01.png";
-import figure_2 from "assets/images/features-split-image-02.png";
 import FeatureSplitRow from "./partials/SplitRow";
 // import figure_3 from "assets/images/features-split-image-03.png";
 
@@ -57,7 +55,7 @@ export default function FeaturesSplit({
       body:
         "Gets a feed from a webscraping bot that notifies a discord channel when there are \
         important updates to the SEC website. The fastest way to get new information.",
-      img: { src: figure_1, alt: "Notifi Bot" },
+      img: { src: "images/features-split-image-01.png", alt: "Notifi Bot" },
       from: "left",
       shouldFill: imageFill,
     },
@@ -67,7 +65,7 @@ export default function FeaturesSplit({
       body:
         "Be the first to know about breaking news. Notifi News reads every article the second \
         it is published and filters it for important financial information.",
-      img: { src: figure_2, alt: "Notifi News Bot" },
+      img: { src: "images/features-split-image-02.png", alt: "Notifi News Bot" },
       from: "right",
       shouldFill: imageFill,
     },
