@@ -1,6 +1,7 @@
 {
   "name": "blubbr",
   "version": "0.1.0",
+  "homepage": "https://blubbr.io",
   "private": true,
   "scripts": {
     "dev": "next dev",
