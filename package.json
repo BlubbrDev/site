@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "node_modules/.bin/eslint --ext '.tsx' --fix src/"
   },
   "dependencies": {
     "classnames": "^2.2.6",
