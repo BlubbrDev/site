@@ -1,3 +1,6 @@
+# Notice:
+# This action has been depreciated. We now use vercel to automate our deployment. Contact @Justin 
+# for more information about this if you have any questions.
 name: 'Deploys a React App to GitHub pages'
 description: 'This action will automate the process of deploying a react app to github pages.'
 
@@ -24,7 +27,7 @@ runs:
 
     # Commit all changes (see grep details below)
     - name : Committing changes...
-      run : git commit -m "Automatically deploying v$(npm version | grep 'site' | grep -E -o "[0-9]+\.[0-9]+\.[0-9]+[^']*")"
+      run : git commit -m "🥳 Automatically deploying v$(npm version | grep 'site' | grep -E -o "[0-9]+\.[0-9]+\.[0-9]+[^']*")"
       shell: bash
 
     # Push the changes to the gh-pages branch

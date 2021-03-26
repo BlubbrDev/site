@@ -32,17 +32,17 @@ jobs:
       with:
         name : react-app-build
         path : build/
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    name: Deploy App
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Downloading build artifacts...
-      uses: actions/download-artifact@v2
-      with:
-        name: react-app-build
-        path: build/
-    - name: Deploying...
-      uses: ./.github/actions/deploy
+  # deploy:
+  #   if: github.ref == 'refs/heads/main'
+  #   name: Deploy App
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - name: Downloading build artifacts...
+  #     uses: actions/download-artifact@v2
+  #     with:
+  #       name: react-app-build
+  #       path: build/
+  #   - name: Deploying...
+  #     uses: ./.github/actions/deploy
