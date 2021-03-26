@@ -6,6 +6,8 @@ import ScrollReveal from "utils/ScrollReveal";
 
 /**
  * The 404 error page for the website.
+ * This page is shown whenever the user tries to navigate to a URL that does not have a matching
+ * file in the /pages directory.
  */
 export default function PageNotFound(): JSX.Element {
   return (
