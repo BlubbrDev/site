@@ -10,6 +10,8 @@ import ScrollReveal from "utils/ScrollReveal";
 
 /**
  * The landing page for the website.
+ * This is the home page and will be the default page loaded when a user navigates to the
+ * homepage, located at https://blubbr.io (this can be seen in the package.json file as well).
  */
 export default function Home(): JSX.Element {
   return (
