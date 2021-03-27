@@ -1,14 +1,16 @@
 import "public/scss/style.scss";
-import {useEffect} from "react";
-import type { AppProps /*, AppContext */ } from 'next/app';
+import { useEffect } from "react";
+import type { AppProps /*, AppContext */ } from "next/app";
 import { initializeGoogleAnalytics } from "utils/GoogleAnalytics";
 
-
+/**
+ * This is the default part of the webapp that is shared between all pages of the site.
+ */
 function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     initializeGoogleAnalytics();
   }, []);
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
 // Only uncomment this method if you have blocking data requirements for
