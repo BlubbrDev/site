@@ -3,12 +3,6 @@ import classNames from "classnames";
 import { SectionTileProps } from "utils/SectionProps";
 import SectionHeader from "components/sections/partials/SectionHeader";
 
-import feature_1 from "assets/images/feature-tile-icon-01.svg";
-import feature_2 from "assets/images/feature-tile-icon-02.svg";
-import feature_3 from "assets/images/feature-tile-icon-03.svg";
-import feature_4 from "assets/images/feature-tile-icon-04.svg";
-import feature_5 from "assets/images/feature-tile-icon-05.svg";
-import feature_6 from "assets/images/feature-tile-icon-06.svg";
 import FeatureTile from "./partials/FeatureTile";
 
 export default function FeaturesTiles({
@@ -56,7 +50,7 @@ export default function FeaturesTiles({
       body:
         "Our specialized software is optimized to find the next big insight that can help you \
         realize alpha gains.",
-      img: { src: feature_1, alt: "Premium Content" },
+      img: { src: "images/feature-tile-icon-01.svg", alt: "Premium Content" },
     },
     {
       delay: 100,
@@ -64,14 +58,14 @@ export default function FeaturesTiles({
       body:
         "With our daily digest, you will get the powerful insights of blubbr right in your \
         inbox.",
-      img: { src: feature_2, alt: "Daily Digest" },
+      img: { src: "images/feature-tile-icon-02.svg", alt: "Daily Digest" },
     },
     {
       delay: 50,
       title: "Global Network",
       body:
         "Our global community of financial professionals means you can always talk stock.",
-      img: { src: feature_3, alt: "Global Network" },
+      img: { src: "images/feature-tile-icon-03.svg", alt: "Global Network" },
     },
     {
       delay: 0,
@@ -79,7 +73,7 @@ export default function FeaturesTiles({
       body:
         "Our machine-learning algorithms will help you better understand current market \
         dynamics.",
-      img: { src: feature_4, alt: "ML Insights" },
+      img: { src: "images/feature-tile-icon-04.svg", alt: "ML Insights" },
     },
     {
       delay: 100,
@@ -87,14 +81,14 @@ export default function FeaturesTiles({
       body:
         "Join the community for free and see for yourself how much fat you can cut off with \
         blubbr.",
-      img: { src: feature_5, alt: "Free Trial" },
+      img: { src: "images/feature-tile-icon-05.svg", alt: "Free Trial" },
     },
     {
       delay: 200,
       title: "Deep Dives",
       body:
         "As a member, you get access to hand-crafted research from our deticated members.",
-      img: { src: feature_6, alt: "Deep Dives" },
+      img: { src: "images/feature-tile-icon-06.svg", alt: "Deep Dives" },
     },
   ];
 

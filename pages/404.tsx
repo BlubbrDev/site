@@ -1,11 +1,13 @@
 import React from "react";
-import LayoutDefault from "layouts/LayoutDefault";
+import LayoutDefault from "components/layout/LayoutDefault";
 import Animation from "components/elements/Animation";
 import TrackedPage from "utils/GoogleAnalytics";
 import ScrollReveal from "utils/ScrollReveal";
 
 /**
  * The 404 error page for the website.
+ * This page is shown whenever the user tries to navigate to a URL that does not have a matching
+ * file in the /pages directory.
  */
 export default function PageNotFound(): JSX.Element {
   return (

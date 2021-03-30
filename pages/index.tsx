@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "components/sections/Hero";
-import LayoutDefault from "layouts/LayoutDefault";
+import LayoutDefault from "components/layout/LayoutDefault";
 import FeaturesTiles from "components/sections/FeaturesTiles";
 import FeaturesSplit from "components/sections/FeaturesSplit";
 import Testimonial from "components/sections/Testimonial";
@@ -10,6 +10,8 @@ import ScrollReveal from "utils/ScrollReveal";
 
 /**
  * The landing page for the website.
+ * This is the home page and will be the default page loaded when a user navigates to the
+ * homepage, located at https://blubbr.io (this can be seen in the package.json file as well).
  */
 export default function Home(): JSX.Element {
   return (

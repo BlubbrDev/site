@@ -19,41 +19,43 @@ interface _ScrollerProps {
  * The scroller that controlls when elements are revealed based on the current scroll position.
  */
 const _Scroller = React.forwardRef((props: _ScrollerProps, ref) => {
-  const throttleWait = 30; // The number of milliseconds to throttle invocations to.
-  const [viewportHeight, setViewportheight] = useState(window.innerHeight);
+  const throttleWait = 30;
+  const [viewportHeight, setViewportheight] = useState(600);
   const [revealEl, setRevealel] = useState<NodeListOf<Element>>();
   
   /**
    * Reveals the elements when the window loads.
    */
   useEffect(() => {
+    setViewportheight(window.innerHeight);
     handleListeners();
     revealElements();
-  }, [viewportHeight]);
+  }, []);
   
-    /**
-     * Exposes an initializer callback function that sets the reveal for the scroll reveal.
-     */
-    useImperativeHandle(ref, () => ({
-      init() {
-        const query = "[class*=reveal-]";
-        setRevealel(document.querySelectorAll(query) as NodeListOf<Element>);
-      },
-    }));
-  
-    /**
-     * When the reveal element loads, checks to see if the reveal has been completed and if not, it
-     * will set an event listener on the scroll and resize emitters.
-     */
-    useEffect(() => {
-      if (typeof revealEl !== "undefined" && revealEl.length > 0) {
-        if (!checkComplete()) {
-          window.addEventListener("scroll", handleScroll);
-          window.addEventListener("resize", handleResize);
-        }
-        revealElements();
+  /**
+   * Exposes an initializer callback function that sets the reveal for the scroll reveal.
+   */
+  useImperativeHandle(ref, () => ({
+    init() {
+      const query = "[class*=reveal-]";
+      setRevealel(document.querySelectorAll(query));
+    },
+  }));
+
+  /**
+   * When the reveal element loads, checks to see if the reveal has been completed and if not, it
+   * will set an event listener on the scroll and resize emitters.
+   */
+  useEffect(() => {
+    document.querySelector('body').classList.add('has-animations');
+    if (typeof revealEl !== "undefined" && revealEl.length > 0) {
+      if (!checkComplete() && typeof window !== 'undefined') {
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleResize);
       }
-    }, [revealEl]);
+      revealElements();
+    }
+  }, [revealEl]);
 
   /**
    * Checks if the reveal has completed (all the elements that should be visible are visible).
@@ -87,12 +89,12 @@ const _Scroller = React.forwardRef((props: _ScrollerProps, ref) => {
     const revealed = "is-revealed";
     for (let i = 0; i < revealEl.length; i++) {
       const el: Element = revealEl[i];
-      const revealDelay = parseInt(el.getAttribute(delay) as string);
+      const revealDelay = parseInt(el.getAttribute(delay));
       const revealOffset: number = el.getAttribute(offset)
-        ? parseInt(el.getAttribute(offset) as string)
+        ? parseInt(el.getAttribute(offset))
         : 200;
       const listenedEl = el.getAttribute(container)
-        ? (el.closest(el.getAttribute(container) as string) as Element)
+        ? el.closest(el.getAttribute(container))
         : el;
       if (
         isVisible(listenedEl, revealOffset) &&
@@ -149,7 +151,6 @@ interface ScrollRevealProps {
 export default function ScrollReveal({
   children,
 }: ScrollRevealProps): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const childRef = useRef<any>();
 
   useEffect(() => {

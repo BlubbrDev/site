@@ -3,7 +3,7 @@ import TrackedPage from "utils/GoogleAnalytics";
 
 /**
  * This page contains an embedded dashboard of spac information, powered by Tableau.
- * If you have any questions, you should contact @StevenK
+ * If you have any questions, you should contact @StevenK because he knows more about this than me.
  */
 export default function Spacs(): JSX.Element {
   useEffect(() => _loadTableau());
