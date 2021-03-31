@@ -22,16 +22,7 @@ const _Scroller = React.forwardRef((props: _ScrollerProps, ref) => {
   const throttleWait = 30;
   const [viewportHeight, setViewportheight] = useState(0);
   const [revealEl, setRevealel] = useState<NodeListOf<Element>>();
-  
-  /**
-   * Reveals the elements when the window loads.
-   */
-  useEffect(() => {
-    setViewportheight(window.innerHeight);
-    handleListeners();
-    revealElements();
-  }, []);
-  
+
   /**
    * Exposes an initializer callback function that sets the reveal for the scroll reveal.
    */
@@ -47,9 +38,12 @@ const _Scroller = React.forwardRef((props: _ScrollerProps, ref) => {
    * will set an event listener on the scroll and resize emitters.
    */
   useEffect(() => {
-    document.querySelector('body').classList.add('has-animations');
+    setViewportheight(window.innerHeight);
+    handleListeners();
+    revealElements();
+    document.querySelector("body").classList.add("has-animations");
     if (typeof revealEl !== "undefined" && revealEl.length > 0) {
-      if (!checkComplete() && typeof window !== 'undefined') {
+      if (!checkComplete() && typeof window !== "undefined") {
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", handleResize);
       }
@@ -132,7 +126,6 @@ const _Scroller = React.forwardRef((props: _ScrollerProps, ref) => {
   const handleResize = throttle(() => {
     setViewportheight(window.innerHeight);
   }, throttleWait);
-
 
   return <>{props.children}</>;
 });
