@@ -8,6 +8,8 @@ import CallToAction from "components/sections/CallToAction";
 import TrackedPage from "utils/GoogleAnalytics";
 import ScrollReveal from "utils/ScrollReveal";
 
+import PageMetadata from "utils/PageMetadata";
+
 /**
  * The landing page for the website.
  * This is the home page and will be the default page loaded when a user navigates to the
@@ -15,21 +17,24 @@ import ScrollReveal from "utils/ScrollReveal";
  */
 export default function Home(): JSX.Element {
   return (
-    <TrackedPage>
-      <ScrollReveal>
-        <LayoutDefault>
-          <Hero className="illustration-section-01" />
-          <FeaturesTiles />
-          <FeaturesSplit
-            invertMobile
-            topDivider
-            imageFill
-            className="illustration-section-02"
-          />
-          <Testimonial topDivider />
-          <CallToAction split />
-        </LayoutDefault>
-      </ScrollReveal>
-    </TrackedPage>
+    <>
+      <PageMetadata/>
+      <TrackedPage>
+        <ScrollReveal>
+          <LayoutDefault>
+            <Hero className="illustration-section-01" />
+            <FeaturesTiles />
+            <FeaturesSplit
+              invertMobile
+              topDivider
+              imageFill
+              className="illustration-section-02"
+            />
+            <Testimonial topDivider />
+            <CallToAction split />
+          </LayoutDefault>
+        </ScrollReveal>
+      </TrackedPage>
+    </>
   );
 }
