@@ -27,7 +27,7 @@ export default function PageMetadata({
 }: PageMetadataProps) {
   return (
     <Head>
-      <title>Blubbr</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="og:title" property="og:title" content={title} />
       <meta
