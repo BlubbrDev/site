@@ -20,7 +20,7 @@ interface _ScrollerProps {
  */
 const _Scroller = React.forwardRef((props: _ScrollerProps, ref) => {
   const throttleWait = 30;
-  const [viewportHeight, setViewportheight] = useState(600);
+  const [viewportHeight, setViewportheight] = useState(0);
   const [revealEl, setRevealel] = useState<NodeListOf<Element>>();
   
   /**

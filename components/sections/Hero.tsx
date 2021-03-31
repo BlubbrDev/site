@@ -56,7 +56,7 @@ export default function Hero({
                     tag="a"
                     color="primary"
                     wideMobile
-                    href={process.env.REACT_APP_DISCORD_URL as string}
+                    href={process.env.NEXT_PUBLIC_DISCORD_URL}
                   >
                     Join Discord
                   </Button>

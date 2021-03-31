@@ -50,7 +50,7 @@ export default function FeaturesTiles({
       body:
         "Our specialized software is optimized to find the next big insight that can help you \
         realize alpha gains.",
-      img: { src: "images/feature-tile-icon-01.svg", alt: "Premium Content" },
+      img: { src: "/images/feature-tile-icon-01.svg", alt: "Premium Content" },
     },
     {
       delay: 100,
@@ -58,14 +58,14 @@ export default function FeaturesTiles({
       body:
         "With our daily digest, you will get the powerful insights of blubbr right in your \
         inbox.",
-      img: { src: "images/feature-tile-icon-02.svg", alt: "Daily Digest" },
+      img: { src: "/images/feature-tile-icon-02.svg", alt: "Daily Digest" },
     },
     {
       delay: 50,
       title: "Global Network",
       body:
         "Our global community of financial professionals means you can always talk stock.",
-      img: { src: "images/feature-tile-icon-03.svg", alt: "Global Network" },
+      img: { src: "/images/feature-tile-icon-03.svg", alt: "Global Network" },
     },
     {
       delay: 0,
@@ -73,7 +73,7 @@ export default function FeaturesTiles({
       body:
         "Our machine-learning algorithms will help you better understand current market \
         dynamics.",
-      img: { src: "images/feature-tile-icon-04.svg", alt: "ML Insights" },
+      img: { src: "/images/feature-tile-icon-04.svg", alt: "ML Insights" },
     },
     {
       delay: 100,
@@ -81,14 +81,14 @@ export default function FeaturesTiles({
       body:
         "Join the community for free and see for yourself how much fat you can cut off with \
         blubbr.",
-      img: { src: "images/feature-tile-icon-05.svg", alt: "Free Trial" },
+      img: { src: "/images/feature-tile-icon-05.svg", alt: "Free Trial" },
     },
     {
       delay: 200,
       title: "Deep Dives",
       body:
         "As a member, you get access to hand-crafted research from our deticated members.",
-      img: { src: "images/feature-tile-icon-06.svg", alt: "Deep Dives" },
+      img: { src: "/images/feature-tile-icon-06.svg", alt: "Deep Dives" },
     },
   ];
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import { Rive } from "rive-js";
-
 /**
  * Defines the shape of the props passed into the animation component as a parameter.
  */

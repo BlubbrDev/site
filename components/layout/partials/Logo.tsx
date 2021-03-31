@@ -15,7 +15,7 @@ export default function Logo(logoProp: LogoProp): JSX.Element {
       <h1 className="m-0">
         <Link href="/">
           <a>
-            <Image src={"images/logo.png"} alt="Open" width={32} height={32} />
+            <Image src={"/images/logo.png"} alt="Open" width={32} height={32} />
           </a>
         </Link>
       </h1>

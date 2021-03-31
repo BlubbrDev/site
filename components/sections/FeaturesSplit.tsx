@@ -55,7 +55,7 @@ export default function FeaturesSplit({
       body:
         "Gets a feed from a webscraping bot that notifies a discord channel when there are \
         important updates to the SEC website. The fastest way to get new information.",
-      img: { src: "images/features-split-image-01.png", alt: "Notifi Bot" },
+      img: { src: "/images/features-split-image-01.png", alt: "Notifi Bot" },
       from: "left",
       shouldFill: imageFill,
     },
@@ -65,7 +65,10 @@ export default function FeaturesSplit({
       body:
         "Be the first to know about breaking news. Notifi News reads every article the second \
         it is published and filters it for important financial information.",
-      img: { src: "images/features-split-image-02.png", alt: "Notifi News Bot" },
+      img: {
+        src: "/images/features-split-image-02.png",
+        alt: "Notifi News Bot",
+      },
       from: "right",
       shouldFill: imageFill,
     },
