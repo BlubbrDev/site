@@ -1,14 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * The left-most logo as seen in the navbar.
+ */
 export default function Logo() {
   return (
     <Link href="/">
       <a>
         <span className="sr-only">Blubbr</span>
-        <img
+        <Image
           className="h-8 w-auto sm:h-10"
-          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+          src="/blubbr_512.png"
           alt="Blubbr"
+          width={40}
+          height={40}
         />
       </a>
     </Link>
