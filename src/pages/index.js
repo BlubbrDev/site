@@ -1,6 +1,7 @@
 import Logo from "components/navbar/logo";
 import Button from "components/elements/button";
 import Menu from "components/navbar/menu";
+import NavLink from "../components/navbar/navlink";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
             <Menu />
           </div>
           <nav class="hidden md:flex space-x-10">
-            
+            <NavLink title="Solutions" />
 
             <a
               href="#"
