@@ -3,17 +3,24 @@ import ChevronDownIcon from "../icons/chevron_down";
 import { Transition } from "@headlessui/react";
 import Dropdown from "./dropdown/dropdown";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface NavLinkProps {
   title: string;
+  href?: string;
   isDropdown?: boolean;
 }
 
 /**
  * Defines the state and behavior of a link in the nav bar.
  */
-export default function NavLink({ title, isDropdown = false }: NavLinkProps) {
+export default function NavLink({
+  title,
+  href = "/",
+  isDropdown = false,
+}: NavLinkProps) {
   const [isActive, setIsActive] = useState(false);
+  const router = useRouter();
 
   return isDropdown ? (
     <div className="relative">
@@ -22,7 +29,7 @@ export default function NavLink({ title, isDropdown = false }: NavLinkProps) {
         type="button"
         aria-expanded="false"
         className={
-          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-indigo-500" +
+          "group bg-white rounded-md inline-flex items-center text-base font-light hover:text-gray-900 focus:outline-none focus:ring-indigo-500" +
           (isActive ? " text-gray-900" : " text-gray-500")
         }
       >
@@ -43,7 +50,7 @@ export default function NavLink({ title, isDropdown = false }: NavLinkProps) {
       </Transition>
     </div>
   ) : (
-    <Link href="/">
+    <Link href={href}>
       <a className="text-base font-light text-gray-500 hover:text-gray-900">
         {title}
       </a>

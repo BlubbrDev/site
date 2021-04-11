@@ -86,12 +86,12 @@ const data = [
     ],
   },
   {
-    title: "Notifi News Bot",
+    title: "NotiFi News Bot",
     image: "/assets/images/news_whale_460_200.png",
     content: [
       {
         body:
-          "Our bot monitors news for all SPACs and instantly notifies our community regarding potential mergers.",
+          "Monitors news for all SPACs and instantly notifies our community regarding potential mergers.",
         icon: <Menu />,
       },
       {

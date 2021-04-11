@@ -28,10 +28,9 @@ export default function Navbar() {
             <Menu onClick={() => setShowMenu(!showMenu)} />
           </div>
           <div className="hidden md:flex items-center justify-end space-x-10 md:flex-1 lg:w-0">
-            {/* <NavLink title="Solutions" isDropdown={true} /> */}
-            <NavLink title="Bots" />
+            <NavLink title="What is a SPAC" href="/spacs" />
             <NavLink title="Pricing" />
-            <NavLink title="Solutions" />
+            <NavLink title="Solutions" isDropdown={true} />
             <NavLink title="Newsletter" />
             <Button title="Discord" href="/" primary />
           </div>
