@@ -11,7 +11,7 @@ export default function Logo() {
         <span className="sr-only">Blubbr</span>
         <Image
           className="h-8 w-auto sm:h-10"
-          src="/blubbr_512.png"
+          src="/assets/images/base_whale_512.png"
           alt="Blubbr"
           width={40}
           height={40}
