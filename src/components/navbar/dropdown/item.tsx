@@ -1,13 +1,16 @@
 import Link from "next/link";
 
-interface NavDropdownItemProps {
+interface ItemProps {
   title: string;
   body: string;
   href: string;
   icon: JSX.Element;
 }
 
-export default function NavDropdownItem({ title, body, href, icon }) {
+/**
+ * A navigation bar dropdown item.
+ */
+export default function Item({ title, body, href, icon }: ItemProps) {
   return (
     <Link href={href}>
       <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
