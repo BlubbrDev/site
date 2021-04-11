@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "node_modules/.bin/eslint --ext '.tsx'",
+    "test": ""
   },
   "dependencies": {
     "@headlessui/react": "^0.3.2",
