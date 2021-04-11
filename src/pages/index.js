@@ -51,7 +51,7 @@ export default function Home() {
     },
     {
       title: "SPAC Patrol Bot",
-      image: "/assets/images/base_whale_460_200.png",
+      image: "/assets/images/alert_whale_460_200.png",
       content: [
         {
           body:
@@ -93,7 +93,7 @@ export default function Home() {
     },
     {
       title: "Notifi News Bot",
-      image: "/assets/images/base_whale_460_200.png",
+      image: "/assets/images/news_whale_460_200.png",
       content: [
         {
           body:
@@ -107,7 +107,7 @@ export default function Home() {
         },
         {
           body:
-            "They can choose to open BLBA positions before the news is priced into BLBA’s price.",
+            "They can choose to open BLBA positions before the news is priced into BLBA’s price following its article release.",
           icon: <Menu />,
         },
       ],
@@ -135,7 +135,7 @@ export default function Home() {
     },
     {
       title: "Whale Watcher Bot",
-      image: "/assets/images/base_whale_460_200.png",
+      image: "/assets/images/whale_watch_460_200.png",
       content: [
         {
           body:
@@ -177,7 +177,7 @@ export default function Home() {
     },
     {
       title: "SPAC Merger Bot",
-      image: "/assets/images/base_whale_460_200.png",
+      image: "/assets/images/whale_fam_460_200.png",
       content: [
         {
           body:
