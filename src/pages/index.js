@@ -1,7 +1,7 @@
 import Logo from "components/navbar/logo";
 import Button from "components/elements/button";
 import Menu from "components/navbar/menu";
-import NavLink from "../components/navbar/navlink";
+import NavLink from "components/navbar/navlink";
 
 export default function Home() {
   return (
