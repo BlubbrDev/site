@@ -1,6 +1,9 @@
+import { Transition } from "@headlessui/react";
+import { useState } from "react";
+
 import Logo from "../../components/navbar/logo";
-import Button from "../../components/elements/button";
 import Menu from "../../components/navbar/menu";
+import Button from "../../components/elements/button";
 import MenuItem from "./mobile/menuitem";
 import MenuLink from "./mobile/menulink";
 import NavLink from "../../components/navbar/navlink";
@@ -10,8 +13,6 @@ import CursorClick from "../../components/icons/cursor_click";
 import Refresh from "../../components/icons/refresh";
 import ViewGrid from "../../components/icons/view_grid";
 import ShieldCheck from "../../components/icons/shield_check";
-import { Transition } from "@headlessui/react";
-import { useState } from "react";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -32,9 +33,7 @@ export default function Navbar() {
             <NavLink title="Pricing" />
             <NavLink title="Solutions" />
             <NavLink title="Newsletter" />
-            
             <Button title="Discord" href="/" primary />
-
           </div>
         </div>
       </div>
