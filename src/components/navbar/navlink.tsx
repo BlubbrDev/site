@@ -44,7 +44,7 @@ export default function NavLink({ title, isDropdown = false }: NavLinkProps) {
     </div>
   ) : (
     <Link href="/">
-      <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+      <a className="text-base font-light text-gray-500 hover:text-gray-900">
         {title}
       </a>
     </Link>
