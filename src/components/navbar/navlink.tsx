@@ -30,11 +30,13 @@ export default function NavLink({
         aria-expanded="false"
         className={
           "group bg-white rounded-md inline-flex items-center text-base font-light hover:text-gray-900 focus:outline-none focus:ring-indigo-500" +
-          (isActive ? " text-gray-900" : " text-gray-500")
+          (isActive || router.pathname === href
+            ? " text-gray-900"
+            : " text-gray-500")
         }
       >
         <span>{title}</span>
-        <ChevronDownIcon isActive={isActive} />
+        <ChevronDownIcon isActive={isActive || router.pathname === href} />
       </button>
 
       <Transition
@@ -51,7 +53,12 @@ export default function NavLink({
     </div>
   ) : (
     <Link href={href}>
-      <a className="text-base font-light text-gray-500 hover:text-gray-900">
+      <a
+        className={
+          (router.pathname === href ? "text-gray-900" : "text-gray-500") +
+          " text-base font-light hover:text-gray-900"
+        }
+      >
         {title}
       </a>
     </Link>

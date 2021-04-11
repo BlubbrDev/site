@@ -1,5 +1,6 @@
 import { Transition } from "@headlessui/react";
 import { useState } from "react";
+import Link from "next/link";
 
 import Logo from "../../components/navbar/logo";
 import Menu from "../../components/navbar/menu";
@@ -8,6 +9,7 @@ import MenuItem from "./mobile/menuitem";
 import MenuLink from "./mobile/menulink";
 import NavLink from "../../components/navbar/navlink";
 import CloseIcon from "../../components/icons/close";
+import DiscordIcon from "../../components/icons/discord";
 import ChartBar from "../../components/icons/chart_bar";
 import CursorClick from "../../components/icons/cursor_click";
 import Refresh from "../../components/icons/refresh";
@@ -32,7 +34,9 @@ export default function Navbar() {
             <NavLink title="Pricing" />
             <NavLink title="Solutions" isDropdown={true} />
             <NavLink title="Newsletter" />
-            <Button title="Discord" href="/" primary />
+            <Link href="/discord">
+              <DiscordIcon />
+            </Link>
           </div>
         </div>
       </div>
