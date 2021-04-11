@@ -32,7 +32,9 @@ export default function Navbar() {
             <NavLink title="Pricing" />
             <NavLink title="Solutions" />
             <NavLink title="Newsletter" />
+            
             <Button title="Discord" href="/" primary />
+
           </div>
         </div>
       </div>

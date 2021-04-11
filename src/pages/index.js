@@ -72,7 +72,7 @@ export default function Home() {
     },
     {
       title: "Media Coverage",
-      image: "/assets/images/base_whale_460_200.png",
+      image: "/assets/images/tv_news_460_200.png",
       content: [
         {
           body:
@@ -114,7 +114,7 @@ export default function Home() {
     },
     {
       title: "Blubbr Strikes Back",
-      image: "/assets/images/base_whale_460_200.png",
+      image: "/assets/images/paper_charts_460_200.png",
       content: [
         {
           body:
@@ -156,7 +156,7 @@ export default function Home() {
     },
     {
       title: "The Merger",
-      image: "/assets/images/base_whale_460_200.png",
+      image: "/assets/images/to_the_moon_460_200.png",
       content: [
         {
           body:
