@@ -1,6 +1,8 @@
 import Heading from "../cta/heading";
 import Checkmark from "../icons/check";
 
+import Link from "next/link";
+
 export default function Pricing() {
   return (
     <section>
@@ -35,9 +37,11 @@ export default function Pricing() {
               <span>free access to all bots</span>
             </li>
           </ul>
-          <div className="border-gray-300 text-gray-500 border-2 rounded-xl py-2 mt-4 text-center font-light">
-            Join our Discord
-          </div>
+          <Link href="https://www.patreon.com/bePatron?u=50202907">
+            <a className="border-gray-300 text-gray-500 border-2 rounded-xl py-2 mt-4 text-center font-light">
+              Join our Discord
+            </a>
+          </Link>
         </div>
         <div className="flex flex-col shadow-lg rounded-xl p-10 mx-4">
           <div className="text-6xl font-serif pb-4">$7</div>
@@ -66,9 +70,11 @@ export default function Pricing() {
               <span>free access to all bots</span>
             </li>
           </ul>
-          <div className="border-gray-500 border-2 rounded-xl py-2 mt-4 text-center font-light">
-            Join our Discord
-          </div>
+          <Link href="https://www.patreon.com/bePatron?u=50202907">
+            <a className="border-gray-500 border-2 rounded-xl py-2 mt-4 text-center font-light">
+              Join our Discord
+            </a>
+          </Link>
         </div>
         <div className="flex flex-col shadow-lg rounded-xl p-10 mx-4">
           <div className="text-6xl font-serif pb-4">$12</div>
@@ -97,9 +103,11 @@ export default function Pricing() {
               <span>free access to all bots</span>
             </li>
           </ul>
-          <div className="border-black border-2 rounded-xl py-2 mt-4 text-center font-medium">
-            Join our Discord
-          </div>
+          <Link href="https://www.patreon.com/bePatron?u=50202907">
+            <a className="border-black border-2 rounded-xl py-2 mt-4 text-center font-medium">
+              Join our Discord
+            </a>
+          </Link>
         </div>
         <div className="flex flex-col shadow-lg rounded-xl p-10 mx-4">
           <div className="text-6xl font-serif text-red-light pb-4">$20</div>
@@ -128,9 +136,11 @@ export default function Pricing() {
               <span>free access to all bots</span>
             </li>
           </ul>
-          <div className="border-red-light border-2 bg-red-light text-white rounded-xl py-2 mt-4 text-center font-medium">
-            Join our Discord
-          </div>
+          <Link href="https://www.patreon.com/bePatron?u=50202907">
+            <a className="border-red-light border-2 bg-red-light text-white rounded-xl py-2 mt-4 text-center font-medium">
+              Join our Discord
+            </a>
+          </Link>
         </div>
       </div>
     </section>
