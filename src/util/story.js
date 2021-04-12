@@ -3,7 +3,7 @@ import ReplitLogo from "../components/icons/replit";
 import IPOLogo from "../components/icons/ipo";
 import InstitutionIcon from "../components/icons/institution";
 import NewsScrapingIcon from "../components/icons/news_scraping";
-// import Icon from "../components/icons/icon";
+import Icon from "../components/icons/icon";
 
 const data = [
   {
@@ -13,7 +13,7 @@ const data = [
       {
         body:
           "SPAC stands for Special Purpose Acquisition Company or Special Purpose Asquisition Corporation.",
-        icon: <Menu />,
+        icon: <Icon />,
       },
       {
         body:
