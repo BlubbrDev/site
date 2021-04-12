@@ -2,7 +2,7 @@ import { Transition } from "@headlessui/react";
 import { useState } from "react";
 import Link from "next/link";
 
-import Logo from "../../components/navbar/logo";
+import Logo from "../elements/logo";
 import Menu from "../../components/navbar/menu";
 import Button from "../../components/elements/button";
 import MenuItem from "./mobile/menuitem";

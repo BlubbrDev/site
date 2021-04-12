@@ -1,8 +1,8 @@
 export default function Newsletter() {
   return (
-    <div className="mt-10">
+    <div className="mt-10 bg-blue-darkest">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           <span className="block">Ready to dive in?</span>
           <span className="block text-blue-dark">
             Start your free trial today.
@@ -15,13 +15,13 @@ export default function Newsletter() {
               name="email"
               id="email"
               placeholder="Enter your email"
-              className="p-4 focus:border-blue-dark block w-full shadow-md sm:text-lg border-blue-darker border-2 rounded-lg"
+              className="p-4 block w-full shadow-md sm:text-lg rounded-lg"
             />
           </form>
           <div className="inline-flex rounded-md shadow">
             <a
               href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-dark hover:bg-blue-darker"
+              className="inline-flex items-center justify-center px-5 py-3 outline-none text-lg font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker"
             >
               Subscribe
             </a>
