@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Pricing() {
   return (
     <section id="pricing">
-      <Heading title="Our Pricing" />
+      <Heading id="pricing" title="Our Pricing" />
       <div className="flex flex-row flex-wrap justify-center mx-20">
         <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4">
           <div className="text-5xl font-serif pb-4">
