@@ -19,12 +19,9 @@ export default function Newsletter() {
             />
           </form>
           <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 outline-none text-lg font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker"
-            >
+            <button className="inline-flex items-center justify-center px-5 py-3 outline-none text-ls font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker">
               Subscribe
-            </a>
+            </button>
           </div>
         </div>
       </div>

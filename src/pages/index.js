@@ -8,6 +8,7 @@ import Navbar from "../components/navbar/navbar";
 import data from "../util/story";
 import Banner from "../components/banner/banner";
 import Pricing from "../components/pricing/pricing";
+import JoinDiscord from "../components/cta/join_discord";
 
 export default function Home() {
   return (
@@ -28,8 +29,9 @@ export default function Home() {
             />
           )
       )}
-      <Pricing id="pricing" />
       <Newsletter />
+      <Pricing id="pricing" />
+      <JoinDiscord />
       <Footer />
     </>
   );
