@@ -7,7 +7,7 @@ export default function Beta() {
   return (
     <>
       <Navbar />
-      <CTA title="Our API is in Private-Beta" />
+      <CTA id="beta" title="Our API is in Private-Beta" />
       <Newsletter
         title="Want a sneek peek?"
         subtitle="Send us your email for early access."

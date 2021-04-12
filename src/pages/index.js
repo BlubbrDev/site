@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <Banner />
       <Hero />
-      <CTA title="Meet the Bots" />
+      <CTA id="bots" title="Meet the Bots" />
       {data.map(
         (value, index) =>
           index % 2 == 0 &&
