@@ -9,7 +9,7 @@ export default function SpacsForDummies() {
   return (
     <>
       <Navbar />
-      <CTA title="What is a SPAC?" />
+      <CTA id="about" title="What is a SPAC?" />
       {data.map(
         (value, index) =>
           (index % 2 === 1 || index === 0) && (
