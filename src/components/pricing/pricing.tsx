@@ -5,12 +5,13 @@ import Link from "next/link";
 
 export default function Pricing() {
   return (
-    <section>
+    <section id="pricing">
       <Heading title="Our Pricing" />
       <div className="flex flex-row flex-wrap justify-center mx-20">
         <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4">
           <div className="text-5xl font-serif pb-4">
             <span>Free</span>
+            <span className="pl-4 text-base text-gray-400">(forever)</span>
           </div>
           <div className="text-2xl font-serif pb-4">Guppy</div>
           <img

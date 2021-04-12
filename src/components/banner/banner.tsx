@@ -1,6 +1,7 @@
 import SpeakerPhoneIcon from "../icons/speaker_phone";
 import CloseIcon from "../icons/close";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Banner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -21,12 +22,11 @@ export default function Banner() {
               </p>
             </div>
             <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-              <a
-                href="#"
-                className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-darker hover:bg-blue"
-              >
-                Subscribe
-              </a>
+              <Link href="#newsletter">
+                <a className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-darker hover:bg-blue">
+                  Subscribe
+                </a>
+              </Link>
             </div>
             <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
               <button

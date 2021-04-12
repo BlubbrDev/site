@@ -33,8 +33,8 @@ export default function Navbar() {
             <NavLink title="About" href="/spacs" />
             <NavLink title="Pricing" href="#pricing" />
             <NavLink title="Solutions" isDropdown={true} />
-            <NavLink title="Newsletter" />
-            <NavLink title="API" />
+            <NavLink title="Newsletter" href="#newsletter" />
+            <NavLink title="API" href="beta" />
             <Link href="/discord">
               <a className="fill-current text-gray-500 hover:text-gray-800">
                 <DiscordIcon />

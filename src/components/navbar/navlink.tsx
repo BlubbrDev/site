@@ -30,13 +30,15 @@ export default function NavLink({
         aria-expanded="false"
         className={
           "group bg-white rounded-md inline-flex items-center text-base font-light hover:text-gray-900 focus:outline-none focus:ring-indigo-500" +
-          (isActive || router.pathname === href
+          (isActive || (!isDropdown && router.pathname === href)
             ? " text-gray-900"
             : " text-gray-500")
         }
       >
         <span>{title}</span>
-        <ChevronDownIcon isActive={isActive || router.pathname === href} />
+        <ChevronDownIcon
+          isActive={isActive || (!isDropdown && router.pathname === href)}
+        />
       </button>
 
       <Transition

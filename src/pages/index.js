@@ -29,8 +29,11 @@ export default function Home() {
             />
           )
       )}
-      <Newsletter />
-      <Pricing id="pricing" />
+      <Newsletter
+        title="Don't miss out!"
+        subtitle="Stay up-to-date with our newsletter."
+      />
+      <Pricing />
       <JoinDiscord />
       <Footer />
     </>
