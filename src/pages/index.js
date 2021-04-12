@@ -1,4 +1,4 @@
-import CTA from "../components/cta/cta";
+import CTA from "../components/cta/heading";
 import Feature from "../components/feature/feature";
 import Hero from "../components/hero/hero";
 import Footer from "../components/footer/footer";
@@ -6,6 +6,7 @@ import Navbar from "../components/navbar/navbar";
 
 import data from "../util/story";
 import Banner from "../components/banner/banner";
+import Pricing from "../components/pricing/pricing";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
             />
           )
       )}
+      <Pricing />
       <Footer />
     </>
   );

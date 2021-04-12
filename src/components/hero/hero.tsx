@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <main className="md:mb-40 md:grid md:grid-flow-col md:grid-cols-2 mx-auto max-w-6xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+    <main className="md:mb-40 md:grid md:grid-flow-col md:grid-cols-2 mx-auto max-w-6xl px-4 sm:mt-8 sm:px-6 md:mt-12 lg:mt-16 lg:px-8 xl:mt-20">
       <div className="text-center lg:text-left mt-10">
         <h1 className="text-7xl font-extrabold font-serif text-gray-900 sm:text-8xl md:text-6xl lg:text-7xl xl:text-8xl">
           <span className="block">

@@ -1,4 +1,4 @@
-export default function () {
+export default function Icon() {
   return (
     <svg
       width="104"

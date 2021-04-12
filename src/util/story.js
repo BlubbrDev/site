@@ -1,9 +1,24 @@
-import Menu from "../components/icons/menu";
 import ReplitLogo from "../components/icons/replit";
 import IPOLogo from "../components/icons/ipo";
 import InstitutionIcon from "../components/icons/institution";
+import MergerIcon from "../components/icons/merger";
+import BlubbrReplitIcon from "../components/icons/blubbr_replit";
 import NewsScrapingIcon from "../components/icons/news_scraping";
 import GuyHoldingCheckIcon from "../components/icons/guy_holding_check";
+import DiamondHand from "../components/icons/DiamondHand";
+import Icon1 from "../components/icons/Icon-1";
+import Icon2 from "../components/icons/Icon-2";
+import Icon3 from "../components/icons/Icon-3";
+import Icon4 from "../components/icons/Icon-4";
+import Icon5 from "../components/icons/Icon-5";
+import Icon6 from "../components/icons/Icon-6";
+import Icon7 from "../components/icons/Icon-7";
+import Icon8 from "../components/icons/Icon-8";
+import Icon9 from "../components/icons/Icon-9";
+import Icon10 from "../components/icons/Icon-10";
+import Icon11 from "../components/icons/Icon-11";
+import Icon12 from "../components/icons/Icon-12";
+import Icon13 from "../components/icons/Icon-13";
 
 const data = [
   {
@@ -13,7 +28,7 @@ const data = [
       {
         body:
           "SPAC stands for Special Purpose Acquisition Company or Special Purpose Asquisition Corporation.",
-        icon: <Menu />,
+        icon: <Icon5 />,
       },
       {
         body:
@@ -39,12 +54,12 @@ const data = [
       {
         body:
           "If we started with $100 million in our bank account, we could issue 100,000 shares of BLBA.",
-        icon: <Menu />,
+        icon: <Icon1 />,
       },
       {
         body:
           "Our management team would be seeking to acquire a company worth around $100M.",
-        icon: <Menu />,
+        icon: <Icon3 />,
       },
     ],
   },
@@ -55,7 +70,7 @@ const data = [
       {
         body:
           "When BLBA files its IPO with the SEC, it registers a CIK and submits an S-1 form.",
-        icon: <Menu />,
+        icon: <Icon4 />,
       },
       {
         body:
@@ -65,7 +80,7 @@ const data = [
       {
         body:
           "Community members read our SPAC summary and decide if they want to invest.",
-        icon: <Menu />,
+        icon: <Icon13 />,
       },
     ],
   },
@@ -76,7 +91,7 @@ const data = [
       {
         body:
           "Before the merger is announced, media companies might release articles about potential targets for BLBA.",
-        icon: <Menu />,
+        icon: <Icon12 />,
       },
       {
         body:
@@ -86,7 +101,7 @@ const data = [
       {
         body:
           "If the market thinks this is a good acquisition, the BLBA share price will increase above $10 a share.",
-        icon: <Menu />,
+        icon: <Icon7 />,
       },
     ],
   },
@@ -97,17 +112,17 @@ const data = [
       {
         body:
           "Monitors news for all SPACs and instantly notifies our community regarding potential mergers.",
-        icon: <Menu />,
+        icon: <Icon8 />,
       },
       {
         body:
           "We instantly notify our community when news articles are released that detail information about SPAC mergers.",
-        icon: <Menu />,
+        icon: <Icon11 />,
       },
       {
         body:
           "They can choose to open BLBA positions before the news is priced into BLBA’s price following its article release.",
-        icon: <Menu />,
+        icon: <DiamondHand />,
       },
     ],
   },
@@ -118,17 +133,17 @@ const data = [
       {
         body:
           "SPAC issuers will often create subsequent SPACs after finding acquisitions for their current SPACs.",
-        icon: <Menu />,
+        icon: <Icon6 />,
       },
       {
         body:
           "If the Blubbr team believes BLBA is close to finalizing a deal, Blubbr may file for a second SPAC, BLBB.",
-        icon: <Menu />,
+        icon: <Icon9 />,
       },
       {
         body:
           "This indicates BLBA is likely to merge soon and will likely see a price increase.",
-        icon: <Menu />,
+        icon: <Icon7 />,
       },
     ],
   },
@@ -139,17 +154,17 @@ const data = [
       {
         body:
           "Watches for instances like this where the parent company of a current SPAC files for a second SPAC IPO.",
-        icon: <Menu />,
+        icon: <Icon10 />,
       },
       {
         body:
           "The Blubbr community is the first to find out SPAC sponsors release new SPACs.",
-        icon: <Menu />,
+        icon: <Icon8 />,
       },
       {
         body:
           "Instant notifications following subsequent filings mean our community members can get in before the new filing is priced in.",
-        icon: <Menu />,
+        icon: <Icon2 />,
       },
     ],
   },
@@ -160,17 +175,17 @@ const data = [
       {
         body:
           "Blubbr and Replit file with the SEC to officially announce they are merging.",
-        icon: <Menu />,
+        icon: <BlubbrReplitIcon />,
       },
       {
         body:
           "In 3 months, the BLBR ticker will change to REPL and all Blubbr shares become Replit shares.",
-        icon: <Menu />,
+        icon: <MergerIcon />,
       },
       {
         body:
           "BLBR price will likely have strong price movements to reflect the merger confirmation.",
-        icon: <Menu />,
+        icon: <Icon7 />,
       },
     ],
   },
@@ -181,16 +196,16 @@ const data = [
       {
         body:
           "Prior to announcing a merger, the SEC requires SPACs to file a 425 form detailing the merger.",
-        icon: <Menu />,
+        icon: <Icon9 />,
       },
       {
         body:
           "The SPAC Merger Bot instantly notifies our community upon new 425 filings. ",
-        icon: <Menu />,
+        icon: <Icon8 />,
       },
       {
         body: "Blubbr members are the first to hear when SPACs finally merge!",
-        icon: <Menu />,
+        icon: <Icon11 />,
       },
     ],
   },

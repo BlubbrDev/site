@@ -1,4 +1,4 @@
-import CTA from "../components/cta/cta";
+import CTA from "../components/cta/heading";
 import Feature from "../components/feature/feature";
 import Footer from "../components/footer/footer";
 import Navbar from "../components/navbar/navbar";
@@ -9,7 +9,7 @@ export default function SpacsForDummies() {
   return (
     <>
       <Navbar />
-      <CTA title="What is a SPAC?"/>
+      <CTA title="What is a SPAC?" />
       {data.map(
         (value, index) =>
           (index % 2 === 1 || index === 0) && (

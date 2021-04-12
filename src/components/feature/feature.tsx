@@ -28,11 +28,11 @@ export default function Feature({
             {title}
           </h4>
           <ul className="mt-10">
-            {content.map((subpoint, index) => (
+            {content.map((subpoint, _) => (
               <li className="mt-5">
                 <div className="flex">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-8 w-8 text-blue-dark">
+                    <div className="flex items-center justify-center h-8 w-9 text-blue-dark">
                       {subpoint.icon}
                     </div>
                   </div>

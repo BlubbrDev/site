@@ -30,6 +30,7 @@ export default function Navbar() {
             <Menu onClick={() => setShowMenu(!showMenu)} />
           </div>
           <div className="hidden md:flex items-center justify-end space-x-10 md:flex-1 lg:w-0">
+            <NavLink title="About" href="/spacs"/>
             <NavLink title="Pricing" href="/pricing"/>
             <NavLink title="Solutions" isDropdown={true} />
             <NavLink title="Newsletter" />
