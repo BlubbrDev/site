@@ -5,11 +5,13 @@ import Footer from "../components/footer/footer";
 import Navbar from "../components/navbar/navbar";
 
 import data from "../util/story";
+import Banner from "../components/banner/banner";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <Banner />
       <Hero />
       <CTA title="Meet the Bots" />
       {data.map(

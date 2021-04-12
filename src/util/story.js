@@ -1,4 +1,9 @@
 import Menu from "../components/icons/menu";
+import ReplitLogo from "../components/icons/replit";
+import IPOLogo from "../components/icons/ipo";
+import InstitutionIcon from "../components/icons/institution";
+import NewsScrapingIcon from "../components/icons/news_scraping";
+// import Icon from "../components/icons/icon";
 
 const data = [
   {
@@ -13,7 +18,7 @@ const data = [
       {
         body:
           "SPACs are publically traded companies with only cash and no operations.",
-        icon: <Menu />,
+        icon: <InstitutionIcon />,
       },
       {
         body:
@@ -29,7 +34,7 @@ const data = [
       {
         body:
           "We would IPO our SPAC, Blubbr A, under the ticker BLBA with a share price of $10.",
-        icon: <Menu />,
+        icon: <IPOLogo />,
       },
       {
         body:
@@ -55,7 +60,7 @@ const data = [
       {
         body:
           "Our SPAC Patrol bot immediately identifies the new registration and S-1 filings and notifies our community.",
-        icon: <Menu />,
+        icon: <NewsScrapingIcon />,
       },
       {
         body:
@@ -76,7 +81,7 @@ const data = [
       {
         body:
           "For example, BLBA might be looking to acquire a company such as Replit.",
-        icon: <Menu />,
+        icon: <ReplitLogo />,
       },
       {
         body:

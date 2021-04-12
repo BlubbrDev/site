@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -21,20 +22,18 @@ export default function Hero() {
         </p>
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow">
-            <a
-              href="#"
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker md:py-4 md:text-lg md:px-10"
-            >
-              Discord
-            </a>
+            <Link href="/discord">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker md:py-4 md:text-lg md:px-10">
+                Join Discord
+              </a>
+            </Link>
           </div>
           <div className="mt-3 sm:mt-0 sm:ml-3">
-            <a
-              href="#"
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-light rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 md:py-4 md:text-lg md:px-10"
-            >
-              What's New
-            </a>
+            <Link href="/spacs">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-light rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 md:py-4 md:text-lg md:px-10">
+                What is a SPAC?
+              </a>
+            </Link>
           </div>
         </div>
       </div>

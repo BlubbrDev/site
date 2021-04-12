@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <div className="bg-white top-0 sticky shadow-sm z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-3 md:justify-start">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Logo />
           </div>
@@ -30,12 +30,14 @@ export default function Navbar() {
             <Menu onClick={() => setShowMenu(!showMenu)} />
           </div>
           <div className="hidden md:flex items-center justify-end space-x-10 md:flex-1 lg:w-0">
-            <NavLink title="What is a SPAC" href="/spacs" />
-            <NavLink title="Pricing" />
+            <NavLink title="Pricing" href="/pricing"/>
             <NavLink title="Solutions" isDropdown={true} />
             <NavLink title="Newsletter" />
+            <NavLink title="API" />
             <Link href="/discord">
-              <DiscordIcon />
+              <a className="fill-current text-gray-400 hover:text-gray-500">
+                <DiscordIcon />
+              </a>
             </Link>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function Feature({
               <li className="mt-5">
                 <div className="flex">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-dark text-white">
+                    <div className="flex items-center justify-center h-8 w-8 text-blue-dark">
                       {subpoint.icon}
                     </div>
                   </div>
