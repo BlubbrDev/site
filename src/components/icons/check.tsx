@@ -1,10 +1,13 @@
-export default function CheckMark() {
+interface CheckmarkProps {
+  className: string;
+}
+
+export default function CheckMark({ className = "" }: CheckmarkProps) {
   return (
     <svg
-      width="18"
-      height="15"
+      className={className}
       viewBox="0 0 18 15"
-      fill="none"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

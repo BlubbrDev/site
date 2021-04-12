@@ -30,13 +30,13 @@ export default function Navbar() {
             <Menu onClick={() => setShowMenu(!showMenu)} />
           </div>
           <div className="hidden md:flex items-center justify-end space-x-10 md:flex-1 lg:w-0">
-            <NavLink title="About" href="/spacs"/>
-            <NavLink title="Pricing" href="/pricing"/>
+            <NavLink title="About" href="/spacs" />
+            <NavLink title="Pricing" href="#pricing" />
             <NavLink title="Solutions" isDropdown={true} />
             <NavLink title="Newsletter" />
             <NavLink title="API" />
             <Link href="/discord">
-              <a className="fill-current text-gray-400 hover:text-gray-500">
+              <a className="fill-current text-gray-500 hover:text-gray-800">
                 <DiscordIcon />
               </a>
             </Link>

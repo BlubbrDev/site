@@ -27,7 +27,7 @@ export default function Home() {
             />
           )
       )}
-      <Pricing />
+      <Pricing id="pricing" />
       <Footer />
     </>
   );
