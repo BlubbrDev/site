@@ -4,17 +4,10 @@ import Link from "next/link";
 
 import Logo from "../elements/logo";
 import Menu from "../../components/navbar/menu";
-import Button from "../../components/elements/button";
-import MenuItem from "./mobile/menuitem";
 import MenuLink from "./mobile/menulink";
 import NavLink from "../../components/navbar/navlink";
 import CloseIcon from "../../components/icons/close";
 import DiscordIcon from "../../components/icons/discord";
-import ChartBar from "../../components/icons/chart_bar";
-import CursorClick from "../../components/icons/cursor_click";
-import Refresh from "../../components/icons/refresh";
-import ViewGrid from "../../components/icons/view_grid";
-import ShieldCheck from "../../components/icons/shield_check";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,10 +24,10 @@ export default function Navbar() {
           </div>
           <div className="hidden md:flex items-center justify-end space-x-10 md:flex-1 lg:w-0">
             <NavLink title="About" href="/spacs" />
-            <NavLink title="Pricing" href="#pricing" />
-            <NavLink title="Solutions" href="#bots" />
-            <NavLink title="Newsletter" href="#newsletter" />
-            <NavLink title="API" href="beta" />
+            <NavLink title="Pricing" href="/#pricing" />
+            <NavLink title="Solutions" href="/#bots" />
+            <NavLink title="Newsletter" href="/#newsletter" />
+            <NavLink title="API" href="/beta" />
             <Link href="/discord">
               <a className="fill-current text-gray-500 hover:text-gray-800">
                 <DiscordIcon />
