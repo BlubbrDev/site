@@ -27,7 +27,7 @@ const data = [
     content: [
       {
         body:
-          "SPAC stands for Special Purpose Acquisition Company or Special Purpose Asquisition Corporation.",
+          "SPAC stands for Special Purpose Acquisition Company or Special Purpose Acquisition Corporation.",
         icon: <Icon5 />,
       },
       {
@@ -69,7 +69,7 @@ const data = [
     content: [
       {
         body:
-          "When BLBA files its IPO with the SEC, it registers a CIK and submits an S-1 form.",
+          "When a SPAC files for an IPO with the SEC it files a registration form and a S-1 form.",
         icon: <Icon4 />,
       },
       {
@@ -79,7 +79,7 @@ const data = [
       },
       {
         body:
-          "Community members read our SPAC summary and decide if they want to invest.",
+          "Our community members read our SPAC summary and decide if they want to invest.",
         icon: <Icon13 />,
       },
     ],
@@ -121,7 +121,7 @@ const data = [
       },
       {
         body:
-          "They can choose to open BLBA positions before the news is priced into BLBA’s price following its article release.",
+          "Our community is then able to open positions in the SPACs before the merger news is reflected in their share prices.",
         icon: <DiamondHand />,
       },
     ],
@@ -153,12 +153,12 @@ const data = [
     content: [
       {
         body:
-          "Watches for instances like this where the parent company of a current SPAC files for a second SPAC IPO.",
+          "Watches for instances where the parent company of a current SPAC files for a second SPAC IPO.",
         icon: <Icon10 />,
       },
       {
         body:
-          "The Blubbr community is the first to find out SPAC sponsors release new SPACs.",
+          "Instant notifications following subsequent filings mean our community members can buy shares before the new filing is priced in.",
         icon: <Icon8 />,
       },
       {
@@ -195,7 +195,7 @@ const data = [
     content: [
       {
         body:
-          "Prior to announcing a merger, the SEC requires SPACs to file a 425 form detailing the merger.",
+          "Prior to announcing their mergers, the SEC requires SPACs to file a 425 form detailing their mergers.",
         icon: <Icon9 />,
       },
       {

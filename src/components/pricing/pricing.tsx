@@ -7,8 +7,8 @@ export default function Pricing() {
   return (
     <section id="pricing">
       <Heading id="pricing" title="Our Pricing" />
-      <div className="flex flex-row flex-wrap justify-center mx-20">
-        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4 mb-10">
+      <div className="flex flex-row flex-wrap justify-center">
+        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4 mb-10 w-124">
           <div className="text-5xl font-serif pb-4">
             <span>Free</span>
             <span className="pl-4 text-base text-gray-400">(forever)</span>
@@ -71,7 +71,7 @@ export default function Pricing() {
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>NotiFi News Notifications</span>
+              <span>Notii News Notifications</span>
             </li>
           </ul>
           <Link href="https://www.patreon.com/bePatron?u=50202907">
