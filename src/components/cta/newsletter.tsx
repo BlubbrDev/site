@@ -1,37 +1,70 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 interface NewsletterProps {
   title: string;
   subtitle: string;
 }
 
 export default function Newsletter({ title, subtitle }: NewsletterProps) {
+  const [isSubmitted, setIsSumbitted] = useState(false);
+  useEffect(() => {
+    console.log("starting");
+    let url =
+      "https://blubbr.us1.list-manage.com/subscribe/post?u=620a18422b78481eb1e7e0320&amp;id=bcb1f8eb89";
+    let form = document.getElementById("mc-form") as HTMLFormElement;
+    form.addEventListener("submit", (event) => {
+      console.log("submitting");
+      let formData = new FormData(form);
+      axios({
+        method: "POST",
+        url: url,
+        data: formData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          crossdomain: true,
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
+        .then((res) => res.status == 200 && setIsSumbitted(true))
+        .catch((err) => console.error(err));
+      event.preventDefault();
+    });
+  }, []);
   return (
-    <section
-      id="newsletter"
-      className="mt-10 py-32 bg-blue-darkest bg-repeat"
-      // style={{
-      //   backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%23ffffff' fill-opacity='0.04' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E\")",
-      // }}
-    >
+    <section id="newsletter" className="mt-10 py-32 bg-blue-darkest bg-repeat">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
         <h2 className="text-3xl font-serif font-extrabold tracking-tight text-white sm:text-4xl">
           <span className="block">{title}</span>
           <span className="block text-blue-light font-medium">{subtitle}</span>
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <form className="mr-4" action="#" method="POST">
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 block w-full font- shadow-md sm:text-lg rounded-lg"
-            />
+          <form className="mr-4" id="mc-form" name="mc-embedded-subscribe-form">
+            <div className="flex flex-row" id="mc_embed_signup_scroll">
+              {!isSubmitted && (
+                <input
+                  className="inline-flex px-4 mx-4 py-2 w-full font-light shadow-md sm:text-md rounded-lg outline-none"
+                  type="text"
+                  name="EMAIL"
+                  id="mce-EMAIL"
+                  placeholder="Enter your email"
+                  required
+                />
+              )}
+              {isSubmitted ? (
+                <div className="inline-flex items-center justify-center px-5 py-2 outline-none text-md font-light rounded-md text-white bg-blue-darker">
+                  Subscribed!
+                </div>
+              ) : (
+                <input
+                  className="inline-flex items-center justify-center px-5 py-2 outline-none text-md font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker"
+                  type="submit"
+                  value="Subscribe"
+                  name="subscribe"
+                  id="mc-embedded-subscribe"
+                />
+              )}
+            </div>
           </form>
-          <div className="inline-flex rounded-md shadow">
-            <button className="inline-flex items-center justify-center px-5 py-2 outline-none text-ls font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker">
-              Subscribe
-            </button>
-          </div>
         </div>
       </div>
     </section>

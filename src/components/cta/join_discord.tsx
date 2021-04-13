@@ -12,7 +12,7 @@ export default function JoinDiscord() {
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <Link href="/discord">
-            <a className="px-5 py-3 outline-none text-xl font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker">
+            <a className="px-5 py-3 outline-none text-md font-light rounded-md text-white bg-blue-dark hover:bg-blue-darker">
               Join Discord
             </a>
           </Link>
