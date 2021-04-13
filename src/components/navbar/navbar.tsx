@@ -8,6 +8,7 @@ import MenuLink from "./mobile/menulink";
 import NavLink from "../../components/navbar/navlink";
 import CloseIcon from "../../components/icons/close";
 import DiscordIcon from "../../components/icons/discord";
+import { logEvent } from "../../util/GoogleAnalytics";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,7 +30,12 @@ export default function Navbar() {
             <NavLink title="Newsletter" href="/#newsletter" />
             <NavLink title="API" href="/beta" />
             <Link href="/discord">
-              <a className="fill-current text-gray-500 hover:text-gray-800">
+              <a
+                className="fill-current text-gray-500 hover:text-gray-800"
+                onClick={() =>
+                  logEvent("NAVBAR", "Clicked on discord icon", "LINK")
+                }
+              >
                 <DiscordIcon />
               </a>
             </Link>

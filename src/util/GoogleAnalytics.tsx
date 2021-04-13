@@ -16,6 +16,20 @@ export function initializeGoogleAnalytics(): void {
 }
 
 /**
+ * Event - Add custom tracking event.
+ * @param {string} category
+ * @param {string} action
+ * @param {string} label
+ */
+export const logEvent = (category: string, action: string, label: string) => {
+  GoogleAnalytics.event({
+    category: category,
+    action: action,
+    label: label,
+  });
+};
+
+/**
  * Defines the interface of props used by the tracked page component.
  */
 interface TrackedPageProps {

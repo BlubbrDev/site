@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { logEvent } from "../../util/GoogleAnalytics";
 
 /**
  * The left-most logo as seen in the navbar.
@@ -7,7 +8,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <Link href="/">
-      <a>
+      <a onClick={() => logEvent("NAVBAR", "Clicked on logo", "LINK")}>
         <span className="sr-only">Blubbr</span>
         <Image
           className="h-8 w-auto sm:h-10"

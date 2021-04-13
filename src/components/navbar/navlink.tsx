@@ -4,6 +4,7 @@ import { Transition } from "@headlessui/react";
 import Dropdown from "./dropdown/dropdown";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { logEvent } from "../../util/GoogleAnalytics";
 
 interface NavLinkProps {
   title: string;
@@ -60,6 +61,7 @@ export default function NavLink({
           (router.pathname === href ? "text-gray-900" : "text-gray-500") +
           " text-base font-light hover:text-gray-900"
         }
+          onClick={() => logEvent("NAVBAR", "Clicked on " + href, "LINK")}
       >
         {title}
       </a>
