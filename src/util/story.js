@@ -158,7 +158,7 @@ const data = [
       },
       {
         body:
-          "Instant notifications following subsequent filings mean our community members can buy shares before the new filing is priced in.",
+          "The Blubbr community is the first to find out when SPAC sponsors release new SPACs.",
         icon: <Icon8 />,
       },
       {
