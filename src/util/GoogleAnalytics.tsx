@@ -34,6 +34,7 @@ export default function TrackedPage({
   const router = useRouter();
 
   useEffect(() => {
+    initializeGoogleAnalytics();
     return () => trackPage(router.pathname);
   }, [router]);
 
