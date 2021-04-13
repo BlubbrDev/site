@@ -63,15 +63,15 @@ export default function Pricing() {
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>Global finance commuinity</span>
+              <span>NotiFi News Notifications</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>Interactive stock analysis</span>
+              <span>SPAC news summaries</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>Notii News Notifications</span>
+              <span>SPAC price notifications</span>
             </li>
           </ul>
           <Link href="https://www.patreon.com/bePatron?u=50202907">

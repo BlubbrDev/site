@@ -9,11 +9,12 @@ import data from "../util/story";
 import Banner from "../components/banner/banner";
 import Pricing from "../components/pricing/pricing";
 import JoinDiscord from "../components/cta/join_discord";
+import TrackedPage from "../util/GoogleAnalytics";
 import Head from "next/head";
 
 export default function Home() {
   return (
-    <>
+    <TrackedPage>
       <Head>
         <title>Blubbr</title>
         <meta property="og:title" content="Blubbr" />
@@ -56,6 +57,6 @@ export default function Home() {
       <Pricing />
       <JoinDiscord />
       <Footer />
-    </>
+    </TrackedPage>
   );
 }
