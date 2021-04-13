@@ -14,6 +14,25 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Blubbr</title>
+        <meta property="og:title" content="Blubbr" />
+        <meta
+          property="og:description"
+          content="Blubbr is the global leader in real-time automated notifications for key events in the lifecycle of every SPAC."
+        />
+        <meta property="og:image" content="/assets/images/base_whale_512.png" />
+        <meta name="twitter:card" content="/assets/images/base_whale_512.png" />
+        <meta name="twitter:title" content="Blubbr" />
+        <meta
+          name="twitter:description"
+          content="Blubbr is the global leader in real-time automated notifications for key events in the lifecycle of every SPAC."
+        />
+        <meta
+          name="twitter:image"
+          content="/assets/images/base_whale_128.png"
+        />
+      </Head>
       <Navbar />
       <Banner />
       <Hero />
