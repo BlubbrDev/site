@@ -99,11 +99,11 @@ export default function Pricing() {
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>SPAC Merger Notifications</span>
+              <span>SPAC Merger notifications</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>Exclusive discord access</span>
+              <span>Exclusive Discord access</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
@@ -135,11 +135,11 @@ export default function Pricing() {
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-red-light" />
-              <span>Whale Watcher Alerts</span>
+              <span>Whale Watcher alerts</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-red-light" />
-              <span>SPAC Patrol Alerts</span>
+              <span>SPAC Patrol alerts</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-red-light" />

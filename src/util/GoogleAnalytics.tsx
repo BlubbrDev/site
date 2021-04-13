@@ -7,9 +7,12 @@ import { useRouter } from "next/router";
  * Initializes the GoogleAnalytics tracker with the code in the root .env file.
  */
 export function initializeGoogleAnalytics(): void {
-  GoogleAnalytics.initialize(process.env.NEXT_PUBLIC_GA_CODE, {
-    testMode: process.env.NODE_ENV === "test", // check if we are running in a test env
-  });
+  GoogleAnalytics.initialize(
+    process.env.NEXT_PUBLIC_GA_CODE
+    //, {
+    //testMode: process.env.NODE_ENV === "test", // check if we are running in a test env
+    //}
+  );
 }
 
 /**
