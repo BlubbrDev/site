@@ -9,6 +9,7 @@ import data from "../util/story";
 import Banner from "../components/banner/banner";
 import Pricing from "../components/pricing/pricing";
 import JoinDiscord from "../components/cta/join_discord";
+import Head from "next/head";
 
 export default function Home() {
   return (

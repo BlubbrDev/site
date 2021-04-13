@@ -8,7 +8,7 @@ export default function Pricing() {
     <section id="pricing">
       <Heading id="pricing" title="Our Pricing" />
       <div className="flex flex-row flex-wrap justify-center mx-20">
-        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4">
+        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4 mb-10">
           <div className="text-5xl font-serif pb-4">
             <span>Free</span>
             <span className="pl-4 text-base text-gray-400">(forever)</span>
@@ -44,7 +44,7 @@ export default function Pricing() {
             </a>
           </Link>
         </div>
-        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4">
+        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4 mb-10">
           <div className="text-5xl font-serif pb-4">
             <span>$7</span>
             <span className="pl-4 text-base text-gray-400">/ month</span>
@@ -80,7 +80,7 @@ export default function Pricing() {
             </a>
           </Link>
         </div>
-        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4">
+        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4 mb-10">
           <div className="text-5xl font-serif pb-4">
             <span>$12</span>
             <span className="pl-4 text-base text-gray-400">/ month</span>
@@ -116,7 +116,7 @@ export default function Pricing() {
             </a>
           </Link>
         </div>
-        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4">
+        <div className="flex flex-col shadow-md hover:shadow-xl rounded-xl p-10 mx-4 mb-10">
           <div className="text-5xl font-serif text-red-light pb-4">
             <span>$20</span>
             <span className="pl-4 text-base text-gray-400">/ month</span>
