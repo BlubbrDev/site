@@ -53,7 +53,7 @@ const data = [
       },
       {
         body:
-          "If we started with $100 million in our bank account, we could issue 100,000 shares of BLBA.",
+          "If we started with $100 million in our bank account, we could issue 10,000,000 shares of BLBA.",
         icon: <Icon1 />,
       },
       {
