@@ -23,19 +23,19 @@ export default function Pricing() {
           <ul className="text-4xl font-serif pt-4">
             <li className="flex flex-row content-center font-sans text-base font-light text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>7d free access to all bots</span>
+              <span>7 day access to all bots</span>
             </li>
             <li className="flex flex-row content-center font-sans text-base font-light text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>global finance community</span>
+              <span>Global finance community</span>
             </li>
             <li className="flex flex-row content-center font-sans text-base font-light text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>google search stock data</span>
+              <span>Google search stock data</span>
             </li>
             <li className="flex flex-row content-center font-sans text-base font-light text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>interactive stock analysis</span>
+              <span>Interactive stock analysis</span>
             </li>
           </ul>
           <Link href="/discord">
@@ -59,19 +59,19 @@ export default function Pricing() {
           <ul className="text-4xl font-serif pt-4">
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>all the free benefits</span>
+              <span>All the free benefits</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>global finance commuinity</span>
+              <span>Global finance commuinity</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>interactive stock analysis</span>
+              <span>Interactive stock analysis</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>Notifi News Notifications</span>
+              <span>NotiFi News Notifications</span>
             </li>
           </ul>
           <Link href="https://www.patreon.com/bePatron?u=50202907">
@@ -95,7 +95,7 @@ export default function Pricing() {
           <ul className="text-4xl font-serif pt-4">
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
-              <span>all benefits of Sailor</span>
+              <span>All benefits of Sailor</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-black" />
@@ -131,7 +131,7 @@ export default function Pricing() {
           <ul className="text-4xl font-serif pt-4">
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-red-light" />
-              <span>all benefits of Whaler</span>
+              <span>All benefits of Whaler</span>
             </li>
             <li className="flex flex-row content-center font-sans font-light text-base text-gray-500">
               <Checkmark className="w-4 h-4 pt-1 mr-4 -ml-4 text-red-light" />

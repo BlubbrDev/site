@@ -11,7 +11,7 @@ export default function Banner() {
         <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between flex-wrap">
             <div className="w-0 flex-1 flex items-center">
-              <span className="flex p-2 rounded-lg bg-blue-darker">
+              <span className="md:flex hidden p-2 rounded-lg bg-blue-darker">
                 <SpeakerPhoneIcon />
               </span>
               <p className="ml-3 font-light text-white truncate">
