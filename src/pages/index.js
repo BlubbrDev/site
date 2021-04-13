@@ -9,10 +9,14 @@ import data from "../util/story";
 import Banner from "../components/banner/banner";
 import Pricing from "../components/pricing/pricing";
 import JoinDiscord from "../components/cta/join_discord";
-import TrackedPage from "../util/GoogleAnalytics";
+import TrackedPage, {
+  initializeGoogleAnalytics,
+} from "../util/GoogleAnalytics";
 import Head from "next/head";
 
 export default function Home() {
+  initializeGoogleAnalytics();
+
   return (
     <TrackedPage>
       <Head>
