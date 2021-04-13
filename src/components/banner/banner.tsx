@@ -21,14 +21,14 @@ export default function Banner() {
                 </span>
               </p>
             </div>
-            <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+            <div className="order-3 sm:order-2 sm:mt-0 sm:w-auto">
               <Link href="#newsletter">
                 <a className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-darker hover:bg-blue">
                   Subscribe
                 </a>
               </Link>
             </div>
-            <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+            <div className="order-3 flex-shrink-0 sm:order-3 sm:ml-3">
               <button
                 type="button"
                 onClick={() => setIsVisible(false)}

@@ -32,7 +32,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center justify-end space-x-10 md:flex-1 lg:w-0">
             <NavLink title="About" href="/spacs" />
             <NavLink title="Pricing" href="#pricing" />
-            <NavLink title="Solutions" isDropdown={true} />
+            <NavLink title="Solutions" href="#bots" />
             <NavLink title="Newsletter" href="#newsletter" />
             <NavLink title="API" href="beta" />
             <Link href="/discord">
@@ -69,42 +69,26 @@ export default function Navbar() {
                   </button>
                 </div>
               </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  <MenuItem title="Analytics" href="/" icon={<ChartBar />} />
-                  <MenuItem
-                    title="Engagement"
-                    href="/"
-                    icon={<CursorClick />}
-                  />
-                  <MenuItem title="Security" href="/" icon={<ShieldCheck />} />
-                  <MenuItem title="Integrations" href="/" icon={<ViewGrid />} />
-                  <MenuItem title="Automations" href="/" icon={<Refresh />} />
-                </nav>
-              </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <MenuLink title="Pricing" href="/" />
-                <MenuLink title="Docs" href="/" />
-                <MenuLink title="Help Center" href="/" />
-                <MenuLink title="Guides" href="/" />
-                <MenuLink title="Events" href="/" />
-                <MenuLink title="Security" href="/" />
+              <div
+                className="grid grid-cols-2 gap-y-4 gap-x-8"
+                onClick={() => setShowMenu(!showMenu)}
+              >
+                <MenuLink title="About" href="/spacs" />
+                <MenuLink title="Pricing" href="/#pricing" />
+                <MenuLink title="Solutions" href="/#bots" />
+                <MenuLink title="Newsletter" href="/#newsletter" />
+                <MenuLink title="API" href="/beta" />
+                <MenuLink title="Discord" href="/discord" />
               </div>
               <div>
                 <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-dark hover:bg-blue-darker"
+                  onClick={() => setShowMenu(!showMenu)}
+                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-light text-white bg-blue-dark hover:bg-blue-darker"
                 >
-                  Sign up
+                  Join Discord
                 </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{" "}
-                  <a href="#" className="text-blue-dark hover:text-blue-darker">
-                    Sign in
-                  </a>
-                </p>
               </div>
             </div>
           </div>

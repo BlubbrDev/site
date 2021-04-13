@@ -24,7 +24,7 @@ export default function Feature({
             (isFlipped ? "lg:col-start-1" : "lg:col-start-2") + " md:pl-20"
           }
         >
-          <h4 className="text-4xl font-serif leading-8 font-extrabold text-gray-900 dark:text-white tracking-tight sm:leading-9">
+          <h4 className="text-4xl text-center lg:text-left font-serif leading-8 font-extrabold text-gray-900 dark:text-white tracking-tight sm:leading-9">
             {title}
           </h4>
           <ul className="mt-10">
