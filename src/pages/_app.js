@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import { initializeGoogleAnalytics } from "../util/GoogleAnalytics";
+import { initializeGoogleAnalytics } from "util/GoogleAnalytics";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

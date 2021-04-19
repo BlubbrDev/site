@@ -2,6 +2,7 @@
 import React, { ReactNode, ReactNodeArray, useEffect } from "react";
 import GoogleAnalytics from "react-ga";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 /**
  * Initializes the GoogleAnalytics tracker with the code in the root .env file.
@@ -33,6 +34,7 @@ export const logEvent = (category: string, action: string, label: string) => {
  * Defines the interface of props used by the tracked page component.
  */
 interface TrackedPageProps {
+  title: string;
   children: ReactNode | ReactNodeArray;
 }
 
@@ -43,6 +45,7 @@ interface TrackedPageProps {
  * This should wrap all page routes that we want to track.
  */
 export default function TrackedPage({
+  title,
   children,
 }: TrackedPageProps): JSX.Element {
   const router = useRouter();
@@ -56,5 +59,28 @@ export default function TrackedPage({
     GoogleAnalytics.set({ page });
     GoogleAnalytics.pageview(page);
   };
-  return <>{children}</>;
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta property="og:title" content="Blubbr" />
+        <meta
+          property="og:description"
+          content="Blubbr is the global leader in real-time automated notifications for key events in the lifecycle of every SPAC."
+        />
+        <meta property="og:image" content="/assets/images/base_whale_512.png" />
+        <meta name="twitter:card" content="/assets/images/base_whale_512.png" />
+        <meta name="twitter:title" content="Blubbr" />
+        <meta
+          name="twitter:description"
+          content="Blubbr is the global leader in real-time automated notifications for key events in the lifecycle of every SPAC."
+        />
+        <meta
+          name="twitter:image"
+          content="/assets/images/base_whale_128.png"
+        />
+      </Head>
+      {children}
+    </>
+  );
 }

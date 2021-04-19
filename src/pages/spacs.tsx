@@ -1,32 +1,13 @@
-import CTA from "../components/cta/heading";
-import Feature from "../components/feature/feature";
-import Footer from "../components/footer/footer";
-import Navbar from "../components/navbar/navbar";
-import Head from "next/head";
-import data from "../util/story";
+import CTA from "components/cta/heading";
+import Feature from "components/feature/feature";
+import Footer from "components/footer/footer";
+import Navbar from "components/navbar/navbar";
+import data from "util/story";
+import TrackedPage from "util/GoogleAnalytics";
 
 export default function SpacsForDummies() {
   return (
-    <>
-      <Head>
-        <title>About | Blubbr</title>
-        <meta property="og:title" content="Blubbr" />
-        <meta
-          property="og:description"
-          content="Blubbr is the global leader in real-time automated notifications for key events in the lifecycle of every SPAC."
-        />
-        <meta property="og:image" content="/assets/images/base_whale_512.png" />
-        <meta name="twitter:card" content="/assets/images/base_whale_512.png" />
-        <meta name="twitter:title" content="Blubbr" />
-        <meta
-          name="twitter:description"
-          content="Blubbr is the global leader in real-time automated notifications for key events in the lifecycle of every SPAC."
-        />
-        <meta
-          name="twitter:image"
-          content="/assets/images/base_whale_128.png"
-        />
-      </Head>
+    <TrackedPage title="About | Blubbr">
       <Navbar />
       <CTA id="about" title="What is a SPAC?" />
       {data.map(
@@ -41,6 +22,6 @@ export default function SpacsForDummies() {
           )
       )}
       <Footer />
-    </>
+    </TrackedPage>
   );
 }
