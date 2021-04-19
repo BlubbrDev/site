@@ -8,19 +8,23 @@ export default function Home({ allPostsData }) {
     <TrackedPage title="Blog | Blubbr">
       <Navbar />
       <section className="bg-red-200  max-w-7xl mx-auto">
-        <h2>Blog</h2>
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
+        <main>
+          {allPostsData.map(({ id, date, title, img }) => (
+            <div key={id}>
               {title}
+              <br />
+              <img className="h-48 object-cover" src={img} />
               <br />
               {id}
               <br />
               {date}
-            </li>
+            </div>
           ))}
-        </ul>
+        </main>
+        <aside className="bg-blue-200">Section</aside>
       </section>
+      <section className="bg-green-200">Section</section>
+      <aside className="bg-purple-200">Section</aside>
       <Footer />
     </TrackedPage>
   );
