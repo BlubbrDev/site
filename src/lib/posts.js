@@ -1,12 +1,22 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import remark from "remark";
+import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "src/_posts");
 
 export function getSortedPostsData() {
+  // returns the first 50 words of the post
+  function getPreviewText(file, options) {
+    let excerpt = file.content.split(" ").slice(0, 50).join(" ");
+    excerpt = excerpt.replaceAll("*", "").replaceAll("_", ""); // strip md format => plain text
+    file.excerpt = excerpt;
+  }
+
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
+
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
@@ -16,12 +26,12 @@ export function getSortedPostsData() {
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+    const matterResult = matter(fileContents, { excerpt: getPreviewText });
 
     // Combine the data with the id
     return {
       id,
-      ...matterResult.data,
+      ...matterResult,
     };
   });
 
@@ -33,4 +43,56 @@ export function getSortedPostsData() {
       return -1;
     }
   });
+}
+
+/**
+ * Return a list of file names in the posts directory.
+ */
+export function getAllPostIds() {
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  // Returns an array that looks like this:
+  // [
+  //   {
+  //     params: {
+  //       id: 'ssg-ssr'
+  //     }
+  //   },
+  //   {
+  //     params: {
+  //       id: 'pre-rendering'
+  //     }
+  //   }
+  // ]
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ""),
+      },
+    };
+  });
+}
+
+/**
+ * Fetch data necesary to render the post with the given id.
+ */
+export async function getPostData(id) {
+  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+
+  // Use gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents, { excerpt: true });
+
+  // Use remark to convert markdown into HTML string
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
+
+  // Combine the data with the id and contentHtml
+  return {
+    id,
+    contentHtml,
+    ...matterResult.data,
+  };
 }
