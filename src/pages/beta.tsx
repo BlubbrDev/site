@@ -2,7 +2,6 @@ import CTA from "components/cta/heading";
 import Newsletter from "components/cta/newsletter";
 import Footer from "components/footer/footer";
 import Navbar from "components/navbar/navbar";
-import Head from "next/head";
 import TrackedPage from "util/GoogleAnalytics";
 
 export default function Beta() {

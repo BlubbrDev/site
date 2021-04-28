@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "tailwindcss/tailwind.css";
+import "styles.css";
 import { initializeGoogleAnalytics } from "util/GoogleAnalytics";
 
 function MyApp({ Component, pageProps }) {

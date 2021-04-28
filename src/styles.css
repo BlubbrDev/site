@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #blubbr-content p,
+  #blubbr-content ul {
+    @apply text-xl leading-prose pb-10;
+  }
+
+  #blubbr-content p:first-child::first-letter,
+  #blubbr-content ul:first-child::first-letter {
+    @apply text-8xl float-left pr-4;
+  }
+
+  #blubbr-content li {
+    @apply list-disc ml-4;
+  }
+
+  #blubbr-content pre {
+    @apply m-4 p-4 bg-gray-lighter;
+  }
+}

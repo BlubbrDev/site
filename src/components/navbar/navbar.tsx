@@ -10,11 +10,19 @@ import CloseIcon from "../../components/icons/close";
 import DiscordIcon from "../../components/icons/discord";
 import { logEvent } from "../../util/GoogleAnalytics";
 
-export default function Navbar() {
+interface NavBarProps {
+  isNotSticky?: boolean;
+}
+
+export default function Navbar({ isNotSticky = false }: NavBarProps) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="bg-white top-0 sticky shadow-sm z-40">
+    <div
+      className={
+        "bg-white top-0 shadow-sm z-40" + (!isNotSticky ? " sticky" : "")
+      }
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-3 md:justify-start">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -25,6 +33,7 @@ export default function Navbar() {
           </div>
           <div className="hidden md:flex items-center justify-end space-x-10 md:flex-1 lg:w-0">
             <NavLink title="About" href="/spacs" />
+            <NavLink title="Blog" href="/blog" />
             <NavLink title="Pricing" href="/#pricing" />
             <NavLink title="Solutions" href="/#bots" />
             <NavLink title="Newsletter" href="/#newsletter" />
