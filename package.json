@@ -22,7 +22,7 @@
     "eslint": "^7.24.0",
     "eslint-plugin-react": "^7.23.2",
     "jsonp": "^0.2.1",
-    "postcss": "^8.2.9",
+    "postcss": "^8.2.10",
     "tailwindcss": "^2.1.1",
     "typescript": "^4.2.4"
   }
