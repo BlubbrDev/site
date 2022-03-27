@@ -15,7 +15,6 @@ export default function Banner() {
                 <SpeakerPhoneIcon />
               </span>
               <p className="ml-3 font-light text-white truncate">
-                <span className="md:hidden">We shipped our newsletter!</span>
                 <span className="hidden md:inline">
                   Disclaimer: As of June 2021, the team is no longer maintaining
                   this project.

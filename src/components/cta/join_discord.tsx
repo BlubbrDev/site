@@ -7,7 +7,7 @@ export default function JoinDiscord() {
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           <span className="block">Ready to dive in?</span>
           <span className="block text-blue-dark">
-            Start your free trial today.
+            Join our Discord today!
           </span>
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">

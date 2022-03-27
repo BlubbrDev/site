@@ -27,8 +27,6 @@ export default function Navbar() {
             <NavLink title="About" href="/spacs" />
             <NavLink title="Pricing" href="/#pricing" />
             <NavLink title="Solutions" href="/#bots" />
-            <NavLink title="Newsletter" href="/#newsletter" />
-            <NavLink title="API" href="/beta" />
             <Link href="/discord">
               <a
                 className="fill-current text-gray-500 hover:text-gray-800"
@@ -77,8 +75,6 @@ export default function Navbar() {
                 <MenuLink title="About" href="/spacs" />
                 <MenuLink title="Pricing" href="/#pricing" />
                 <MenuLink title="Solutions" href="/#bots" />
-                <MenuLink title="Newsletter" href="/#newsletter" />
-                <MenuLink title="API" href="/beta" />
                 <MenuLink title="Discord" href="/discord" />
               </div>
               <div>
