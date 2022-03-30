@@ -1,5 +1,4 @@
 import CTA from "../components/cta/heading";
-import Newsletter from "../components/cta/newsletter";
 import Feature from "../components/feature/feature";
 import Hero from "../components/hero/hero";
 import Footer from "../components/footer/footer";
@@ -50,10 +49,6 @@ export default function Home() {
             />
           )
       )}
-      <Newsletter
-        title="Don't miss out!"
-        subtitle="Stay up-to-date with our newsletter."
-      />
       <Pricing />
       <JoinDiscord />
       <Footer />

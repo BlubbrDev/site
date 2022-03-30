@@ -25,11 +25,6 @@ export default function Footer() {
                   Discord
                 </a>
               </Link>
-              <Link href="#newsletter">
-                <a className="px-4 text-sm font-light text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline">
-                  Newsletter
-                </a>
-              </Link>
             </div>
           </div>
         </div>

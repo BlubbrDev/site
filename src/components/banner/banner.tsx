@@ -15,18 +15,12 @@ export default function Banner() {
                 <SpeakerPhoneIcon />
               </span>
               <p className="ml-3 font-light text-white truncate">
-                <span className="md:hidden">We shipped our newsletter!</span>
+                <span className="md:hidden">Disclaimer: As of June 2021, the team is no longer maintaining this project.</span>
                 <span className="hidden md:inline">
-                  Hey! We're excited to announce our weekly newsletter.
+                  Disclaimer: As of June 2021, the team is no longer maintaining
+                  this project.
                 </span>
               </p>
-            </div>
-            <div className="order-3 sm:order-2 sm:mt-0 sm:w-auto">
-              <Link href="#newsletter">
-                <a className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-darker hover:bg-blue">
-                  Subscribe
-                </a>
-              </Link>
             </div>
             <div className="order-3 flex-shrink-0 sm:order-3 sm:ml-3">
               <button

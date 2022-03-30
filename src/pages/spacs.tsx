@@ -1,3 +1,4 @@
+import Banner from "../components/banner/banner";
 import CTA from "../components/cta/heading";
 import Feature from "../components/feature/feature";
 import Footer from "../components/footer/footer";
@@ -28,6 +29,7 @@ export default function SpacsForDummies() {
         />
       </Head>
       <Navbar />
+      <Banner />
       <CTA id="about" title="What is a SPAC?" />
       {data.map(
         (value, index) =>
